@@ -18,6 +18,7 @@ from api.models import (
 )
 from api.etl_service import FormETLService
 from api.json_builder import JSONBuilderService
+from api.document_service import get_document_service
 
 # Configure logging
 logging.basicConfig(
@@ -66,6 +67,7 @@ app.add_middleware(
 # Initialize services
 etl_service = FormETLService()
 json_builder = JSONBuilderService()
+document_service = get_document_service()
 
 
 # ============================================================================
@@ -620,6 +622,134 @@ async def remove_party_issue(party_id: str, option_id: str):
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
             detail=f"Failed to remove issue: {str(e)}"
+        )
+
+
+# ============================================================================
+# Document Generation Endpoints
+# ============================================================================
+
+@app.post("/api/cases/{case_id}/generate-documents")
+async def generate_documents(case_id: str, templates: list[str] = None, upload_to_dropbox: bool = True):
+    """
+    Generate legal documents for a case using Docmosis
+
+    This endpoint:
+    1. Fetches case data from database
+    2. Calls Docmosis API at docs.liptonlegal.com/api/render
+    3. Generates PDF documents from templates
+    4. Uploads documents to Dropbox (if enabled)
+
+    Args:
+        case_id: UUID of the case
+        templates: List of template names (optional, uses defaults if not provided)
+        upload_to_dropbox: Whether to upload generated documents to Dropbox
+
+    Returns:
+        Document generation results including success/failure status
+    """
+    try:
+        logger.info(f"Document generation requested for case {case_id}")
+
+        # Check if Docmosis is configured
+        if not document_service.is_configured():
+            raise HTTPException(
+                status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+                detail="Document generation is not configured. Please set DOCMOSIS_ACCESS_KEY."
+            )
+
+        # Generate documents
+        result = await document_service.generate_documents_for_case(
+            case_id=case_id,
+            templates=templates,
+            upload_to_dropbox=upload_to_dropbox
+        )
+
+        if not result['success']:
+            raise HTTPException(
+                status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                detail=f"Document generation failed: {result.get('error', 'Unknown error')}"
+            )
+
+        logger.info(
+            f"✅ Document generation complete for case {case_id}: "
+            f"{result['documents_generated']} generated, {result['documents_uploaded']} uploaded"
+        )
+
+        return {
+            "success": True,
+            "case_id": case_id,
+            "documents_generated": result['documents_generated'],
+            "documents_uploaded": result['documents_uploaded'],
+            "documents": result['documents'],
+            "dropbox_uploads": result.get('dropbox_uploads', []),
+            "message": f"Generated {result['documents_generated']} documents successfully"
+        }
+
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Document generation failed for case {case_id}: {e}")
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"Document generation failed: {str(e)}"
+        )
+
+
+@app.post("/api/cases/{case_id}/generate-document/{template_name}")
+async def generate_single_document(case_id: str, template_name: str, upload_to_dropbox: bool = True):
+    """
+    Generate a single document for a case
+
+    Args:
+        case_id: UUID of the case
+        template_name: Name of Docmosis template (e.g., 'ComplaintForm.docx')
+        upload_to_dropbox: Whether to upload generated document to Dropbox
+
+    Returns:
+        Document generation result
+    """
+    try:
+        logger.info(f"Generating single document for case {case_id}: {template_name}")
+
+        # Check if Docmosis is configured
+        if not document_service.is_configured():
+            raise HTTPException(
+                status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+                detail="Document generation is not configured. Please set DOCMOSIS_ACCESS_KEY."
+            )
+
+        # Generate document
+        result = await document_service.generate_single_document(
+            case_id=case_id,
+            template_name=template_name,
+            upload_to_dropbox=upload_to_dropbox
+        )
+
+        if not result['success']:
+            raise HTTPException(
+                status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                detail=f"Document generation failed: {result.get('error', 'Unknown error')}"
+            )
+
+        logger.info(f"✅ Document generated successfully: {result['filename']}")
+
+        return {
+            "success": True,
+            "case_id": case_id,
+            "filename": result['filename'],
+            "size": result['size'],
+            "dropbox_upload": result.get('dropbox_upload'),
+            "message": f"Document generated successfully: {result['filename']}"
+        }
+
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Document generation failed: {e}")
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"Document generation failed: {str(e)}"
         )
 
 
