@@ -42,7 +42,9 @@ class DocumentGenerationService:
             logger.info(f"Fetching case data for document generation: {case_id}")
 
             # Use JSON builder to get normalized case data
-            case_json = await self.json_builder.build_case_json(case_id)
+            with get_db_connection() as conn:
+                with conn.cursor() as cur:
+                    case_json = self.json_builder.build_json_from_db(cur, case_id)
 
             if not case_json:
                 logger.error(f"Case not found: {case_id}")
