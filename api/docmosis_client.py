@@ -139,11 +139,12 @@ class DocmosisClient:
                 - documents: List[Dict] (details for each document)
         """
         if templates is None:
-            # Default templates for legal forms
+            # Default discovery document templates
+            # These match the Phase 4 profiles from the normalization pipeline
             templates = [
-                'ComplaintForm.docx',
-                'DiscoveryRequest.docx',
-                'SummonsForm.docx'
+                'SROGsMaster.docx',      # Special Interrogatories
+                'PODsMaster.docx',       # Production of Documents
+                'AdmissionsMaster.docx'  # Requests for Admissions
             ]
 
         results = {
