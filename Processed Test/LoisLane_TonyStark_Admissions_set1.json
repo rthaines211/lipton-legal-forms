@@ -1,0 +1,68 @@
+{
+  "SetNumber": 1,
+  "InterrogatoryStart": 1,
+  "Case": {
+    "FilingCity": "Los Angeles",
+    "FilingCounty": "North Carolina",
+    "FullAddress": "1331 Yorkshire Place NW Unit 2, Los Angeles, North Carolina 28027",
+    "StreetAddress": "1331 Yorkshire Place NW Unit 2, Los Angeles, North Carolina 28027"
+  },
+  "Plaintiffs": [
+    {
+      "name": "Bruce Wayne",
+      "type": "Individual",
+      "Age": "Adult"
+    },
+    {
+      "name": "Clark Kent",
+      "type": "Individual",
+      "Age": "Adult"
+    },
+    {
+      "name": "Lois Lane",
+      "type": "Guardian",
+      "Age": "Adult"
+    }
+  ],
+  "Defendants": [
+    {
+      "name": "Steve Rogers",
+      "type": "LLC",
+      "Owner/Manager": "Owner"
+    },
+    {
+      "name": "Tony Stark",
+      "type": "LLC",
+      "Owner/Manager": "Manager"
+    }
+  ],
+  "AllPlaintiffs": "Bruce Wayne, Clark Kent, Lois Lane",
+  "AllDefendants": "Steve Rogers, Tony Stark",
+  "AllPlaintiffsUpperWithTypes": "BRUCE WAYNE, Individual; CLARK KENT, Individual; LOIS LANE, Guardian",
+  "AllDefendantsUpperWithTypes": "STEVE ROGERS, LLC; TONY STARK, LLC",
+  "HeadOfHousehold": "Lois Lane",
+  "TargetDefendant": "Tony Stark",
+  "AgencyParagraph": "",
+  "Street Address": "1331 Yorkshire Place NW, Los Angeles, North Carolina 28027",
+  "AdmissionsGeneral": true,
+  "IsManager": true,
+  "HasLosAngeles": true,
+  "HasVermin": true,
+  "HasRatsMice": true,
+  "HasSkunks": true,
+  "HasPigeons": true,
+  "HasInsects": true,
+  "HasFlies": true,
+  "HasBees": true,
+  "HasHornets": true,
+  "HasTermites": true,
+  "HasInadequateNumberOfTrashReceptacles": true,
+  "HasInadequateServicingAndEmptyingTrashReceptacles": true,
+  "TotalSets": 1,
+  "SetLabel": "Set 1 of 1",
+  "SetNoWrite": "ONE",
+  "SetStart": 1,
+  "SetEnd": 47,
+  "InterrogatoryCount": 47,
+  "CumulativeInterrogatoryEnd": 47
+}

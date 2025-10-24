@@ -1,0 +1,75 @@
+# ============================================
+# Railway Deployment - Files to Exclude
+# ============================================
+
+# Node.js
+node_modules/
+.npm
+npm-debug.log*
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.venv/
+venv/
+htmlcov/
+.coverage
+coverage.xml
+
+# Environment files
+.env
+.env.local
+.env.*.local
+.env.production
+
+# Development tools
+.vscode/
+.idea/
+.cursor/
+*.swp
+*.swo
+
+# Test artifacts
+test-results/
+playwright-report/
+Processed Test/
+
+# Data and backups
+backups/
+logs/
+*.log
+
+# Build artifacts (will be regenerated)
+dist/
+
+# OS files
+.DS_Store
+Thumbs.db
+.Spotlight-V100
+.Trashes
+
+# Git
+.git/
+.gitignore
+
+# Documentation that's not needed in production
+DOCUMENTATION_SUMMARY.md
+TDD_IMPLEMENTATION_SUMMARY.md
+TDD_SUMMARY.md
+TESTING_QUICKSTART.md
+GCP_DEPLOYMENT_PLAN.md
+RAILWAY_DEPLOYMENT_PLAN.md
+
+# Large files not needed in production
+*.pdf
+Tornado-Installation-Guide-2.10.2*.pdf
+"Docmosis Tornado VM — Instance Configuration"
+"Dropbox Feature"
+
+# Monitoring data (not needed for deployment)
+monitoring/data/
+monitoring/prometheus/data/
+monitoring/grafana/data/

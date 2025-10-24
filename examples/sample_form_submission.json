@@ -1,0 +1,83 @@
+{
+  "Form": {
+    "Id": "1",
+    "InternalName": "TestCase2025",
+    "Name": "Habitability Case Submission"
+  },
+  "Full_Address": {
+    "StreetAddress": "1331 Yorkshire Place NW",
+    "City": "Concord",
+    "State": "North Carolina",
+    "PostalCode": "28027",
+    "Country": "United States",
+    "CountryCode": "US"
+  },
+  "Filing city": "Los Angeles",
+  "Filing county": "Los Angeles County",
+  "PlaintiffDetails": [
+    {
+      "ItemNumber": 1,
+      "PlaintiffItemNumberName": {
+        "First": "Clark",
+        "Last": "Kent",
+        "FirstAndLast": "Clark Kent"
+      },
+      "PlaintiffItemNumberType": "Individual",
+      "PlaintiffItemNumberAgeCategory": ["Adult"],
+      "HeadOfHousehold": true,
+      "PlaintiffItemNumberDiscovery": {
+        "VerminIssue": true,
+        "Vermin": ["Rats/Mice", "Skunks"],
+        "InsectIssues": true,
+        "Insects": ["Roaches", "Ants"],
+        "HVACIssues": true,
+        "HVAC": ["Air Conditioner", "Heater"],
+        "ElectricalIssues": false,
+        "Electrical": [],
+        "FireHazardIssues": false,
+        "Fire Hazard": [],
+        "GovernmentEntityContacted": false,
+        "Specific Government Entity Contacted": [],
+        "AppliancesIssues": false,
+        "Appliances": [],
+        "PlumbingIssues": false,
+        "Plumbing": [],
+        "CabinetsIssues": false,
+        "Cabinets": [],
+        "FlooringIssues": false,
+        "Flooring": [],
+        "WindowsIssues": false,
+        "Windows": [],
+        "DoorIssues": false,
+        "Doors": [],
+        "StructureIssues": false,
+        "Structure": [],
+        "CommonAreasIssues": false,
+        "Common areas": [],
+        "TrashProblems": false,
+        "Select Trash Problems": [],
+        "NuisanceIssues": false,
+        "Nuisance": [],
+        "HealthHazardIssues": false,
+        "Health hazard": [],
+        "SafetyIssues": false,
+        "Select Safety Issues": [],
+        "NoticesIssues": false,
+        "Select Notices Issues": [],
+        "Unit": "1"
+      }
+    }
+  ],
+  "DefendantDetails2": [
+    {
+      "ItemNumber": 1,
+      "DefendantItemNumberName": {
+        "First": "Tony",
+        "Last": "Stark",
+        "FirstAndLast": "Tony Stark"
+      },
+      "DefendantItemNumberType": "LLC",
+      "DefendantItemNumberManagerOwner": "Manager"
+    }
+  ]
+}

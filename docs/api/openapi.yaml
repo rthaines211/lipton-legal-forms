@@ -1,0 +1,810 @@
+openapi: 3.0.3
+info:
+  title: Legal Form Application API
+  version: 1.0.0
+  description: |
+    Comprehensive API for managing legal form submissions with dual storage (JSON + PostgreSQL),
+    Dropbox integration, and automated normalization pipeline.
+
+    ## Features
+    - Form submission with structured data transformation
+    - Dual storage: JSON files and PostgreSQL database
+    - Optional Dropbox cloud backup
+    - Python normalization pipeline integration
+    - Comprehensive monitoring and health checks
+    - Token-based authentication in production
+
+    ## Authentication
+    In production mode, API endpoints require authentication via:
+    - Query parameter: `?token=YOUR_ACCESS_TOKEN`
+    - Authorization header: `Bearer YOUR_ACCESS_TOKEN`
+
+    Health check and metrics endpoints are always accessible without authentication.
+
+  contact:
+    name: API Support
+  license:
+    name: MIT
+
+servers:
+  - url: http://localhost:3000
+    description: Development server
+  - url: https://your-production-domain.com
+    description: Production server
+
+tags:
+  - name: Form Entries
+    description: CRUD operations for legal form submissions
+  - name: Pipeline
+    description: Normalization pipeline management
+  - name: Health
+    description: Health checks and monitoring
+  - name: Pages
+    description: HTML page endpoints
+
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      description: Access token for production authentication
+    QueryToken:
+      type: apiKey
+      in: query
+      name: token
+      description: Access token as query parameter
+
+  schemas:
+    FormEntry:
+      type: object
+      required:
+        - Full_Address
+        - PlaintiffDetails
+        - DefendantDetails2
+      properties:
+        Form:
+          type: object
+          properties:
+            Id:
+              type: string
+              example: "1"
+            InternalName:
+              type: string
+              example: "AutoPopulationForm"
+            Name:
+              type: string
+              example: "Auto-Population Form"
+        Full_Address:
+          type: object
+          required:
+            - StreetAddress
+            - City
+            - State
+            - PostalCode
+          properties:
+            StreetAddress:
+              type: string
+              example: "1331 Yorkshire Place NW"
+            City:
+              type: string
+              example: "Concord"
+            State:
+              type: string
+              example: "North Carolina"
+            PostalCode:
+              type: string
+              example: "28027"
+            Country:
+              type: string
+              example: "United States"
+            CountryCode:
+              type: string
+              example: "US"
+        "Filing city":
+          type: string
+          example: "Los Angeles"
+        "Filing county":
+          type: string
+          example: "Los Angeles County"
+        submitter_name:
+          type: string
+          description: Name of form submitter (defaults to 'Anonymous')
+          example: "John Doe"
+        submitter_email:
+          type: string
+          description: Email for notifications (optional)
+          example: "john.doe@example.com"
+        PlaintiffDetails:
+          type: array
+          items:
+            $ref: '#/components/schemas/Plaintiff'
+        DefendantDetails2:
+          type: array
+          items:
+            $ref: '#/components/schemas/Defendant'
+
+    Plaintiff:
+      type: object
+      required:
+        - ItemNumber
+        - PlaintiffItemNumberName
+      properties:
+        Id:
+          type: string
+          format: uuid
+        ItemNumber:
+          type: integer
+          example: 1
+        PlaintiffItemNumberName:
+          type: object
+          properties:
+            First:
+              type: string
+              example: "Clark"
+            Last:
+              type: string
+              example: "Kent"
+            FirstAndLast:
+              type: string
+              example: "Clark Kent"
+        PlaintiffItemNumberType:
+          type: string
+          enum: [Individual, Organization]
+          example: "Individual"
+        PlaintiffItemNumberAgeCategory:
+          type: array
+          items:
+            type: string
+            enum: [Minor, Adult]
+          example: ["Adult"]
+        HeadOfHousehold:
+          type: boolean
+          example: true
+        PlaintiffItemNumberDiscovery:
+          type: object
+          description: Comprehensive issue tracking with 19 categories
+          properties:
+            VerminIssue:
+              type: boolean
+            Vermin:
+              type: array
+              items:
+                type: string
+            InsectIssues:
+              type: boolean
+            Insects:
+              type: array
+              items:
+                type: string
+            Unit:
+              type: string
+              example: "1"
+
+    Defendant:
+      type: object
+      required:
+        - ItemNumber
+        - DefendantItemNumberName
+      properties:
+        Id:
+          type: string
+          format: uuid
+        ItemNumber:
+          type: integer
+          example: 1
+        DefendantItemNumberName:
+          type: object
+          properties:
+            First:
+              type: string
+              example: "Jane"
+            Last:
+              type: string
+              example: "Smith"
+            FirstAndLast:
+              type: string
+              example: "Jane Smith"
+        DefendantItemNumberType:
+          type: string
+          enum: [Individual, LLC, Corporation, Government, Trust, Other]
+          example: "LLC"
+        DefendantItemNumberManagerOwner:
+          type: string
+          enum: [Manager, Owner]
+          example: "Manager"
+
+    FormEntryResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          example: true
+        message:
+          type: string
+          example: "Form submission successful"
+        entry:
+          type: object
+          properties:
+            id:
+              type: string
+              example: "1729539600000-abc123"
+            timestamp:
+              type: integer
+              example: 1729539600000
+            filename:
+              type: string
+              example: "form-entry-1729539600000-abc123.json"
+        database:
+          type: object
+          properties:
+            case_id:
+              type: string
+              format: uuid
+            plaintiff_count:
+              type: integer
+            defendant_count:
+              type: integer
+        dropbox:
+          type: object
+          properties:
+            uploaded:
+              type: boolean
+            path:
+              type: string
+
+    PipelineStatus:
+      type: object
+      properties:
+        case_id:
+          type: string
+          format: uuid
+        pipeline_status:
+          type: string
+          enum: [pending, processing, completed, failed]
+        last_run:
+          type: string
+          format: date-time
+        error_message:
+          type: string
+        phases_completed:
+          type: array
+          items:
+            type: string
+        processing_time_ms:
+          type: integer
+
+    HealthResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          enum: [healthy, degraded, unhealthy]
+        timestamp:
+          type: string
+          format: date-time
+        uptime:
+          type: number
+        database:
+          type: string
+          enum: [connected, disconnected]
+
+    Error:
+      type: object
+      properties:
+        error:
+          type: string
+        message:
+          type: string
+        details:
+          type: object
+
+paths:
+  /:
+    get:
+      tags:
+        - Pages
+      summary: Main form page
+      description: Serves the main legal form HTML page
+      responses:
+        '200':
+          description: HTML form page
+          content:
+            text/html:
+              schema:
+                type: string
+
+  /review.html:
+    get:
+      tags:
+        - Pages
+      summary: Review page
+      description: Serves the form review page where users can preview their submission
+      responses:
+        '200':
+          description: HTML review page
+          content:
+            text/html:
+              schema:
+                type: string
+
+  /success:
+    get:
+      tags:
+        - Pages
+      summary: Success confirmation page
+      description: Displays success message after form submission
+      responses:
+        '200':
+          description: HTML success page
+          content:
+            text/html:
+              schema:
+                type: string
+
+  /api/form-entries:
+    post:
+      tags:
+        - Form Entries
+      summary: Submit new form entry
+      description: |
+        Processes and stores a new legal form submission with the following workflow:
+        1. Validates incoming JSON structure
+        2. Transforms data to structured format
+        3. Saves to JSON file in data/ directory
+        4. Stores in PostgreSQL database
+        5. Optionally uploads to Dropbox
+        6. Triggers normalization pipeline if enabled
+      security:
+        - BearerAuth: []
+        - QueryToken: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/FormEntry'
+      responses:
+        '200':
+          description: Form submitted successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FormEntryResponse'
+        '400':
+          description: Invalid form data
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '401':
+          description: Unauthorized (production only)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+    get:
+      tags:
+        - Form Entries
+      summary: List all form entries
+      description: Retrieves all form submissions from the data directory
+      security:
+        - BearerAuth: []
+        - QueryToken: []
+      responses:
+        '200':
+          description: List of form entries
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  entries:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/FormEntry'
+                  count:
+                    type: integer
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /api/form-entries/{id}:
+    get:
+      tags:
+        - Form Entries
+      summary: Get specific form entry
+      description: Retrieves a single form submission by ID
+      security:
+        - BearerAuth: []
+        - QueryToken: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+          description: Form entry ID
+          example: "1729539600000-abc123"
+      responses:
+        '200':
+          description: Form entry details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FormEntry'
+        '404':
+          description: Form entry not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+    put:
+      tags:
+        - Form Entries
+      summary: Update form entry
+      description: Updates an existing form submission
+      security:
+        - BearerAuth: []
+        - QueryToken: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+          description: Form entry ID
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/FormEntry'
+      responses:
+        '200':
+          description: Form entry updated successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  message:
+                    type: string
+        '404':
+          description: Form entry not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+    delete:
+      tags:
+        - Form Entries
+      summary: Delete form entry
+      description: Deletes a specific form submission
+      security:
+        - BearerAuth: []
+        - QueryToken: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+          description: Form entry ID
+      responses:
+        '200':
+          description: Form entry deleted successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  message:
+                    type: string
+        '404':
+          description: Form entry not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /api/form-entries/clear-all:
+    delete:
+      tags:
+        - Form Entries
+      summary: Delete all form entries
+      description: |
+        **DANGER**: Deletes ALL form submissions from the data directory.
+        This operation cannot be undone.
+      security:
+        - BearerAuth: []
+        - QueryToken: []
+      responses:
+        '200':
+          description: All entries deleted successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  message:
+                    type: string
+                  deletedCount:
+                    type: integer
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /api/pipeline-status/{caseId}:
+    get:
+      tags:
+        - Pipeline
+      summary: Get normalization pipeline status
+      description: Retrieves the current status of the normalization pipeline for a specific case
+      security:
+        - BearerAuth: []
+        - QueryToken: []
+      parameters:
+        - name: caseId
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+          description: Case UUID from database
+      responses:
+        '200':
+          description: Pipeline status
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PipelineStatus'
+        '404':
+          description: Case not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /api/pipeline-retry/{caseId}:
+    post:
+      tags:
+        - Pipeline
+      summary: Retry normalization pipeline
+      description: Manually triggers the normalization pipeline for a specific case
+      security:
+        - BearerAuth: []
+        - QueryToken: []
+      parameters:
+        - name: caseId
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+          description: Case UUID from database
+      responses:
+        '200':
+          description: Pipeline triggered successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  message:
+                    type: string
+                  pipeline_status:
+                    type: string
+        '404':
+          description: Case not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '503':
+          description: Pipeline service unavailable
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /health:
+    get:
+      tags:
+        - Health
+      summary: Basic health check
+      description: Returns basic health status of the application (always accessible)
+      responses:
+        '200':
+          description: Service is healthy
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HealthResponse'
+
+  /api/health:
+    get:
+      tags:
+        - Health
+      summary: API health check
+      description: Same as /health endpoint (always accessible)
+      responses:
+        '200':
+          description: Service is healthy
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HealthResponse'
+
+  /health/ready:
+    get:
+      tags:
+        - Health
+      summary: Readiness probe
+      description: Kubernetes-style readiness check (always accessible)
+      responses:
+        '200':
+          description: Service is ready
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: "ready"
+                  checks:
+                    type: object
+                    properties:
+                      database:
+                        type: string
+                        enum: [pass, fail]
+                      filesystem:
+                        type: string
+                        enum: [pass, fail]
+        '503':
+          description: Service not ready
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: "not ready"
+                  checks:
+                    type: object
+
+  /health/detailed:
+    get:
+      tags:
+        - Health
+      summary: Detailed health check
+      description: Comprehensive health information including dependencies (always accessible)
+      responses:
+        '200':
+          description: Detailed health status
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                  timestamp:
+                    type: string
+                    format: date-time
+                  uptime:
+                    type: number
+                  checks:
+                    type: object
+                    properties:
+                      database:
+                        type: object
+                        properties:
+                          status:
+                            type: string
+                          latency_ms:
+                            type: number
+                      filesystem:
+                        type: object
+                        properties:
+                          status:
+                            type: string
+                          writable:
+                            type: boolean
+                      dropbox:
+                        type: object
+                        properties:
+                          enabled:
+                            type: boolean
+                          status:
+                            type: string
+                      pipeline:
+                        type: object
+                        properties:
+                          enabled:
+                            type: boolean
+                          url:
+                            type: string
+                          reachable:
+                            type: boolean
+
+  /metrics:
+    get:
+      tags:
+        - Health
+      summary: Prometheus metrics
+      description: Exposes application metrics in Prometheus format (always accessible)
+      responses:
+        '200':
+          description: Prometheus metrics
+          content:
+            text/plain:
+              schema:
+                type: string
+              example: |
+                # HELP http_request_duration_seconds HTTP request duration in seconds
+                # TYPE http_request_duration_seconds histogram
+                http_request_duration_seconds_bucket{le="0.1",method="GET",route="/api/form-entries",status_code="200"} 45
+                http_request_duration_seconds_bucket{le="0.5",method="GET",route="/api/form-entries",status_code="200"} 50
+                http_request_duration_seconds_sum{method="GET",route="/api/form-entries",status_code="200"} 12.5
+                http_request_duration_seconds_count{method="GET",route="/api/form-entries",status_code="200"} 50

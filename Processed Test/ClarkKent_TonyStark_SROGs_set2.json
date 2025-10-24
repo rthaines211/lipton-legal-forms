@@ -1,0 +1,63 @@
+{
+  "SetNumber": 2,
+  "InterrogatoryStart": 116,
+  "Case": {
+    "FilingCity": "Los Angeles",
+    "FilingCounty": "North Carolina",
+    "FullAddress": "1331 Yorkshire Place NW Unit 1, Los Angeles, North Carolina 28027",
+    "StreetAddress": "1331 Yorkshire Place NW Unit 1, Los Angeles, North Carolina 28027"
+  },
+  "Plaintiffs": [
+    {
+      "name": "Bruce Wayne",
+      "type": "Individual",
+      "Age": "Adult"
+    },
+    {
+      "name": "Clark Kent",
+      "type": "Individual",
+      "Age": "Adult"
+    },
+    {
+      "name": "Lois Lane",
+      "type": "Guardian",
+      "Age": "Adult"
+    }
+  ],
+  "Defendants": [
+    {
+      "name": "Steve Rogers",
+      "type": "LLC",
+      "Owner/Manager": "Owner"
+    },
+    {
+      "name": "Tony Stark",
+      "type": "LLC",
+      "Owner/Manager": "Manager"
+    }
+  ],
+  "AllPlaintiffs": "Bruce Wayne, Clark Kent, Lois Lane",
+  "AllDefendants": "Steve Rogers, Tony Stark",
+  "AllPlaintiffsUpperWithTypes": "BRUCE WAYNE, Individual; CLARK KENT, Individual; LOIS LANE, Guardian",
+  "AllDefendantsUpperWithTypes": "STEVE ROGERS, LLC; TONY STARK, LLC",
+  "HeadOfHousehold": "Clark Kent",
+  "TargetDefendant": "Tony Stark",
+  "AgencyParagraph": "Los Angeles Health Department, Los Angeles Housing Department, Department of Building and Safety, Division Code Enforcement (County of North Carolina), Department of Health Services or Department of Environmental Health, City of Los Angeles Police Department, City of Los Angeles Fire Department, and lastly, the North Carolina County Sheriffs.",
+  "Street Address": "1331 Yorkshire Place NW, Los Angeles, North Carolina 28027",
+  "HasRoaches": true,
+  "HasFlies": true,
+  "HasBedbugs": true,
+  "HasBees": true,
+  "HasWasps": true,
+  "HasHornets": true,
+  "HasSpiders": true,
+  "HasTermites": true,
+  "HasMosquitos": true,
+  "TotalSets": 10,
+  "SetLabel": "Set 2 of 10",
+  "SetNoWrite": "TWO",
+  "SetStart": 116,
+  "SetEnd": 232,
+  "InterrogatoryCount": 117,
+  "CumulativeInterrogatoryEnd": 232
+}

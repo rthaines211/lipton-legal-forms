@@ -1,0 +1,76 @@
+{
+  "SetNumber": 3,
+  "InterrogatoryStart": 239,
+  "Case": {
+    "FilingCity": "Los Angeles",
+    "FilingCounty": "North Carolina",
+    "FullAddress": "1331 Yorkshire Place NW Unit 1, Los Angeles, North Carolina 28027",
+    "StreetAddress": "1331 Yorkshire Place NW Unit 1, Los Angeles, North Carolina 28027"
+  },
+  "Plaintiffs": [
+    {
+      "name": "Bruce Wayne",
+      "type": "Individual",
+      "Age": "Adult"
+    },
+    {
+      "name": "Clark Kent",
+      "type": "Individual",
+      "Age": "Adult"
+    },
+    {
+      "name": "Lois Lane",
+      "type": "Guardian",
+      "Age": "Adult"
+    }
+  ],
+  "Defendants": [
+    {
+      "name": "Steve Rogers",
+      "type": "LLC",
+      "Owner/Manager": "Owner"
+    },
+    {
+      "name": "Tony Stark",
+      "type": "LLC",
+      "Owner/Manager": "Manager"
+    }
+  ],
+  "AllPlaintiffs": "Bruce Wayne, Clark Kent, Lois Lane",
+  "AllDefendants": "Steve Rogers, Tony Stark",
+  "AllPlaintiffsUpperWithTypes": "BRUCE WAYNE, Individual; CLARK KENT, Individual; LOIS LANE, Guardian",
+  "AllDefendantsUpperWithTypes": "STEVE ROGERS, LLC; TONY STARK, LLC",
+  "HeadOfHousehold": "Clark Kent",
+  "TargetDefendant": "Steve Rogers",
+  "AgencyParagraph": "Los Angeles Health Department, Los Angeles Housing Department, Department of Building and Safety, Division Code Enforcement (County of North Carolina), Department of Health Services or Department of Environmental Health, City of Los Angeles Police Department, City of Los Angeles Fire Department, and lastly, the North Carolina County Sheriffs.",
+  "Street Address": "1331 Yorkshire Place NW, Los Angeles, North Carolina 28027",
+  "HasSmoking": true,
+  "HasGangs": true,
+  "HasHealthHazards": true,
+  "HasGasLeaks": true,
+  "HasMold": true,
+  "HasMildew": true,
+  "HasMushrooms": true,
+  "HasRawSewageOnExterior": true,
+  "HasNoxiousFumes": true,
+  "HasNonresponsiveLandlord": true,
+  "HasWaterShutoffs": true,
+  "HasElectricityShutoffs": true,
+  "HasInadequateNumberOfTrashReceptacles": true,
+  "HasInadequateServicingAndEmptyingTrashReceptacles": true,
+  "HasInoperableLocks": true,
+  "HasBrokenSecurityGate": true,
+  "HasSecurityCameras": true,
+  "HasStolenItems": true,
+  "HasAgeDiscrimination": true,
+  "HasDisabilityDiscrimination": true,
+  "HasRacialDiscrimination": true,
+  "HasSecurityDeposit": true,
+  "TotalSets": 3,
+  "SetLabel": "Set 3 of 3",
+  "SetNoWrite": "THREE",
+  "SetStart": 239,
+  "SetEnd": 327,
+  "InterrogatoryCount": 89,
+  "CumulativeInterrogatoryEnd": 327
+}

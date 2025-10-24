@@ -1,0 +1,69 @@
+{
+  "Form": {
+    "Id": "1",
+    "InternalName": "AutoPopulationForm",
+    "Name": "Auto-Population Form"
+  },
+  "PlaintiffDetails": [
+    {
+      "Id": "qDYnKh",
+      "PlaintiffItemNumberName": {
+        "First": "John",
+        "FirstAndLast": "John Doe",
+        "Last": "Doe",
+        "Middle": null,
+        "MiddleInitial": null,
+        "Prefix": null,
+        "Suffix": null
+      },
+      "PlaintiffItemNumberType": "Individual",
+      "PlaintiffItemNumberAgeCategory": [
+        "Adult"
+      ],
+      "HeadOfHousehold": false,
+      "ItemNumber": 1
+    }
+  ],
+  "PlaintiffDetails_Minimum": 1,
+  "DefendantDetails2": [
+    {
+      "Id": "9dlQeD",
+      "DefendantItemNumberName": {
+        "First": "Jane",
+        "FirstAndLast": "Jane Smith",
+        "Last": "Smith",
+        "Middle": null,
+        "MiddleInitial": null,
+        "Prefix": null,
+        "Suffix": null
+      },
+      "DefendantItemNumberType": "Individual",
+      "DefendantItemNumberManagerOwner": "Owner",
+      "ItemNumber": 1
+    }
+  ],
+  "DefendantDetails2_Minimum": 1,
+  "DefendantDetails2_Maximum": 10,
+  "Full_Address": {
+    "City": "New York",
+    "CityStatePostalCode": "New York, New York 10001",
+    "Country": "United States",
+    "CountryCode": "US",
+    "FullAddress": "123 Main St, New York, New York 10001",
+    "FullInternationalAddress": "123 Main St, New York, New York 10001, United States",
+    "Latitude": null,
+    "Line1": "123 Main St",
+    "Line2": null,
+    "Line3": null,
+    "Longitude": null,
+    "PostalCode": "10001",
+    "State": "New York",
+    "StreetAddress": "123 Main St",
+    "Type": "Home"
+  },
+  "Filing city": "New York",
+  "Filing county": "New York County",
+  "Notification Email Opt-In": false,
+  "Notification Email": null,
+  "serverTimestamp": "2025-10-21T01:25:37.120Z"
+}

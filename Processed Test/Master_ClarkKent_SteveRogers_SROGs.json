@@ -1,0 +1,672 @@
+{
+  "DocType": "SROGs",
+  "Template": "SROGsMaster.docx",
+  "FileName": "Clark Kent vs Steve Rogers - Discovery Propounded SROGs",
+  "HeadOfHousehold": "Clark Kent",
+  "TargetDefendant": "Steve Rogers",
+  "Sets": [
+    {
+      "SetNumber": 1,
+      "InterrogatoryStart": 1,
+      "Case": {
+        "FilingCity": "Los Angeles",
+        "FilingCounty": "North Carolina",
+        "FullAddress": "1331 Yorkshire Place NW Unit 1, Los Angeles, North Carolina 28027",
+        "StreetAddress": "1331 Yorkshire Place NW Unit 1, Los Angeles, North Carolina 28027"
+      },
+      "Plaintiffs": [
+        {
+          "name": "Bruce Wayne",
+          "type": "Individual",
+          "Age": "Adult"
+        },
+        {
+          "name": "Clark Kent",
+          "type": "Individual",
+          "Age": "Adult"
+        },
+        {
+          "name": "Lois Lane",
+          "type": "Guardian",
+          "Age": "Adult"
+        }
+      ],
+      "Defendants": [
+        {
+          "name": "Steve Rogers",
+          "type": "LLC",
+          "Owner/Manager": "Owner"
+        },
+        {
+          "name": "Tony Stark",
+          "type": "LLC",
+          "Owner/Manager": "Manager"
+        }
+      ],
+      "AllPlaintiffs": "Bruce Wayne, Clark Kent, Lois Lane",
+      "AllDefendants": "Steve Rogers, Tony Stark",
+      "AllPlaintiffsUpperWithTypes": "BRUCE WAYNE, Individual; CLARK KENT, Individual; LOIS LANE, Guardian",
+      "AllDefendantsUpperWithTypes": "STEVE ROGERS, LLC; TONY STARK, LLC",
+      "HeadOfHousehold": "Clark Kent",
+      "TargetDefendant": "Steve Rogers",
+      "AgencyParagraph": "Los Angeles Health Department, Los Angeles Housing Department, Department of Building and Safety, Division Code Enforcement (County of North Carolina), Department of Health Services or Department of Environmental Health, City of Los Angeles Police Department, City of Los Angeles Fire Department, and lastly, the North Carolina County Sheriffs.",
+      "Street Address": "1331 Yorkshire Place NW, Los Angeles, North Carolina 28027",
+      "SROGsGeneral": true,
+      "IsOwner": true,
+      "HasVermin": true,
+      "HasInsects": true,
+      "HasAnts": true,
+      "TotalSets": 10,
+      "SetLabel": "Set 1 of 10",
+      "SetNoWrite": "ONE",
+      "SetStart": 1,
+      "SetEnd": 117,
+      "InterrogatoryCount": 117,
+      "CumulativeInterrogatoryEnd": 117
+    },
+    {
+      "SetNumber": 2,
+      "InterrogatoryStart": 118,
+      "Case": {
+        "FilingCity": "Los Angeles",
+        "FilingCounty": "North Carolina",
+        "FullAddress": "1331 Yorkshire Place NW Unit 1, Los Angeles, North Carolina 28027",
+        "StreetAddress": "1331 Yorkshire Place NW Unit 1, Los Angeles, North Carolina 28027"
+      },
+      "Plaintiffs": [
+        {
+          "name": "Bruce Wayne",
+          "type": "Individual",
+          "Age": "Adult"
+        },
+        {
+          "name": "Clark Kent",
+          "type": "Individual",
+          "Age": "Adult"
+        },
+        {
+          "name": "Lois Lane",
+          "type": "Guardian",
+          "Age": "Adult"
+        }
+      ],
+      "Defendants": [
+        {
+          "name": "Steve Rogers",
+          "type": "LLC",
+          "Owner/Manager": "Owner"
+        },
+        {
+          "name": "Tony Stark",
+          "type": "LLC",
+          "Owner/Manager": "Manager"
+        }
+      ],
+      "AllPlaintiffs": "Bruce Wayne, Clark Kent, Lois Lane",
+      "AllDefendants": "Steve Rogers, Tony Stark",
+      "AllPlaintiffsUpperWithTypes": "BRUCE WAYNE, Individual; CLARK KENT, Individual; LOIS LANE, Guardian",
+      "AllDefendantsUpperWithTypes": "STEVE ROGERS, LLC; TONY STARK, LLC",
+      "HeadOfHousehold": "Clark Kent",
+      "TargetDefendant": "Steve Rogers",
+      "AgencyParagraph": "Los Angeles Health Department, Los Angeles Housing Department, Department of Building and Safety, Division Code Enforcement (County of North Carolina), Department of Health Services or Department of Environmental Health, City of Los Angeles Police Department, City of Los Angeles Fire Department, and lastly, the North Carolina County Sheriffs.",
+      "Street Address": "1331 Yorkshire Place NW, Los Angeles, North Carolina 28027",
+      "HasRoaches": true,
+      "HasFlies": true,
+      "HasBedbugs": true,
+      "HasBees": true,
+      "HasWasps": true,
+      "HasHornets": true,
+      "HasSpiders": true,
+      "HasTermites": true,
+      "HasMosquitos": true,
+      "TotalSets": 10,
+      "SetLabel": "Set 2 of 10",
+      "SetNoWrite": "TWO",
+      "SetStart": 118,
+      "SetEnd": 234,
+      "InterrogatoryCount": 117,
+      "CumulativeInterrogatoryEnd": 234
+    },
+    {
+      "SetNumber": 3,
+      "InterrogatoryStart": 235,
+      "Case": {
+        "FilingCity": "Los Angeles",
+        "FilingCounty": "North Carolina",
+        "FullAddress": "1331 Yorkshire Place NW Unit 1, Los Angeles, North Carolina 28027",
+        "StreetAddress": "1331 Yorkshire Place NW Unit 1, Los Angeles, North Carolina 28027"
+      },
+      "Plaintiffs": [
+        {
+          "name": "Bruce Wayne",
+          "type": "Individual",
+          "Age": "Adult"
+        },
+        {
+          "name": "Clark Kent",
+          "type": "Individual",
+          "Age": "Adult"
+        },
+        {
+          "name": "Lois Lane",
+          "type": "Guardian",
+          "Age": "Adult"
+        }
+      ],
+      "Defendants": [
+        {
+          "name": "Steve Rogers",
+          "type": "LLC",
+          "Owner/Manager": "Owner"
+        },
+        {
+          "name": "Tony Stark",
+          "type": "LLC",
+          "Owner/Manager": "Manager"
+        }
+      ],
+      "AllPlaintiffs": "Bruce Wayne, Clark Kent, Lois Lane",
+      "AllDefendants": "Steve Rogers, Tony Stark",
+      "AllPlaintiffsUpperWithTypes": "BRUCE WAYNE, Individual; CLARK KENT, Individual; LOIS LANE, Guardian",
+      "AllDefendantsUpperWithTypes": "STEVE ROGERS, LLC; TONY STARK, LLC",
+      "HeadOfHousehold": "Clark Kent",
+      "TargetDefendant": "Steve Rogers",
+      "AgencyParagraph": "Los Angeles Health Department, Los Angeles Housing Department, Department of Building and Safety, Division Code Enforcement (County of North Carolina), Department of Health Services or Department of Environmental Health, City of Los Angeles Police Department, City of Los Angeles Fire Department, and lastly, the North Carolina County Sheriffs.",
+      "Street Address": "1331 Yorkshire Place NW, Los Angeles, North Carolina 28027",
+      "HasHeater": true,
+      "HasAC": true,
+      "HasOutlets": true,
+      "HasPanel": true,
+      "HasWallSwitches": true,
+      "HasExteriorLighting": true,
+      "HasInteriorLighting": true,
+      "HasLightFixtures": true,
+      "HasFans": true,
+      "HasSmokeAlarms": true,
+      "HasFireExtinguisher": true,
+      "HasNoncompliantElectricity": true,
+      "HasCarbonmonoxideDetectors": true,
+      "HasGovContact": true,
+      "HasStove": true,
+      "HasDishwasher": true,
+      "HasWasherDryer": true,
+      "TotalSets": 10,
+      "SetLabel": "Set 3 of 10",
+      "SetNoWrite": "THREE",
+      "SetStart": 235,
+      "SetEnd": 350,
+      "InterrogatoryCount": 116,
+      "CumulativeInterrogatoryEnd": 350
+    },
+    {
+      "SetNumber": 4,
+      "InterrogatoryStart": 351,
+      "Case": {
+        "FilingCity": "Los Angeles",
+        "FilingCounty": "North Carolina",
+        "FullAddress": "1331 Yorkshire Place NW Unit 1, Los Angeles, North Carolina 28027",
+        "StreetAddress": "1331 Yorkshire Place NW Unit 1, Los Angeles, North Carolina 28027"
+      },
+      "Plaintiffs": [
+        {
+          "name": "Bruce Wayne",
+          "type": "Individual",
+          "Age": "Adult"
+        },
+        {
+          "name": "Clark Kent",
+          "type": "Individual",
+          "Age": "Adult"
+        },
+        {
+          "name": "Lois Lane",
+          "type": "Guardian",
+          "Age": "Adult"
+        }
+      ],
+      "Defendants": [
+        {
+          "name": "Steve Rogers",
+          "type": "LLC",
+          "Owner/Manager": "Owner"
+        },
+        {
+          "name": "Tony Stark",
+          "type": "LLC",
+          "Owner/Manager": "Manager"
+        }
+      ],
+      "AllPlaintiffs": "Bruce Wayne, Clark Kent, Lois Lane",
+      "AllDefendants": "Steve Rogers, Tony Stark",
+      "AllPlaintiffsUpperWithTypes": "BRUCE WAYNE, Individual; CLARK KENT, Individual; LOIS LANE, Guardian",
+      "AllDefendantsUpperWithTypes": "STEVE ROGERS, LLC; TONY STARK, LLC",
+      "HeadOfHousehold": "Clark Kent",
+      "TargetDefendant": "Steve Rogers",
+      "AgencyParagraph": "Los Angeles Health Department, Los Angeles Housing Department, Department of Building and Safety, Division Code Enforcement (County of North Carolina), Department of Health Services or Department of Environmental Health, City of Los Angeles Police Department, City of Los Angeles Fire Department, and lastly, the North Carolina County Sheriffs.",
+      "Street Address": "1331 Yorkshire Place NW, Los Angeles, North Carolina 28027",
+      "HasOven": true,
+      "HasMicrowave": true,
+      "HasGarbageDisposal": true,
+      "HasRefrigerator": true,
+      "HasToilet": true,
+      "HasInsufficientWaterPressure": true,
+      "HasNoHotWater": true,
+      "HasSewageComingOut": true,
+      "HasCabinets": true,
+      "HasCabinetsBroken": true,
+      "HasCabinetHinges": true,
+      "HasCabinetAlignment": true,
+      "HasUnevenFlooring": true,
+      "HasCarpet": true,
+      "HasTiles": true,
+      "HasNailsStickingOut": true,
+      "HasBrokenWindows": true,
+      "TotalSets": 10,
+      "SetLabel": "Set 4 of 10",
+      "SetNoWrite": "FOUR",
+      "SetStart": 351,
+      "SetEnd": 469,
+      "InterrogatoryCount": 119,
+      "CumulativeInterrogatoryEnd": 469
+    },
+    {
+      "SetNumber": 5,
+      "InterrogatoryStart": 470,
+      "Case": {
+        "FilingCity": "Los Angeles",
+        "FilingCounty": "North Carolina",
+        "FullAddress": "1331 Yorkshire Place NW Unit 1, Los Angeles, North Carolina 28027",
+        "StreetAddress": "1331 Yorkshire Place NW Unit 1, Los Angeles, North Carolina 28027"
+      },
+      "Plaintiffs": [
+        {
+          "name": "Bruce Wayne",
+          "type": "Individual",
+          "Age": "Adult"
+        },
+        {
+          "name": "Clark Kent",
+          "type": "Individual",
+          "Age": "Adult"
+        },
+        {
+          "name": "Lois Lane",
+          "type": "Guardian",
+          "Age": "Adult"
+        }
+      ],
+      "Defendants": [
+        {
+          "name": "Steve Rogers",
+          "type": "LLC",
+          "Owner/Manager": "Owner"
+        },
+        {
+          "name": "Tony Stark",
+          "type": "LLC",
+          "Owner/Manager": "Manager"
+        }
+      ],
+      "AllPlaintiffs": "Bruce Wayne, Clark Kent, Lois Lane",
+      "AllDefendants": "Steve Rogers, Tony Stark",
+      "AllPlaintiffsUpperWithTypes": "BRUCE WAYNE, Individual; CLARK KENT, Individual; LOIS LANE, Guardian",
+      "AllDefendantsUpperWithTypes": "STEVE ROGERS, LLC; TONY STARK, LLC",
+      "HeadOfHousehold": "Clark Kent",
+      "TargetDefendant": "Steve Rogers",
+      "AgencyParagraph": "Los Angeles Health Department, Los Angeles Housing Department, Department of Building and Safety, Division Code Enforcement (County of North Carolina), Department of Health Services or Department of Environmental Health, City of Los Angeles Police Department, City of Los Angeles Fire Department, and lastly, the North Carolina County Sheriffs.",
+      "Street Address": "1331 Yorkshire Place NW, Los Angeles, North Carolina 28027",
+      "HasWindowScreens": true,
+      "HasWindowLeaks": true,
+      "HasWindowsDoNotLock": true,
+      "HasBrokenDoors": true,
+      "HasDoorKnobs": true,
+      "HasDoorLocks": true,
+      "HasBrokenHinges": true,
+      "HasSlidingGlassDoors": true,
+      "HasIneffectiveWaterproofing": true,
+      "HasWaterIntrusionInsects": true,
+      "HasBumpsInCeiling": true,
+      "HasHoleInCeiling": true,
+      "HasWaterStainsOnCeiling": true,
+      "HasWaterStainsOnWall": true,
+      "HasHoleInWall": true,
+      "TotalSets": 10,
+      "SetLabel": "Set 5 of 10",
+      "SetNoWrite": "FIVE",
+      "SetStart": 470,
+      "SetEnd": 584,
+      "InterrogatoryCount": 115,
+      "CumulativeInterrogatoryEnd": 584
+    },
+    {
+      "SetNumber": 6,
+      "InterrogatoryStart": 585,
+      "Case": {
+        "FilingCity": "Los Angeles",
+        "FilingCounty": "North Carolina",
+        "FullAddress": "1331 Yorkshire Place NW Unit 1, Los Angeles, North Carolina 28027",
+        "StreetAddress": "1331 Yorkshire Place NW Unit 1, Los Angeles, North Carolina 28027"
+      },
+      "Plaintiffs": [
+        {
+          "name": "Bruce Wayne",
+          "type": "Individual",
+          "Age": "Adult"
+        },
+        {
+          "name": "Clark Kent",
+          "type": "Individual",
+          "Age": "Adult"
+        },
+        {
+          "name": "Lois Lane",
+          "type": "Guardian",
+          "Age": "Adult"
+        }
+      ],
+      "Defendants": [
+        {
+          "name": "Steve Rogers",
+          "type": "LLC",
+          "Owner/Manager": "Owner"
+        },
+        {
+          "name": "Tony Stark",
+          "type": "LLC",
+          "Owner/Manager": "Manager"
+        }
+      ],
+      "AllPlaintiffs": "Bruce Wayne, Clark Kent, Lois Lane",
+      "AllDefendants": "Steve Rogers, Tony Stark",
+      "AllPlaintiffsUpperWithTypes": "BRUCE WAYNE, Individual; CLARK KENT, Individual; LOIS LANE, Guardian",
+      "AllDefendantsUpperWithTypes": "STEVE ROGERS, LLC; TONY STARK, LLC",
+      "HeadOfHousehold": "Clark Kent",
+      "TargetDefendant": "Steve Rogers",
+      "AgencyParagraph": "Los Angeles Health Department, Los Angeles Housing Department, Department of Building and Safety, Division Code Enforcement (County of North Carolina), Department of Health Services or Department of Environmental Health, City of Los Angeles Police Department, City of Los Angeles Fire Department, and lastly, the North Carolina County Sheriffs.",
+      "Street Address": "1331 Yorkshire Place NW, Los Angeles, North Carolina 28027",
+      "HasPaint": true,
+      "HasExteriorDeckPorch": true,
+      "HasWaterproofToilet": true,
+      "HasWaterproofTub": true,
+      "HasStaircase": true,
+      "HasBasementFlood": true,
+      "HasLeaksInGarage": true,
+      "HasMailboxBroken": true,
+      "HasParkingAreaIssues": true,
+      "HasDamageToCars": true,
+      "HasFlooding": true,
+      "HasEntrancesBlocked": true,
+      "HasSwimmingPool": true,
+      "HasJacuzzi": true,
+      "TotalSets": 10,
+      "SetLabel": "Set 6 of 10",
+      "SetNoWrite": "SIX",
+      "SetStart": 585,
+      "SetEnd": 696,
+      "InterrogatoryCount": 112,
+      "CumulativeInterrogatoryEnd": 696
+    },
+    {
+      "SetNumber": 7,
+      "InterrogatoryStart": 697,
+      "Case": {
+        "FilingCity": "Los Angeles",
+        "FilingCounty": "North Carolina",
+        "FullAddress": "1331 Yorkshire Place NW Unit 1, Los Angeles, North Carolina 28027",
+        "StreetAddress": "1331 Yorkshire Place NW Unit 1, Los Angeles, North Carolina 28027"
+      },
+      "Plaintiffs": [
+        {
+          "name": "Bruce Wayne",
+          "type": "Individual",
+          "Age": "Adult"
+        },
+        {
+          "name": "Clark Kent",
+          "type": "Individual",
+          "Age": "Adult"
+        },
+        {
+          "name": "Lois Lane",
+          "type": "Guardian",
+          "Age": "Adult"
+        }
+      ],
+      "Defendants": [
+        {
+          "name": "Steve Rogers",
+          "type": "LLC",
+          "Owner/Manager": "Owner"
+        },
+        {
+          "name": "Tony Stark",
+          "type": "LLC",
+          "Owner/Manager": "Manager"
+        }
+      ],
+      "AllPlaintiffs": "Bruce Wayne, Clark Kent, Lois Lane",
+      "AllDefendants": "Steve Rogers, Tony Stark",
+      "AllPlaintiffsUpperWithTypes": "BRUCE WAYNE, Individual; CLARK KENT, Individual; LOIS LANE, Guardian",
+      "AllDefendantsUpperWithTypes": "STEVE ROGERS, LLC; TONY STARK, LLC",
+      "HeadOfHousehold": "Clark Kent",
+      "TargetDefendant": "Steve Rogers",
+      "AgencyParagraph": "Los Angeles Health Department, Los Angeles Housing Department, Department of Building and Safety, Division Code Enforcement (County of North Carolina), Department of Health Services or Department of Environmental Health, City of Los Angeles Police Department, City of Los Angeles Fire Department, and lastly, the North Carolina County Sheriffs.",
+      "Street Address": "1331 Yorkshire Place NW, Los Angeles, North Carolina 28027",
+      "HasElevator": true,
+      "HasLaundryRoom": true,
+      "HasRecreationRoom": true,
+      "HasGym": true,
+      "HasBlockedAreasDoors": true,
+      "HasInadequateNumberOfTrashReceptacles": true,
+      "HasInadequateServicingAndEmptyingTrashReceptacles": true,
+      "HasDrugs": true,
+      "HasSmoking": true,
+      "HasNoisyNeighbors": true,
+      "HasGangs": true,
+      "HasMold": true,
+      "TotalSets": 10,
+      "SetLabel": "Set 7 of 10",
+      "SetNoWrite": "SEVEN",
+      "SetStart": 697,
+      "SetEnd": 803,
+      "InterrogatoryCount": 107,
+      "CumulativeInterrogatoryEnd": 803
+    },
+    {
+      "SetNumber": 8,
+      "InterrogatoryStart": 804,
+      "Case": {
+        "FilingCity": "Los Angeles",
+        "FilingCounty": "North Carolina",
+        "FullAddress": "1331 Yorkshire Place NW Unit 1, Los Angeles, North Carolina 28027",
+        "StreetAddress": "1331 Yorkshire Place NW Unit 1, Los Angeles, North Carolina 28027"
+      },
+      "Plaintiffs": [
+        {
+          "name": "Bruce Wayne",
+          "type": "Individual",
+          "Age": "Adult"
+        },
+        {
+          "name": "Clark Kent",
+          "type": "Individual",
+          "Age": "Adult"
+        },
+        {
+          "name": "Lois Lane",
+          "type": "Guardian",
+          "Age": "Adult"
+        }
+      ],
+      "Defendants": [
+        {
+          "name": "Steve Rogers",
+          "type": "LLC",
+          "Owner/Manager": "Owner"
+        },
+        {
+          "name": "Tony Stark",
+          "type": "LLC",
+          "Owner/Manager": "Manager"
+        }
+      ],
+      "AllPlaintiffs": "Bruce Wayne, Clark Kent, Lois Lane",
+      "AllDefendants": "Steve Rogers, Tony Stark",
+      "AllPlaintiffsUpperWithTypes": "BRUCE WAYNE, Individual; CLARK KENT, Individual; LOIS LANE, Guardian",
+      "AllDefendantsUpperWithTypes": "STEVE ROGERS, LLC; TONY STARK, LLC",
+      "HeadOfHousehold": "Clark Kent",
+      "TargetDefendant": "Steve Rogers",
+      "AgencyParagraph": "Los Angeles Health Department, Los Angeles Housing Department, Department of Building and Safety, Division Code Enforcement (County of North Carolina), Department of Health Services or Department of Environmental Health, City of Los Angeles Police Department, City of Los Angeles Fire Department, and lastly, the North Carolina County Sheriffs.",
+      "Street Address": "1331 Yorkshire Place NW, Los Angeles, North Carolina 28027",
+      "HasMildew": true,
+      "HasMushrooms": true,
+      "HasRawSewageOnExterior": true,
+      "HasNoxiousFumes": true,
+      "HasUnlawfulDetainer": true,
+      "HasEvictionThreat": true,
+      "HasHarrassmentByDefendants": true,
+      "HasHarrassmentMaintenanceManWorkers": true,
+      "HasHarrassmentManagerStaff": true,
+      "HasHarrassmentByOwnerAndTheirGuests": true,
+      "HasHarrassmentOtherTenants": true,
+      "HasIllegitimateNotices": true,
+      "HasRefusalToMakeTimelyRepairs": true,
+      "TotalSets": 10,
+      "SetLabel": "Set 8 of 10",
+      "SetNoWrite": "EIGHT",
+      "SetStart": 804,
+      "SetEnd": 918,
+      "InterrogatoryCount": 115,
+      "CumulativeInterrogatoryEnd": 918
+    },
+    {
+      "SetNumber": 9,
+      "InterrogatoryStart": 919,
+      "Case": {
+        "FilingCity": "Los Angeles",
+        "FilingCounty": "North Carolina",
+        "FullAddress": "1331 Yorkshire Place NW Unit 1, Los Angeles, North Carolina 28027",
+        "StreetAddress": "1331 Yorkshire Place NW Unit 1, Los Angeles, North Carolina 28027"
+      },
+      "Plaintiffs": [
+        {
+          "name": "Bruce Wayne",
+          "type": "Individual",
+          "Age": "Adult"
+        },
+        {
+          "name": "Clark Kent",
+          "type": "Individual",
+          "Age": "Adult"
+        },
+        {
+          "name": "Lois Lane",
+          "type": "Guardian",
+          "Age": "Adult"
+        }
+      ],
+      "Defendants": [
+        {
+          "name": "Steve Rogers",
+          "type": "LLC",
+          "Owner/Manager": "Owner"
+        },
+        {
+          "name": "Tony Stark",
+          "type": "LLC",
+          "Owner/Manager": "Manager"
+        }
+      ],
+      "AllPlaintiffs": "Bruce Wayne, Clark Kent, Lois Lane",
+      "AllDefendants": "Steve Rogers, Tony Stark",
+      "AllPlaintiffsUpperWithTypes": "BRUCE WAYNE, Individual; CLARK KENT, Individual; LOIS LANE, Guardian",
+      "AllDefendantsUpperWithTypes": "STEVE ROGERS, LLC; TONY STARK, LLC",
+      "HeadOfHousehold": "Clark Kent",
+      "TargetDefendant": "Steve Rogers",
+      "AgencyParagraph": "Los Angeles Health Department, Los Angeles Housing Department, Department of Building and Safety, Division Code Enforcement (County of North Carolina), Department of Health Services or Department of Environmental Health, City of Los Angeles Police Department, City of Los Angeles Fire Department, and lastly, the North Carolina County Sheriffs.",
+      "Street Address": "1331 Yorkshire Place NW, Los Angeles, North Carolina 28027",
+      "HasWrittenThreats": true,
+      "HasAggressiveInappropriateLanguage": true,
+      "HasPhysicalThreatsOrTouching": true,
+      "HasNoticesSinglingOutOneTenant": true,
+      "HasDuplicativeNotices": true,
+      "HasGasLeaks": true,
+      "HasWaterShutoffs": true,
+      "HasElectricityShutoffs": true,
+      "HasInjury": true,
+      "HasNonresponsiveLandlord": true,
+      "HasUnauthorizedEntries": true,
+      "HasStolenItems": true,
+      "HasDamagedItems": true,
+      "HasBrokenSecurityGate": true,
+      "HasInoperableLocks": true,
+      "TotalSets": 10,
+      "SetLabel": "Set 9 of 10",
+      "SetNoWrite": "NINE",
+      "SetStart": 919,
+      "SetEnd": 1031,
+      "InterrogatoryCount": 113,
+      "CumulativeInterrogatoryEnd": 1031
+    },
+    {
+      "SetNumber": 10,
+      "InterrogatoryStart": 1032,
+      "Case": {
+        "FilingCity": "Los Angeles",
+        "FilingCounty": "North Carolina",
+        "FullAddress": "1331 Yorkshire Place NW Unit 1, Los Angeles, North Carolina 28027",
+        "StreetAddress": "1331 Yorkshire Place NW Unit 1, Los Angeles, North Carolina 28027"
+      },
+      "Plaintiffs": [
+        {
+          "name": "Bruce Wayne",
+          "type": "Individual",
+          "Age": "Adult"
+        },
+        {
+          "name": "Clark Kent",
+          "type": "Individual",
+          "Age": "Adult"
+        },
+        {
+          "name": "Lois Lane",
+          "type": "Guardian",
+          "Age": "Adult"
+        }
+      ],
+      "Defendants": [
+        {
+          "name": "Steve Rogers",
+          "type": "LLC",
+          "Owner/Manager": "Owner"
+        },
+        {
+          "name": "Tony Stark",
+          "type": "LLC",
+          "Owner/Manager": "Manager"
+        }
+      ],
+      "AllPlaintiffs": "Bruce Wayne, Clark Kent, Lois Lane",
+      "AllDefendants": "Steve Rogers, Tony Stark",
+      "AllPlaintiffsUpperWithTypes": "BRUCE WAYNE, Individual; CLARK KENT, Individual; LOIS LANE, Guardian",
+      "AllDefendantsUpperWithTypes": "STEVE ROGERS, LLC; TONY STARK, LLC",
+      "HeadOfHousehold": "Clark Kent",
+      "TargetDefendant": "Steve Rogers",
+      "AgencyParagraph": "Los Angeles Health Department, Los Angeles Housing Department, Department of Building and Safety, Division Code Enforcement (County of North Carolina), Department of Health Services or Department of Environmental Health, City of Los Angeles Police Department, City of Los Angeles Fire Department, and lastly, the North Carolina County Sheriffs.",
+      "Street Address": "1331 Yorkshire Place NW, Los Angeles, North Carolina 28027",
+      "HasSecurityCameras": true,
+      "HasAgeDiscrimination": true,
+      "HasDisabilityDiscrimination": true,
+      "HasRacialDiscrimination": true,
+      "HasSecurityDeposit": true,
+      "TotalSets": 10,
+      "SetLabel": "Set 10 of 10",
+      "SetNoWrite": "TEN",
+      "SetStart": 1032,
+      "SetEnd": 1125,
+      "InterrogatoryCount": 94,
+      "CumulativeInterrogatoryEnd": 1125
+    }
+  ],
+  "SetLabels": "Set 1 of 10|Set 2 of 10|Set 3 of 10|Set 4 of 10|Set 5 of 10|Set 6 of 10|Set 7 of 10|Set 8 of 10|Set 9 of 10|Set 10 of 10"
+}

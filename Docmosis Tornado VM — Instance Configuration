@@ -1,0 +1,136 @@
+```markdown
+# Docmosis Tornado VM — Instance Configuration
+
+**Zone:** `us-central1-c`  
+**Machine Type:** `e2-medium`  
+**Status:** 🟢 **Running**  
+**Created:** `2025-10-06T06:44:20.499-07:00`  
+**Last Started:** `2025-10-18T10:57:57.760-07:00`  
+**Last Stopped:** `2025-10-17T15:36:51.088-07:00`  
+
+---
+
+## 🖥️ General Information
+
+| Property | Value |
+|-----------|--------|
+| **Name** | `docmosis-tornado-vm` |
+| **CPU Platform** | Intel Broadwell |
+| **Can IP Forward** | False |
+| **Deletion Protection** | False |
+| **Description** | *(empty)* |
+| **Self Link** | `projects/docmosis-tornado/zones/us-central1-c/instances/docmosis-tornado-vm` |
+| **ID** | `5792920152371525980` |
+| **Labels** | `goog-ops-agent-policy: v2-x86-template-1-4-0` |
+
+---
+
+## 💾 Disks
+
+**Device Name:** `docmosis-tornado-vm`  
+**Type:** Persistent (Boot)  
+**Size:** 30 GB  
+**Auto Delete:** True  
+**Architecture:** X86_64  
+
+**Licenses:**  
+- `projects/ubuntu-os-cloud/global/licenses/ubuntu-minimal-2204-lts`
+
+**Guest OS Features:**
+- VIRTIO_SCSI_MULTIQUEUE  
+- SEV_CAPABLE  
+- SEV_SNP_CAPABLE  
+- SEV_LIVE_MIGRATABLE  
+- SEV_LIVE_MIGRATABLE_V2  
+- IDPF  
+- TDX_CAPABLE  
+- UEFI_COMPATIBLE  
+- GVNIC  
+
+---
+
+## 🌐 Network Interfaces
+
+**Interface Name:** `nic0`  
+**Network:** `projects/docmosis-tornado/global/networks/default`  
+**Subnetwork:** `projects/docmosis-tornado/regions/us-central1/subnetworks/default`  
+**Network IP:** `10.128.0.3`  
+**External NAT IP:** `136.114.198.83`  
+**Network Tier:** PREMIUM  
+
+**Tags:**  
+- `http-server`  
+- `https-server`
+
+---
+
+## 🔐 Security & Shielded VM
+
+| Setting | Value |
+|----------|--------|
+| **Secure Boot** | False |
+| **vTPM** | True |
+| **Integrity Monitoring** | True |
+| **Auto Learn Policy** | True |
+
+**Shielded Configs Present:**  
+- `shieldedInstanceConfig`  
+- `shieldedVmConfig`  
+- `shieldedVmIntegrityPolicy`
+
+---
+
+## ⚙️ Scheduling
+
+| Property | Value |
+|-----------|--------|
+| **Automatic Restart** | True |
+| **Preemptible** | False |
+| **On Host Maintenance** | Migrate |
+| **Provisioning Model** | Standard |
+
+---
+
+## 🧩 Metadata
+
+| Key | Value |
+|-----|--------|
+| enable-osconfig | TRUE |
+| ssh-keys | *(contains Google SSH public keys for liptonlegalgroup@gmail.com)* |
+
+**Fingerprint:** `5L1T0bLTjK0=`
+
+---
+
+## 🔑 Service Account
+
+**Email:** `945419684329-compute@developer.gserviceaccount.com`  
+**Scopes:**
+- `https://www.googleapis.com/auth/devstorage.read_only`  
+- `https://www.googleapis.com/auth/logging.write`  
+- `https://www.googleapis.com/auth/monitoring.write`  
+- `https://www.googleapis.com/auth/service.management.readonly`  
+- `https://www.googleapis.com/auth/servicecontrol`  
+- `https://www.googleapis.com/auth/trace.append`
+
+---
+
+## 🧱 Reservation & Resource Status
+
+| Property | Value |
+|-----------|--------|
+| **Reservation Affinity** | Any Reservation |
+| **VM DNS Setting** | ZonalOnly |
+| **OS Config Metadata** | Enabled |
+
+---
+
+## 🧮 Miscellaneous
+
+| Property | Value |
+|-----------|--------|
+| **Confidential Compute** | Disabled |
+| **Display Device Enabled** | False |
+| **Satisfies PZI** | True |
+| **Start Restricted** | False |
+```

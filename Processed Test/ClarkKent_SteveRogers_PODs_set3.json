@@ -1,0 +1,78 @@
+{
+  "SetNumber": 3,
+  "InterrogatoryStart": 241,
+  "Case": {
+    "FilingCity": "Los Angeles",
+    "FilingCounty": "North Carolina",
+    "FullAddress": "1331 Yorkshire Place NW Unit 1, Los Angeles, North Carolina 28027",
+    "StreetAddress": "1331 Yorkshire Place NW Unit 1, Los Angeles, North Carolina 28027"
+  },
+  "Plaintiffs": [
+    {
+      "name": "Bruce Wayne",
+      "type": "Individual",
+      "Age": "Adult"
+    },
+    {
+      "name": "Clark Kent",
+      "type": "Individual",
+      "Age": "Adult"
+    },
+    {
+      "name": "Lois Lane",
+      "type": "Guardian",
+      "Age": "Adult"
+    }
+  ],
+  "Defendants": [
+    {
+      "name": "Steve Rogers",
+      "type": "LLC",
+      "Owner/Manager": "Owner"
+    },
+    {
+      "name": "Tony Stark",
+      "type": "LLC",
+      "Owner/Manager": "Manager"
+    }
+  ],
+  "AllPlaintiffs": "Bruce Wayne, Clark Kent, Lois Lane",
+  "AllDefendants": "Steve Rogers, Tony Stark",
+  "AllPlaintiffsUpperWithTypes": "BRUCE WAYNE, Individual; CLARK KENT, Individual; LOIS LANE, Guardian",
+  "AllDefendantsUpperWithTypes": "STEVE ROGERS, LLC; TONY STARK, LLC",
+  "HeadOfHousehold": "Clark Kent",
+  "TargetDefendant": "Steve Rogers",
+  "AgencyParagraph": "Los Angeles Health Department, Los Angeles Housing Department, Department of Building and Safety, Division Code Enforcement (County of North Carolina), Department of Health Services or Department of Environmental Health, City of Los Angeles Police Department, City of Los Angeles Fire Department, and lastly, the North Carolina County Sheriffs.",
+  "Street Address": "1331 Yorkshire Place NW, Los Angeles, North Carolina 28027",
+  "HasCabinetsBroken": true,
+  "HasCabinetHinges": true,
+  "HasCabinetAlignment": true,
+  "HasUnevenFlooring": true,
+  "HasCarpet": true,
+  "HasTiles": true,
+  "HasNailsStickingOut": true,
+  "HasBrokenWindows": true,
+  "HasWindowScreens": true,
+  "HasWindowLeaks": true,
+  "HasWindowsDoNotLock": true,
+  "HasBrokenDoors": true,
+  "HasDoorKnobs": true,
+  "HasDoorLocks": true,
+  "HasBrokenHinges": true,
+  "HasSlidingGlassDoors": true,
+  "HasIneffectiveWaterproofing": true,
+  "HasWaterIntrusionInsects": true,
+  "HasBumpsInCeiling": true,
+  "HasHoleInCeiling": true,
+  "HasWaterStainsOnCeiling": true,
+  "HasWaterStainsOnWall": true,
+  "HasHoleInWall": true,
+  "HasPaint": true,
+  "TotalSets": 6,
+  "SetLabel": "Set 3 of 6",
+  "SetNoWrite": "THREE",
+  "SetStart": 241,
+  "SetEnd": 358,
+  "InterrogatoryCount": 118,
+  "CumulativeInterrogatoryEnd": 358
+}

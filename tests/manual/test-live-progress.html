@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress Tracking Live Test</title>
+    <style>
+        body {
+            font-family: monospace;
+            padding: 20px;
+            background: #1e1e1e;
+            color: #d4d4d4;
+        }
+        .log-entry {
+            padding: 5px;
+            margin: 2px 0;
+            border-left: 3px solid #007acc;
+            padding-left: 10px;
+        }
+        .error { border-color: #f44336; color: #ff6b6b; }
+        .success { border-color: #4caf50; color: #69db7c; }
+        .info { border-color: #2196f3; color: #74c0fc; }
+        .warning { border-color: #ff9800; color: #ffd43b; }
+        #logs {
+            background: #252526;
+            padding: 15px;
+            border-radius: 5px;
+            max-height: 500px;
+            overflow-y: auto;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px 5px;
+            cursor: pointer;
+            background: #007acc;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+        button:hover {
+            background: #005a9e;
+        }
+        .stats {
+            background: #2d2d30;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🔍 Progress Tracking Live Test</h1>
+
+    <div class="stats">
+        <strong>Status:</strong> <span id="status">Idle</span><br>
+        <strong>Case ID:</strong> <span id="caseId">None</span><br>
+        <strong>Progress:</strong> <span id="progress">0%</span><br>
+        <strong>Documents:</strong> <span id="documents">0/0</span>
+    </div>
+
+    <button onclick="startTest()">🚀 Start Test (Submit Minimal Form)</button>
+    <button onclick="clearLogs()">🗑️ Clear Logs</button>
+
+    <h2>Live Logs:</h2>
+    <div id="logs"></div>
+
+    <script>
+        let pollInterval = null;
+        let caseId = null;
+
+        function log(message, type = 'info') {
+            const logsDiv = document.getElementById('logs');
+            const entry = document.createElement('div');
+            entry.className = `log-entry ${type}`;
+            entry.textContent = `[${new Date().toLocaleTimeString()}] ${message}`;
+            logsDiv.appendChild(entry);
+            logsDiv.scrollTop = logsDiv.scrollHeight;
+            console.log(message);
+        }
+
+        function updateStats(status, caseIdValue, progress, docs) {
+            document.getElementById('status').textContent = status;
+            document.getElementById('caseId').textContent = caseIdValue || 'None';
+            document.getElementById('progress').textContent = progress + '%';
+            document.getElementById('documents').textContent = docs;
+        }
+
+        function clearLogs() {
+            document.getElementById('logs').innerHTML = '';
+            log('Logs cleared', 'info');
+        }
+
+        async function checkProgress(caseId) {
+            try {
+                const response = await fetch(`/api/pipeline-status/${caseId}`);
+                const data = await response.json();
+
+                log(`📊 Status: ${data.status} | Phase: ${data.phase} | Progress: ${data.progress}%`, 'info');
+
+                if (data.documentProgress && data.documentProgress.total > 0) {
+                    const docs = data.documentProgress;
+                    log(`📄 DOCUMENT PROGRESS: ${docs.completed}/${docs.total} - ${docs.current}`, 'success');
+                    updateStats(data.status, caseId, data.progress, `${docs.completed}/${docs.total}`);
+                } else {
+                    log(`   No document progress data yet`, 'warning');
+                    updateStats(data.status, caseId, data.progress, '0/0');
+                }
+
+                // Stop polling if complete or failed
+                if (data.status === 'success' || data.status === 'failed') {
+                    log(`✅ Pipeline ${data.status}! Stopping poll.`, 'success');
+                    if (pollInterval) {
+                        clearInterval(pollInterval);
+                        pollInterval = null;
+                    }
+                }
+            } catch (error) {
+                log(`❌ Failed to check progress: ${error.message}`, 'error');
+            }
+        }
+
+        async function startTest() {
+            log('='.repeat(60), 'info');
+            log('🚀 Starting progress tracking test...', 'info');
+
+            // Create minimal form data
+            const formData = {
+                id: Date.now() + '-' + Math.random().toString(36).substr(2, 9),
+                timestamp: new Date().toISOString(),
+                submittedAt: new Date().toLocaleString(),
+
+                // Property info
+                'property-address': '123 Test St',
+                'city': 'Test City',
+                'state': 'CA',
+                'zip': '12345',
+                'filing-location': 'Test Court',
+
+                // One plaintiff
+                'plaintiff-1-first-name': 'Test',
+                'plaintiff-1-last-name': 'User',
+                'plaintiff-1-type': 'Individual',
+                'plaintiff-1-age': 'adult',
+                'plaintiff-1-head': 'yes',
+
+                // One defendant
+                'defendant-1-first-name': 'Test',
+                'defendant-1-last-name': 'Landlord',
+                'defendant-1-entity': 'Individual',
+                'defendant-1-role': 'owner'
+            };
+
+            log(`📝 Submitting minimal form (ID: ${formData.id})...`, 'info');
+            updateStats('Submitting', null, 0, '0/0');
+
+            try {
+                const response = await fetch('/api/form-entries', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(formData)
+                });
+
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}`);
+                }
+
+                const result = await response.json();
+                caseId = result.dbCaseId;
+
+                log(`✅ Form submitted successfully!`, 'success');
+                log(`   Form ID: ${result.id}`, 'info');
+                log(`   Database Case ID: ${caseId}`, 'info');
+                log('', 'info');
+                log('📊 Starting to poll for progress every 2 seconds...', 'info');
+                log('   Watch for "DOCUMENT PROGRESS" messages below:', 'warning');
+                log('', 'info');
+
+                updateStats('Polling', caseId, 0, '0/0');
+
+                // Start polling
+                if (pollInterval) {
+                    clearInterval(pollInterval);
+                }
+
+                // Poll immediately, then every 2 seconds
+                checkProgress(caseId);
+                pollInterval = setInterval(() => checkProgress(caseId), 2000);
+
+            } catch (error) {
+                log(`❌ Form submission failed: ${error.message}`, 'error');
+                updateStats('Error', null, 0, '0/0');
+            }
+        }
+
+        log('Ready to test! Click "Start Test" button above.', 'info');
+    </script>
+</body>
+</html>

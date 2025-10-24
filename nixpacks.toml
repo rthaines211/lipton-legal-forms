@@ -1,0 +1,31 @@
+# ============================================
+# Nixpacks Configuration for Railway
+# ============================================
+# Railway uses Nixpacks to automatically detect and build your application
+# This configuration helps optimize the build process for Node.js + Python hybrid app
+
+[phases.setup]
+# Install both Node.js and Python environments
+nixPkgs = ["nodejs-20_x", "python311", "postgresql"]
+
+[phases.install]
+# Install dependencies for both services
+cmds = [
+  "npm ci --only=production",  # Install Node.js dependencies
+  "pip install -r requirements.txt"  # Install Python dependencies
+]
+
+[phases.build]
+# Build production assets for Node.js service
+cmds = ["npm run build:prod"]
+
+[start]
+# This will be overridden per service in Railway dashboard
+# Node.js service: npm start
+# Python service: uvicorn api.main:app --host 0.0.0.0 --port 8000 --workers 4
+cmd = "npm start"
+
+[variables]
+# Environment variables for the build process
+NODE_ENV = "production"
+PYTHONUNBUFFERED = "1"

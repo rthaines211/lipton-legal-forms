@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Your Submission - Lipton Legal</title>
+    <!--
+        Lipton Legal - Review Submission Page
+
+        This page allows users to review their form submission before finalizing.
+        Features:
+        - Displays all entered data in a structured, easy-to-read format
+        - Edit button to return to form and make changes
+        - Finalize button to submit to server
+        - Organized by sections: Property, Plaintiffs, Defendants
+        - Issue tracking displayed per plaintiff
+        - Professional styling matching brand guidelines
+    -->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background: #F5F5F5;
+            min-height: 100vh;
+            color: #333333;
+        }
+
+        .review-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #FFFFFF;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(31, 42, 68, 0.15);
+            overflow: hidden;
+            border: 1px solid #E2E8F0;
+        }
+
+        .review-header {
+            background: linear-gradient(135deg, #1F2A44 0%, #2A3B5A 100%);
+            color: #FFFFFF;
+            padding: 30px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        .review-header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #00AEEF 0%, #F2C8D0 100%);
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo {
+            height: 60px;
+            width: auto;
+            filter: brightness(0) invert(1);
+        }
+
+        .review-header h1 {
+            margin: 0;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .review-header .subtitle {
+            margin: 5px 0 0 0;
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+
+        .review-content {
+            padding: 40px;
+        }
+
+        .info-banner {
+            background: #EFF6FF;
+            border-left: 4px solid #00AEEF;
+            padding: 15px 20px;
+            margin-bottom: 30px;
+            border-radius: 4px;
+        }
+
+        .info-banner p {
+            margin: 0;
+            color: #1E40AF;
+            font-weight: 500;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section-header {
+            background: #1F2A44;
+            color: #FFFFFF;
+            padding: 15px 20px;
+            border-radius: 8px 8px 0 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .section-content {
+            border: 1px solid #E2E8F0;
+            border-top: none;
+            border-radius: 0 0 8px 8px;
+            padding: 20px;
+            background: #FAFAFA;
+        }
+
+        .data-grid {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 15px;
+            align-items: start;
+        }
+
+        .data-label {
+            font-weight: 600;
+            color: #64748B;
+        }
+
+        .data-value {
+            color: #1F2A44;
+            font-weight: 500;
+        }
+
+        .party-card {
+            background: #FFFFFF;
+            border: 1px solid #E2E8F0;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .party-card:last-child {
+            margin-bottom: 0;
+        }
+
+        .party-header {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #1F2A44;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #00AEEF;
+        }
+
+        .issues-section {
+            margin-top: 20px;
+        }
+
+        .issues-category {
+            margin-bottom: 15px;
+        }
+
+        .category-title {
+            font-weight: 600;
+            color: #1F2A44;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .issue-list {
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+        }
+
+        .issue-list li {
+            padding: 5px 0 5px 25px;
+            position: relative;
+            color: #475569;
+        }
+
+        .issue-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 5px;
+            color: #00AEEF;
+            font-weight: bold;
+        }
+
+        .no-data {
+            color: #94A3B8;
+            font-style: italic;
+        }
+
+        .actions-bar {
+            position: sticky;
+            bottom: 0;
+            background: #FFFFFF;
+            border-top: 2px solid #E2E8F0;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            box-shadow: 0 -4px 20px rgba(31, 42, 68, 0.1);
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 28px;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-decoration: none;
+        }
+
+        .btn-back {
+            background: #FFFFFF;
+            color: #1F2A44;
+            border: 2px solid #1F2A44;
+        }
+
+        .btn-back:hover {
+            background: #1F2A44;
+            color: #FFFFFF;
+            transform: translateY(-1px);
+        }
+
+        .btn-submit {
+            background: #00AEEF;
+            color: #FFFFFF;
+            font-size: 1.1rem;
+            padding: 14px 40px;
+        }
+
+        .btn-submit:hover {
+            background: #0099D4;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 174, 239, 0.3);
+        }
+
+        .btn-submit:disabled {
+            background: #94A3B8;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .loading-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(31, 42, 68, 0.8);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .loading-overlay.active {
+            display: flex;
+        }
+
+        .loading-content {
+            background: #FFFFFF;
+            padding: 40px;
+            border-radius: 12px;
+            text-align: center;
+            max-width: 400px;
+        }
+
+        .spinner {
+            border: 4px solid #E2E8F0;
+            border-top: 4px solid #00AEEF;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .empty-section {
+            text-align: center;
+            padding: 40px;
+            color: #94A3B8;
+        }
+
+        @media (max-width: 768px) {
+            .review-content {
+                padding: 20px;
+            }
+
+            .data-grid {
+                grid-template-columns: 1fr;
+                gap: 5px;
+            }
+
+            .actions-bar {
+                flex-direction: column;
+                padding: 15px 20px;
+            }
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="review-container">
+        <div class="review-header">
+            <div class="header-content">
+                <img src="/logo.png" alt="Lipton Legal" class="logo">
+                <div>
+                    <h1>Review Your Submission</h1>
+                    <p class="subtitle">Please review your information carefully before submitting</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="review-content">
+            <div class="info-banner">
+                <p><i class="fas fa-info-circle"></i> Review all information below. Click "Edit Form" to make changes, or "Submit Form" to finalize your submission.</p>
+            </div>
+
+            <!-- Property Information Section -->
+            <div class="section">
+                <div class="section-header">
+                    <i class="fas fa-home"></i>
+                    <span>Property Information</span>
+                </div>
+                <div class="section-content">
+                    <div class="data-grid" id="property-data">
+                        <!-- Populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Plaintiffs Section -->
+            <div class="section">
+                <div class="section-header">
+                    <i class="fas fa-users"></i>
+                    <span>Plaintiff Information</span>
+                </div>
+                <div class="section-content" id="plaintiffs-data">
+                    <!-- Populated by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Defendants Section -->
+            <div class="section">
+                <div class="section-header">
+                    <i class="fas fa-user-tie"></i>
+                    <span>Defendant Information</span>
+                </div>
+                <div class="section-content" id="defendants-data">
+                    <!-- Populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Actions Bar (Sticky) -->
+    <div class="actions-bar">
+        <button type="button" class="btn btn-back" id="edit-btn">
+            <i class="fas fa-arrow-left"></i>
+            Edit Form
+        </button>
+        <button type="button" class="btn btn-submit" id="submit-btn">
+            <i class="fas fa-check-circle"></i>
+            Submit Form
+        </button>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loading-overlay">
+        <div class="loading-content">
+            <div class="spinner"></div>
+            <h3>Submitting Your Form</h3>
+            <p>Please wait while we process your submission...</p>
+        </div>
+    </div>
+
+    <script>
+        /**
+         * Review Page JavaScript
+         * Handles data display and form submission workflow
+         */
+
+        // Store form data from localStorage
+        let formData = {};
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load form data from localStorage
+            const storedData = localStorage.getItem('formData');
+
+            if (!storedData) {
+                alert('No form data found. Redirecting to form...');
+                window.location.href = '/';
+                return;
+            }
+
+            try {
+                formData = JSON.parse(storedData);
+                console.log('Loaded form data:', formData);
+
+                // Populate the review page
+                populatePropertyData();
+                populatePlaintiffData();
+                populateDefendantData();
+            } catch (error) {
+                console.error('Error parsing form data:', error);
+                alert('Error loading form data. Redirecting to form...');
+                window.location.href = '/';
+            }
+
+            // Setup event listeners
+            document.getElementById('edit-btn').addEventListener('click', editForm);
+            document.getElementById('submit-btn').addEventListener('click', submitForm);
+        });
+
+        /**
+         * Populate property information section
+         */
+        function populatePropertyData() {
+            const propertyDataEl = document.getElementById('property-data');
+            const fields = [
+                { label: 'Property Address', key: 'property-address' },
+                { label: 'Apartment/Unit', key: 'apartment-unit' },
+                { label: 'City', key: 'city' },
+                { label: 'State', key: 'state' },
+                { label: 'ZIP Code', key: 'zip-code' },
+                { label: 'Filing City', key: 'filing-city' },
+                { label: 'Filing County', key: 'filing-county' }
+            ];
+
+            fields.forEach(field => {
+                const value = formData[field.key] || '';
+
+                const labelEl = document.createElement('div');
+                labelEl.className = 'data-label';
+                labelEl.textContent = field.label + ':';
+
+                const valueEl = document.createElement('div');
+                valueEl.className = 'data-value';
+                valueEl.textContent = value || '—';
+
+                propertyDataEl.appendChild(labelEl);
+                propertyDataEl.appendChild(valueEl);
+            });
+        }
+
+        /**
+         * Format display values for better readability
+         * Handles proper capitalization and spacing
+         */
+        function formatDisplayValue(value) {
+            if (!value) return '';
+
+            // Convert to string if not already
+            value = String(value);
+
+            // Handle specific known formats
+            if (value.toLowerCase() === 'yes' || value.toLowerCase() === 'no') {
+                return value.charAt(0).toUpperCase() + value.slice(1).toLowerCase();
+            }
+
+            // Handle camelCase or hyphenated values
+            // Insert space before capital letters
+            value = value.replace(/([A-Z])/g, ' $1');
+
+            // Replace hyphens and underscores with spaces
+            value = value.replace(/[-_]/g, ' ');
+
+            // Clean up multiple spaces
+            value = value.replace(/\s+/g, ' ').trim();
+
+            // Capitalize first letter of each word
+            value = value.split(' ')
+                .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+                .join(' ');
+
+            return value;
+        }
+
+        /**
+         * Populate plaintiff information section
+         */
+        function populatePlaintiffData() {
+            const plaintiffsDataEl = document.getElementById('plaintiffs-data');
+
+            // Find all plaintiff numbers
+            const plaintiffNumbers = new Set();
+            Object.keys(formData).forEach(key => {
+                const match = key.match(/plaintiff-(\d+)-/);
+                if (match) {
+                    plaintiffNumbers.add(parseInt(match[1]));
+                }
+            });
+
+            if (plaintiffNumbers.size === 0) {
+                plaintiffsDataEl.innerHTML = '<div class="empty-section">No plaintiff information found</div>';
+                return;
+            }
+
+            // Sort plaintiff numbers
+            const sortedNumbers = Array.from(plaintiffNumbers).sort((a, b) => a - b);
+
+            sortedNumbers.forEach(num => {
+                const card = document.createElement('div');
+                card.className = 'party-card';
+
+                const header = document.createElement('div');
+                header.className = 'party-header';
+                header.innerHTML = `<i class="fas fa-user"></i> Plaintiff ${num}`;
+                card.appendChild(header);
+
+                // Basic info
+                const infoGrid = document.createElement('div');
+                infoGrid.className = 'data-grid';
+
+                // Get head of household value to determine conditional display
+                const isHeadOfHousehold = formData[`plaintiff-${num}-head`] === 'Yes';
+
+                const basicFields = [
+                    { label: 'First Name', key: `plaintiff-${num}-first-name` },
+                    { label: 'Last Name', key: `plaintiff-${num}-last-name` },
+                    { label: 'Type', key: `plaintiff-${num}-type` },
+                    { label: 'Age Category', key: `plaintiff-${num}-age` },
+                    { label: 'Head of Household', key: `plaintiff-${num}-head` }
+                ];
+
+                // Add Unit Number conditionally
+                if (isHeadOfHousehold) {
+                    basicFields.push({ label: 'Unit Number', key: `plaintiff-${num}-unit` });
+                }
+
+                basicFields.forEach(field => {
+                    let value = formData[field.key] || '';
+
+                    // Format the value for better display
+                    if (value) {
+                        // Capitalize first letter of each word for better readability
+                        value = formatDisplayValue(value);
+                    }
+
+                    const labelEl = document.createElement('div');
+                    labelEl.className = 'data-label';
+                    labelEl.textContent = field.label + ':';
+
+                    const valueEl = document.createElement('div');
+                    valueEl.className = 'data-value';
+                    valueEl.textContent = value || '—';
+
+                    infoGrid.appendChild(labelEl);
+                    infoGrid.appendChild(valueEl);
+                });
+
+                card.appendChild(infoGrid);
+
+                // Issues section
+                const issues = extractPlaintiffIssues(num);
+                if (Object.keys(issues).length > 0) {
+                    const issuesSection = document.createElement('div');
+                    issuesSection.className = 'issues-section';
+
+                    const issuesTitle = document.createElement('div');
+                    issuesTitle.className = 'category-title';
+                    issuesTitle.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Reported Issues';
+                    issuesSection.appendChild(issuesTitle);
+
+                    Object.entries(issues).forEach(([category, items]) => {
+                        if (items.length > 0) {
+                            const categoryDiv = document.createElement('div');
+                            categoryDiv.className = 'issues-category';
+
+                            const categoryTitle = document.createElement('div');
+                            categoryTitle.className = 'category-title';
+                            categoryTitle.style.fontSize = '0.95rem';
+                            categoryTitle.textContent = category;
+                            categoryDiv.appendChild(categoryTitle);
+
+                            const itemsList = document.createElement('ul');
+                            itemsList.className = 'issue-list';
+                            items.forEach(item => {
+                                const li = document.createElement('li');
+                                li.textContent = item;
+                                itemsList.appendChild(li);
+                            });
+                            categoryDiv.appendChild(itemsList);
+
+                            issuesSection.appendChild(categoryDiv);
+                        }
+                    });
+
+                    card.appendChild(issuesSection);
+                } else {
+                    const noIssues = document.createElement('div');
+                    noIssues.className = 'no-data';
+                    noIssues.style.marginTop = '15px';
+                    noIssues.textContent = 'No issues reported';
+                    card.appendChild(noIssues);
+                }
+
+                plaintiffsDataEl.appendChild(card);
+            });
+        }
+
+        /**
+         * Extract issues for a specific plaintiff
+         */
+        function extractPlaintiffIssues(plaintiffNum) {
+            const issues = {};
+
+            const issueCategories = {
+                'Vermin': 'vermin',
+                'Insects': 'insect',
+                'HVAC': 'hvac',
+                'Electrical': 'electrical',
+                'Fire Hazard': 'fire-hazard',
+                'Government Entities Contacted': 'government',
+                'Appliances': 'appliances',
+                'Plumbing': 'plumbing',
+                'Cabinets': 'cabinets',
+                'Flooring': 'flooring',
+                'Windows': 'windows',
+                'Doors': 'doors',
+                'Structure': 'structure',
+                'Common Areas': 'common-areas',
+                'Trash Problems': 'trash-problems',
+                'Nuisance': 'nuisance',
+                'Health Hazard': 'health-hazard',
+                'Harassment': 'harassment',
+                'Notices': 'notices-issues',
+                'Utility Issues': 'utility-issues',
+                'Safety Issues': 'safety-issues',
+                'Injury Issues': 'injury-issues',
+                'Nonresponsive Landlord Issues': 'nonresponsive-landlord',
+                'Unauthorized Entries': 'unauthorized-entry',
+                'Stolen Items': 'stolen-items',
+                'Disability Discrimination': 'disability-discrimination',
+                'Damaged Items': 'damaged-items',
+                'Age Discrimination': 'age-discrimination',
+                'Racial Discrimination': 'racial-discrimination',
+                'Security Deposit Issues': 'security-deposit-issues'
+            };
+
+            Object.entries(issueCategories).forEach(([categoryName, prefix]) => {
+                const categoryIssues = [];
+
+                Object.keys(formData).forEach(key => {
+                    // Match pattern: prefix-Item-plaintiffNum
+                    const pattern = new RegExp(`^${prefix}-(.+)-${plaintiffNum}$`);
+                    const match = key.match(pattern);
+
+                    if (match && formData[key] === 'on') {
+                        // Format the item name (convert from camelCase/kebab-case to readable text)
+                        let itemName = match[1];
+
+                        // First, insert spaces before capital letters
+                        itemName = itemName.replace(/([A-Z])/g, ' $1');
+
+                        // Replace hyphens with spaces
+                        itemName = itemName.replace(/-/g, ' ');
+
+                        // Clean up extra spaces and trim
+                        itemName = itemName.replace(/\s+/g, ' ').trim();
+
+                        // Capitalize first letter of each word
+                        itemName = itemName.split(' ')
+                            .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+                            .join(' ');
+
+                        categoryIssues.push(itemName);
+                    }
+                });
+
+                if (categoryIssues.length > 0) {
+                    issues[categoryName] = categoryIssues;
+                }
+            });
+
+            return issues;
+        }
+
+        /**
+         * Populate defendant information section
+         */
+        function populateDefendantData() {
+            const defendantsDataEl = document.getElementById('defendants-data');
+
+            // Find all defendant numbers
+            const defendantNumbers = new Set();
+            Object.keys(formData).forEach(key => {
+                const match = key.match(/defendant-(\d+)-/);
+                if (match) {
+                    defendantNumbers.add(parseInt(match[1]));
+                }
+            });
+
+            if (defendantNumbers.size === 0) {
+                defendantsDataEl.innerHTML = '<div class="empty-section">No defendant information found</div>';
+                return;
+            }
+
+            // Sort defendant numbers
+            const sortedNumbers = Array.from(defendantNumbers).sort((a, b) => a - b);
+
+            sortedNumbers.forEach(num => {
+                const card = document.createElement('div');
+                card.className = 'party-card';
+
+                const header = document.createElement('div');
+                header.className = 'party-header';
+                header.innerHTML = `<i class="fas fa-user-tie"></i> Defendant ${num}`;
+                card.appendChild(header);
+
+                const infoGrid = document.createElement('div');
+                infoGrid.className = 'data-grid';
+
+                const basicFields = [
+                    { label: 'First Name', key: `defendant-${num}-first-name` },
+                    { label: 'Last Name', key: `defendant-${num}-last-name` },
+                    { label: 'Entity Type', key: `defendant-${num}-entity` },
+                    { label: 'Role', key: `defendant-${num}-role` }
+                ];
+
+                basicFields.forEach(field => {
+                    const value = formData[field.key] || '';
+
+                    const labelEl = document.createElement('div');
+                    labelEl.className = 'data-label';
+                    labelEl.textContent = field.label + ':';
+
+                    const valueEl = document.createElement('div');
+                    valueEl.className = 'data-value';
+                    valueEl.textContent = value || '—';
+
+                    infoGrid.appendChild(labelEl);
+                    infoGrid.appendChild(valueEl);
+                });
+
+                card.appendChild(infoGrid);
+                defendantsDataEl.appendChild(card);
+            });
+        }
+
+        /**
+         * Return to form for editing
+         * Preserves form data in localStorage so it can be restored
+         */
+        function editForm() {
+            // Data is already in localStorage, just redirect back
+            window.location.href = '/?edit=true';
+        }
+
+        /**
+         * Submit form data to server
+         */
+        async function submitForm() {
+            const submitBtn = document.getElementById('submit-btn');
+            const loadingOverlay = document.getElementById('loading-overlay');
+
+            // Disable button and show loading
+            submitBtn.disabled = true;
+            loadingOverlay.classList.add('active');
+
+            try {
+                const response = await fetch('/api/form-entries', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                const result = await response.json();
+
+                if (response.ok && result.success) {
+                    // Store submission details for success page
+                    localStorage.setItem('lastEntryId', result.id);
+                    localStorage.setItem('lastSubmissionTime', result.timestamp);
+
+                    // Clear form data
+                    localStorage.removeItem('formData');
+
+                    // Redirect to success page
+                    window.location.href = `/success?id=${result.id}&timestamp=${encodeURIComponent(result.timestamp)}`;
+                } else {
+                    throw new Error(result.error || 'Failed to submit form');
+                }
+            } catch (error) {
+                console.error('Error submitting form:', error);
+                loadingOverlay.classList.remove('active');
+                submitBtn.disabled = false;
+
+                alert(`Error submitting form: ${error.message}\n\nPlease try again or contact support if the problem persists.`);
+            }
+        }
+    </script>
+</body>
+</html>

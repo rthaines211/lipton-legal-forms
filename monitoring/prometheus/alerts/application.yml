@@ -1,0 +1,210 @@
+# Prometheus Alert Rules for Legal Form Application
+#
+# These rules define alerts for critical application issues.
+# Alerts fire when conditions are met for the specified duration.
+#
+# Alert Severity Levels:
+# - critical: Requires immediate attention (paging)
+# - warning: Requires attention but not immediately urgent
+# - info: Informational, no action required
+
+groups:
+  # Application Performance Alerts
+  - name: application_performance
+    interval: 30s
+    rules:
+      # High Error Rate Alert
+      # Fires when 5xx error rate exceeds 5% for 5 minutes
+      - alert: HighErrorRate
+        expr: |
+          sum(rate(http_requests_total{status_code=~"5.."}[5m])) by (instance)
+          / sum(rate(http_requests_total[5m])) by (instance) > 0.05
+        for: 5m
+        labels:
+          severity: critical
+          component: application
+        annotations:
+          summary: "High error rate on {{ $labels.instance }}"
+          description: "Error rate is {{ $value | humanizePercentage }} (threshold: 5%)"
+          runbook: "Check application logs and /health/detailed endpoint"
+
+      # Slow Response Time Alert
+      # Fires when p95 latency exceeds 1 second for 10 minutes
+      - alert: SlowResponseTime
+        expr: |
+          histogram_quantile(0.95,
+            sum(rate(http_request_duration_seconds_bucket[5m])) by (instance, le)
+          ) > 1
+        for: 10m
+        labels:
+          severity: warning
+          component: application
+        annotations:
+          summary: "Slow response time on {{ $labels.instance }}"
+          description: "P95 latency is {{ $value | humanizeDuration }} (threshold: 1s)"
+          runbook: "Check database performance and resource usage"
+
+      # Very Slow Response Time Alert (Critical)
+      - alert: VerySlowResponseTime
+        expr: |
+          histogram_quantile(0.95,
+            sum(rate(http_request_duration_seconds_bucket[5m])) by (instance, le)
+          ) > 5
+        for: 5m
+        labels:
+          severity: critical
+          component: application
+        annotations:
+          summary: "Very slow response time on {{ $labels.instance }}"
+          description: "P95 latency is {{ $value | humanizeDuration }} (threshold: 5s)"
+          runbook: "Immediate investigation required - check database and external services"
+
+  # Database Alerts
+  - name: database
+    interval: 30s
+    rules:
+      # Database Connection Pool Exhausted
+      # Fires when waiting queries > 0 for 2 minutes
+      - alert: DatabaseConnectionPoolExhausted
+        expr: database_pool_connections_waiting > 0
+        for: 2m
+        labels:
+          severity: critical
+          component: database
+        annotations:
+          summary: "Database connection pool exhausted"
+          description: "{{ $value }} queries waiting for database connections"
+          runbook: "Check database performance, increase pool size, or add read replicas"
+
+      # Database Slow Query
+      # Fires when p95 database query time > 100ms
+      - alert: DatabaseSlowQuery
+        expr: |
+          histogram_quantile(0.95,
+            sum(rate(database_query_duration_seconds_bucket[5m])) by (instance, le)
+          ) > 0.1
+        for: 5m
+        labels:
+          severity: warning
+          component: database
+        annotations:
+          summary: "Slow database queries detected"
+          description: "P95 query time is {{ $value | humanizeDuration }} (threshold: 100ms)"
+          runbook: "Review slow queries, check indexes, analyze query plans"
+
+      # High Database Error Rate
+      - alert: HighDatabaseErrorRate
+        expr: |
+          sum(rate(database_queries_total{status="error"}[5m])) by (instance)
+          / sum(rate(database_queries_total[5m])) by (instance) > 0.01
+        for: 5m
+        labels:
+          severity: critical
+          component: database
+        annotations:
+          summary: "High database error rate"
+          description: "Database error rate is {{ $value | humanizePercentage }}"
+          runbook: "Check database logs and connection status"
+
+  # Business Logic Alerts
+  - name: business_metrics
+    interval: 1m
+    rules:
+      # High Form Submission Failure Rate
+      - alert: HighFormSubmissionFailureRate
+        expr: |
+          sum(rate(form_submissions_total{status="error"}[10m])) by (instance)
+          / sum(rate(form_submissions_total[10m])) by (instance) > 0.1
+        for: 10m
+        labels:
+          severity: warning
+          component: business
+        annotations:
+          summary: "High form submission failure rate"
+          description: "{{ $value | humanizePercentage }} of form submissions are failing"
+          runbook: "Check application logs and database connectivity"
+
+      # Pipeline Failure Rate High
+      - alert: PipelineFailureRateHigh
+        expr: |
+          sum(rate(pipeline_executions_total{status="error"}[10m])) by (instance)
+          / sum(rate(pipeline_executions_total[10m])) by (instance) > 0.2
+        for: 10m
+        labels:
+          severity: warning
+          component: pipeline
+        annotations:
+          summary: "High pipeline failure rate"
+          description: "{{ $value | humanizePercentage }} of pipeline executions are failing"
+          runbook: "Check Python API logs and connectivity"
+
+      # No Form Submissions (Possible System Issue)
+      - alert: NoFormSubmissions
+        expr: |
+          sum(increase(form_submissions_total[1h])) by (instance) == 0
+        for: 2h
+        labels:
+          severity: info
+          component: business
+        annotations:
+          summary: "No form submissions in the last 2 hours"
+          description: "Zero form submissions detected - possible system issue or low traffic"
+          runbook: "Check if application is accessible and frontend is working"
+
+  # System Resource Alerts
+  - name: system_resources
+    interval: 30s
+    rules:
+      # High Memory Usage
+      - alert: HighMemoryUsage
+        expr: |
+          nodejs_process_resident_memory_bytes / (1024 * 1024 * 1024) > 1
+        for: 10m
+        labels:
+          severity: warning
+          component: system
+        annotations:
+          summary: "High memory usage detected"
+          description: "Memory usage is {{ $value | humanize }}GB (threshold: 1GB)"
+          runbook: "Check for memory leaks, restart application if necessary"
+
+      # High Event Loop Lag
+      - alert: HighEventLoopLag
+        expr: nodejs_nodejs_eventloop_lag_seconds > 0.1
+        for: 5m
+        labels:
+          severity: warning
+          component: system
+        annotations:
+          summary: "High event loop lag detected"
+          description: "Event loop lag is {{ $value | humanizeDuration }} (threshold: 100ms)"
+          runbook: "Check for blocking operations, CPU usage, and long-running tasks"
+
+  # Availability Alerts
+  - name: availability
+    interval: 1m
+    rules:
+      # Application Down
+      # Fires when Prometheus can't scrape metrics
+      - alert: ApplicationDown
+        expr: up{job="legal-form-app"} == 0
+        for: 2m
+        labels:
+          severity: critical
+          component: availability
+        annotations:
+          summary: "Application {{ $labels.instance }} is down"
+          description: "Prometheus cannot scrape metrics from the application"
+          runbook: "Check if application is running, check network connectivity"
+
+      # Scrape Duration High
+      - alert: ScrapeDurationHigh
+        expr: scrape_duration_seconds > 5
+        for: 5m
+        labels:
+          severity: warning
+          component: monitoring
+        annotations:
+          summary: "High scrape duration for {{ $labels.job }}"
+          description: "Scraping takes {{ $value | humanizeDuration }} (threshold: 5s)"
+          runbook: "Check application performance and metrics endpoint"

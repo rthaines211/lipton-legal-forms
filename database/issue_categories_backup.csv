@@ -1,0 +1,23 @@
+id,category_code,category_name,display_order,is_multi_select,created_at,is_active
+b15c6b49-e5fc-4b1e-819a-9352e42852e8,vermin,Vermin,1,t,2025-10-07 20:15:54.753485-04,t
+6dca4650-7f72-4477-af05-1cba30213079,insects,Insects,2,t,2025-10-07 20:15:54.753485-04,t
+be3b88cd-ffa8-4e34-b8df-a979b1e15883,hvac,HVAC,3,t,2025-10-07 20:22:12.179663-04,t
+039e99ab-f080-4580-b90a-d7398bfb766e,electrical,Electrical,4,t,2025-10-07 20:22:12.179663-04,t
+001dfaea-3764-4a40-b1cb-896f7ee4e49b,fire_hazard,Fire Hazard,5,t,2025-10-07 20:22:12.179663-04,t
+50777d72-e4db-412f-b039-a22385fd8c28,appliances,Appliances,6,t,2025-10-07 20:22:12.179663-04,t
+bb9a3b6f-3c62-47b0-93f3-15d554741cca,plumbing,Plumbing,7,t,2025-10-07 20:22:12.179663-04,t
+2bb54c20-e1e9-4c8d-9272-316864a843b3,cabinets,Cabinets,8,t,2025-10-07 20:22:12.179663-04,t
+5431c348-fe06-40e3-8a0c-692e6da332fb,flooring,Flooring,9,t,2025-10-07 20:22:12.179663-04,t
+ba357de4-f21b-4118-a9b3-2a5dfce7b435,windows,Windows,10,t,2025-10-07 20:22:12.179663-04,t
+f2d7a2d0-7e13-45a1-8ec4-e017d234964c,doors,Doors,11,t,2025-10-07 20:22:12.179663-04,t
+04f8e4a9-bb0f-43d5-be81-048449955dd5,structure,Structure,12,t,2025-10-07 20:22:12.179663-04,t
+8fae70dd-e8df-4665-9cf6-dffe9b4488ce,common_areas,Common Areas,13,t,2025-10-07 20:22:12.179663-04,t
+3f2bf070-bc95-4ccf-82f2-0ac681314bc2,trash_problems,Trash Problems,14,t,2025-10-07 20:22:12.179663-04,t
+7feb6c58-829d-488d-8ef2-ef08582e80f0,nuisance,Nuisance,15,t,2025-10-07 20:22:12.179663-04,t
+ce13763e-94eb-448b-a52b-ea94830bf623,health_hazard,Health Hazard,16,t,2025-10-07 20:22:12.179663-04,t
+1ea2cbd7-ddb4-45af-889e-f4c1b0d9e5e9,safety,Safety,17,t,2025-10-07 20:15:54.753485-04,t
+1489fa11-d059-4669-b71a-04ae109cbac0,harassment,Harassment,18,t,2025-10-07 20:33:30.504609-04,t
+c7bed7f9-4cf1-4c47-9a9a-bd7e3a0779b0,notices,Notices,19,t,2025-10-07 20:22:12.179663-04,t
+b892fb73-f511-4a6f-9049-61d546b5e3b7,utilities,Utilities,20,t,2025-10-07 20:33:30.558872-04,t
+06304cd2-0f86-42d1-b0ce-5e846bf02605,discrimination,Discrimination,21,t,2025-10-07 20:33:30.609084-04,t
+53d27521-8447-4ec5-aa5f-d36a30f34082,government_entities,Government Entities,22,t,2025-10-07 20:22:12.179663-04,t

@@ -1,0 +1,51 @@
+## 🧩 Feature: Save Generated Documents to Dropbox (Preserve Folder Structure)
+
+### Current Behavior
+When the web app generates documents, they are saved **locally** on the server using a defined folder hierarchy.
+
+Example:
+
+    /output/
+     ├── Clients/
+     │    ├── SmithCase/
+     │    │    ├── SROGs/
+     │    │    ├── PODs/
+     │    │    └── Admissions/
+     │    └── DoeCase/
+     └── Templates/
+
+All generated files currently remain on the local file system (for example: `/output/...`).
+
+---
+
+### Desired Behavior
+- Instead of saving locally, the generated documents should be **uploaded to Dropbox**.  
+- The **parent folder** (top-level directory under Dropbox) will **always remain the same** (e.g., `/Apps/MyWebApp/` or `/Clients/`).  
+- The **sub-folder structure** should **mirror exactly** what the app currently generates locally.
+
+Example:
+
+If a document is generated at:  
+`/output/Clients/SmithCase/SROGs/Set1.docx`
+
+…it should appear in Dropbox as:  
+`/Apps/MyWebApp/Clients/SmithCase/SROGs/Set1.docx`
+
+---
+
+### Technical Notes
+- Use the **Dropbox API (Scoped App)** for file uploads.  
+- Keep the existing logic that builds folder paths — only change the **destination** from local disk to Dropbox.  
+- The parent Dropbox folder path should be configurable via an environment variable (e.g., `DROPBOX_BASE_PATH`).  
+- Automatically create any missing sub-folders in Dropbox before uploading.  
+- Overwrite existing files if they already exist.  
+- The implementation must work both **locally** and **in a cloud-deployed environment** (no reliance on persistent local storage).  
+
+---
+
+### Acceptance Criteria
+- [ ] Documents upload to the correct Dropbox folder, preserving sub-folder structure.  
+- [ ] Local generation paths remain unchanged (for backward compatibility).  
+- [ ] Dropbox path uses the same relative structure under the configured base folder.  
+- [ ] Code is **cloud-ready** (stateless, configurable via environment variables).  
+- [ ] Logging includes both **local** and **Dropbox** paths for traceability.

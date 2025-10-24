@@ -1,0 +1,69 @@
+{
+  "Form": {
+    "Id": "1",
+    "InternalName": "AutoPopulationForm",
+    "Name": "Auto-Population Form"
+  },
+  "PlaintiffDetails": [
+    {
+      "Id": "v29SdA",
+      "PlaintiffItemNumberName": {
+        "First": "Alice",
+        "FirstAndLast": "Alice Wonder",
+        "Last": "Wonder",
+        "Middle": null,
+        "MiddleInitial": null,
+        "Prefix": null,
+        "Suffix": null
+      },
+      "PlaintiffItemNumberType": "Individual",
+      "PlaintiffItemNumberAgeCategory": [
+        "Adult"
+      ],
+      "HeadOfHousehold": false,
+      "ItemNumber": 1
+    }
+  ],
+  "PlaintiffDetails_Minimum": 1,
+  "DefendantDetails2": [
+    {
+      "Id": "ipLyhB",
+      "DefendantItemNumberName": {
+        "First": "Bob",
+        "FirstAndLast": "Bob Builder",
+        "Last": "Builder",
+        "Middle": null,
+        "MiddleInitial": null,
+        "Prefix": null,
+        "Suffix": null
+      },
+      "DefendantItemNumberType": "Individual",
+      "DefendantItemNumberManagerOwner": "Owner",
+      "ItemNumber": 1
+    }
+  ],
+  "DefendantDetails2_Minimum": 1,
+  "DefendantDetails2_Maximum": 10,
+  "Full_Address": {
+    "City": "Boston",
+    "CityStatePostalCode": "Boston, Massachusetts 02101",
+    "Country": "United States",
+    "CountryCode": "US",
+    "FullAddress": "456 Test Ave, Boston, Massachusetts 02101",
+    "FullInternationalAddress": "456 Test Ave, Boston, Massachusetts 02101, United States",
+    "Latitude": null,
+    "Line1": "456 Test Ave",
+    "Line2": null,
+    "Line3": null,
+    "Longitude": null,
+    "PostalCode": "02101",
+    "State": "Massachusetts",
+    "StreetAddress": "456 Test Ave",
+    "Type": "Home"
+  },
+  "Filing city": "Boston",
+  "Filing county": "Suffolk County",
+  "Notification Email Opt-In": false,
+  "Notification Email": null,
+  "serverTimestamp": "2025-10-20T20:35:59.679Z"
+}

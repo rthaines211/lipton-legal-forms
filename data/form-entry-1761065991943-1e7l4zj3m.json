@@ -1,0 +1,412 @@
+{
+  "Form": {
+    "Id": "1",
+    "InternalName": "AutoPopulationForm",
+    "Name": "Auto-Population Form"
+  },
+  "PlaintiffDetails": [
+    {
+      "Id": "5MkrK4",
+      "PlaintiffItemNumberName": {
+        "First": "Clark",
+        "FirstAndLast": "Clark Kent",
+        "Last": "Kent",
+        "Middle": null,
+        "MiddleInitial": null,
+        "Prefix": null,
+        "Suffix": null
+      },
+      "PlaintiffItemNumberType": "Individual",
+      "PlaintiffItemNumberAgeCategory": [
+        "Adult"
+      ],
+      "HeadOfHousehold": true,
+      "ItemNumber": 1,
+      "PlaintiffItemNumberDiscovery": {
+        "VerminIssue": true,
+        "Vermin": [
+          "Rats/Mice",
+          "Skunks",
+          "Bats",
+          "Raccoons",
+          "Pigeons",
+          "Opossums"
+        ],
+        "InsectIssues": true,
+        "Insects": [
+          "Ants",
+          "Roaches",
+          "Flies",
+          "Bedbugs",
+          "Wasps",
+          "Hornets",
+          "Spiders",
+          "Termites",
+          "Mosquitos",
+          "Bees"
+        ],
+        "HVACIssues": true,
+        "HVAC": [
+          "Air Conditioner",
+          "Heater",
+          "Ventilation"
+        ],
+        "Electrical": [
+          "Outlets",
+          "Panel",
+          "Wall Switches",
+          "Exterior Lighting",
+          "Interior Lighting",
+          "Light Fixtures",
+          "Fans"
+        ],
+        "ElectricalIssues": true,
+        "FireHazardIssues": true,
+        "GovernmentEntityContacted": true,
+        "AppliancesIssues": true,
+        "PlumbingIssues": true,
+        "CabinetsIssues": true,
+        "Fire Hazard": [
+          "Smoke Alarms",
+          "Fire Extinguisher",
+          "Non-compliant electricity",
+          "Non-GFI outlets near water",
+          "Carbon monoxide detectors"
+        ],
+        "Specific Government Entity Contacted": [
+          "Health Department",
+          "Housing Authority",
+          "Code Enforcement",
+          "Fire Department",
+          "Police Department",
+          "Department of Environmental Health",
+          "Department of Health Services"
+        ],
+        "Appliances": [
+          "Stove",
+          "Dishwasher",
+          "Washer/dryer",
+          "Oven",
+          "Microwave",
+          "Garbage disposal",
+          "Refrigerator"
+        ],
+        "Plumbing": [
+          "Toilet",
+          "Insufficient water pressure",
+          "Clogged bath",
+          "Shower",
+          "No hot water",
+          "Clogged sinks",
+          "Bath",
+          "No cold water",
+          "Clogged shower",
+          "Fixtures",
+          "Sewage coming out",
+          "No Clean Water Supply",
+          "Leaks",
+          "Clogged toilets",
+          "Unsanitary water"
+        ],
+        "Cabinets": [
+          "Broken",
+          "Hinges",
+          "Alignment"
+        ],
+        "FlooringIssues": true,
+        "WindowsIssues": true,
+        "DoorIssues": true,
+        "Flooring": [
+          "Uneven",
+          "Carpet",
+          "Nails sticking out",
+          "Tiles"
+        ],
+        "Windows": [
+          "Broken",
+          "Screens",
+          "Leaks",
+          "Do not lock",
+          "Missing windows",
+          "Broken or missing screens"
+        ],
+        "Doors": [
+          "Broken",
+          "Knobs",
+          "Locks",
+          "Broken hinges",
+          "Sliding glass doors",
+          "Ineffective waterproofing",
+          "Water intrusion and/or insects",
+          "Do not close properly"
+        ],
+        "StructureIssues": true,
+        "Structure": [
+          "Bumps in ceiling",
+          "Hole in ceiling",
+          "Water stains on ceiling",
+          "Water stains on wall",
+          "Hole in wall",
+          "Paint",
+          "Exterior deck/porch",
+          "Waterproof toilet",
+          "Waterproof tub",
+          "Staircase",
+          "Basement flood",
+          "Leaks in garage",
+          "Soft Spots due to Leaks",
+          "Ineffective waterproofing of the tubs or toilet",
+          "Ineffective Weatherproofing of any windows doors"
+        ],
+        "CommonAreasIssues": true,
+        "Common areas": [
+          "Mailbox broken",
+          "Parking area issues",
+          "Damage to cars",
+          "Flooding",
+          "Entrances blocked",
+          "Swimming pool",
+          "Jacuzzi",
+          "Laundry room",
+          "Recreation room",
+          "Gym",
+          "Elevator",
+          "Filth Rubbish Garbage",
+          "Vermin",
+          "Insects",
+          "Broken Gate",
+          "Blocked areas/doors"
+        ],
+        "Select Trash Problems": [
+          "Inadequate number of receptacles",
+          "Properly servicing and emptying receptacles"
+        ],
+        "NuisanceIssues": true,
+        "Nuisance": [
+          "Drugs",
+          "Smoking",
+          "Noisy neighbors",
+          "Gangs"
+        ],
+        "Health hazard": [
+          "Mold",
+          "Mildew",
+          "Mushrooms",
+          "Raw sewage on exterior",
+          "Noxious fumes",
+          "Chemical/paint contamination",
+          "Toxic water pollution",
+          "Offensive odors"
+        ],
+        "HealthHazardIssues": true,
+        "HarassmentIssues": true,
+        "Harassment": [
+          "Unlawful Detainer",
+          "Eviction threats",
+          "By defendant",
+          "By maintenance man/workers",
+          "By manager/building staff",
+          "By owner",
+          "Other tenants",
+          "Illegitimate notices",
+          "Refusal to make timely repairs",
+          "Written threats",
+          "Aggressive/inappropriate language",
+          "Physical threats or touching",
+          "Notices singling out one tenant, but not uniformly given to all tenants",
+          "Duplicative notices",
+          "Untimely Response from Landlord"
+        ],
+        "Select Notices Issues": [
+          "3-day",
+          "24-hour",
+          "30-day",
+          "60-day",
+          "To quit",
+          "Perform or Quit"
+        ],
+        "Checkbox 44n6i": [
+          "Gas leak",
+          "Water shutoffs",
+          "Electricity shutoffs",
+          "Heat shutoff",
+          "Gas shutoff"
+        ],
+        "Injury Issues": true,
+        "Nonresponsive landlord Issues": true,
+        "Unauthorized entries": true,
+        "Stolen items": true,
+        "Damaged items": true,
+        "Age discrimination": true,
+        "Racial Discrimination": true,
+        "Disability discrimination": true,
+        "Unit": "1",
+        "Select Safety Issues": [
+          "Broken/inoperable security gate",
+          "Broken doors",
+          "Unauthorized entries",
+          "Broken buzzer to get in",
+          "Security cameras",
+          "Inoperable locks"
+        ],
+        "Security Deposit": true
+      }
+    },
+    {
+      "Id": "3bOVtf",
+      "PlaintiffItemNumberName": {
+        "First": "Lois",
+        "FirstAndLast": "Lois Lane",
+        "Last": "Lane",
+        "Middle": null,
+        "MiddleInitial": null,
+        "Prefix": null,
+        "Suffix": null
+      },
+      "PlaintiffItemNumberType": "Guardian",
+      "PlaintiffItemNumberAgeCategory": [
+        "Adult"
+      ],
+      "HeadOfHousehold": true,
+      "ItemNumber": 2,
+      "PlaintiffItemNumberDiscovery": {
+        "VerminIssue": true,
+        "Vermin": [
+          "Rats/Mice",
+          "Skunks",
+          "Raccoons",
+          "Pigeons"
+        ],
+        "InsectIssues": true,
+        "Insects": [
+          "Flies",
+          "Hornets",
+          "Termites",
+          "Bees"
+        ],
+        "HVACIssues": false,
+        "HVAC": [],
+        "Electrical": [],
+        "ElectricalIssues": false,
+        "FireHazardIssues": false,
+        "GovernmentEntityContacted": false,
+        "AppliancesIssues": false,
+        "PlumbingIssues": false,
+        "CabinetsIssues": false,
+        "Fire Hazard": [],
+        "Specific Government Entity Contacted": [],
+        "Appliances": [],
+        "Plumbing": [],
+        "Cabinets": [],
+        "FlooringIssues": false,
+        "WindowsIssues": false,
+        "DoorIssues": false,
+        "Flooring": [],
+        "Windows": [],
+        "Doors": [],
+        "StructureIssues": false,
+        "Structure": [],
+        "CommonAreasIssues": false,
+        "Common areas": [],
+        "Select Trash Problems": [
+          "Inadequate number of receptacles",
+          "Properly servicing and emptying receptacles"
+        ],
+        "NuisanceIssues": false,
+        "Nuisance": [],
+        "Health hazard": [],
+        "HealthHazardIssues": false,
+        "HarassmentIssues": false,
+        "Harassment": [],
+        "Select Notices Issues": [],
+        "Checkbox 44n6i": [],
+        "Injury Issues": false,
+        "Nonresponsive landlord Issues": false,
+        "Unauthorized entries": false,
+        "Stolen items": false,
+        "Damaged items": false,
+        "Age discrimination": false,
+        "Racial Discrimination": false,
+        "Disability discrimination": false,
+        "Unit": "2",
+        "Select Safety Issues": [],
+        "Security Deposit": false
+      }
+    },
+    {
+      "Id": "oFJLej",
+      "PlaintiffItemNumberName": {
+        "First": "Bruce",
+        "FirstAndLast": "Bruce Wayne",
+        "Last": "Wayne",
+        "Middle": null,
+        "MiddleInitial": null,
+        "Prefix": null,
+        "Suffix": null
+      },
+      "PlaintiffItemNumberType": "Individual",
+      "PlaintiffItemNumberAgeCategory": [
+        "Adult"
+      ],
+      "HeadOfHousehold": false,
+      "ItemNumber": 3
+    }
+  ],
+  "PlaintiffDetails_Minimum": 1,
+  "DefendantDetails2": [
+    {
+      "Id": "Pev9Ct",
+      "DefendantItemNumberName": {
+        "First": "Tony",
+        "FirstAndLast": "Tony Stark",
+        "Last": "Stark",
+        "Middle": null,
+        "MiddleInitial": null,
+        "Prefix": null,
+        "Suffix": null
+      },
+      "DefendantItemNumberType": "LLC",
+      "DefendantItemNumberManagerOwner": "Manager",
+      "ItemNumber": 1
+    },
+    {
+      "Id": "sK9sUe",
+      "DefendantItemNumberName": {
+        "First": "Steve",
+        "FirstAndLast": "Steve Rogers",
+        "Last": "Rogers",
+        "Middle": null,
+        "MiddleInitial": null,
+        "Prefix": null,
+        "Suffix": null
+      },
+      "DefendantItemNumberType": "LLC",
+      "DefendantItemNumberManagerOwner": "Owner",
+      "ItemNumber": 2
+    }
+  ],
+  "DefendantDetails2_Minimum": 1,
+  "DefendantDetails2_Maximum": 10,
+  "Full_Address": {
+    "City": "Los Angeles",
+    "CityStatePostalCode": "Los Angeles, North Carolina 28027",
+    "Country": "United States",
+    "CountryCode": "US",
+    "FullAddress": "1331 Yorkshire Place NW, Los Angeles, North Carolina 28027",
+    "FullInternationalAddress": "1331 Yorkshire Place NW, Los Angeles, North Carolina 28027, United States",
+    "Latitude": null,
+    "Line1": "1331 Yorkshire Place NW",
+    "Line2": null,
+    "Line3": null,
+    "Longitude": null,
+    "PostalCode": "28027",
+    "State": "North Carolina",
+    "StreetAddress": "1331 Yorkshire Place NW",
+    "Type": "Home"
+  },
+  "Filing city": "Los Angeles",
+  "Filing county": "North Carolina",
+  "Notification Email Opt-In": false,
+  "Notification Email": null,
+  "serverTimestamp": "2025-10-21T16:59:52.069Z"
+}

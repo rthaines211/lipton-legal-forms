@@ -1,0 +1,21 @@
+# FastAPI and server dependencies
+fastapi==0.115.0
+uvicorn[standard]==0.32.0
+pydantic==2.10.0
+pydantic-settings==2.6.0
+
+# PostgreSQL driver
+psycopg[binary]==3.2.3
+psycopg-pool==3.2.1
+
+# Python utilities
+python-multipart==0.0.6
+python-dotenv==1.0.0
+
+# Testing dependencies
+pytest==7.4.3
+pytest-cov==4.1.0
+pytest-asyncio==0.21.1
+pytest-mock==3.12.0
+httpx==0.25.2  # For TestClient
+coverage[toml]==7.3.2

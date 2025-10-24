@@ -1,0 +1,134 @@
+{
+  "Form": {
+    "Id": "1",
+    "InternalName": "AutoPopulationForm",
+    "Name": "Auto-Population Form"
+  },
+  "PlaintiffDetails": [
+    {
+      "Id": "36n3Jp",
+      "PlaintiffItemNumberName": {
+        "First": "Clark",
+        "FirstAndLast": "Clark Kent",
+        "Last": "Kent",
+        "Middle": null,
+        "MiddleInitial": null,
+        "Prefix": null,
+        "Suffix": null
+      },
+      "PlaintiffItemNumberType": "Individual",
+      "PlaintiffItemNumberAgeCategory": [
+        "Adult"
+      ],
+      "HeadOfHousehold": true,
+      "ItemNumber": 1,
+      "PlaintiffItemNumberDiscovery": {
+        "VerminIssue": true,
+        "Vermin": [
+          "Rats/Mice",
+          "Skunks",
+          "Bats",
+          "Raccoons",
+          "Pigeons",
+          "Opossums"
+        ],
+        "InsectIssues": true,
+        "Insects": [
+          "Ants",
+          "Roaches",
+          "Flies",
+          "Hornets",
+          "Spiders",
+          "Termites",
+          "Bees"
+        ],
+        "HVACIssues": false,
+        "HVAC": [],
+        "Electrical": [],
+        "ElectricalIssues": false,
+        "FireHazardIssues": false,
+        "GovernmentEntityContacted": false,
+        "AppliancesIssues": false,
+        "PlumbingIssues": false,
+        "CabinetsIssues": false,
+        "Fire Hazard": [],
+        "Specific Government Entity Contacted": [],
+        "Appliances": [],
+        "Plumbing": [],
+        "Cabinets": [],
+        "FlooringIssues": false,
+        "WindowsIssues": false,
+        "DoorIssues": false,
+        "Flooring": [],
+        "Windows": [],
+        "Doors": [],
+        "StructureIssues": false,
+        "Structure": [],
+        "CommonAreasIssues": false,
+        "Common areas": [],
+        "Select Trash Problems": [],
+        "NuisanceIssues": false,
+        "Nuisance": [],
+        "Health hazard": [],
+        "HealthHazardIssues": false,
+        "HarassmentIssues": false,
+        "Harassment": [],
+        "Select Notices Issues": [],
+        "Checkbox 44n6i": [],
+        "Injury Issues": false,
+        "Nonresponsive landlord Issues": false,
+        "Unauthorized entries": false,
+        "Stolen items": false,
+        "Damaged items": false,
+        "Age discrimination": false,
+        "Racial Discrimination": false,
+        "Disability discrimination": false,
+        "Unit": "1",
+        "Select Safety Issues": [],
+        "Security Deposit": false
+      }
+    }
+  ],
+  "PlaintiffDetails_Minimum": 1,
+  "DefendantDetails2": [
+    {
+      "Id": "R9KpVZ",
+      "DefendantItemNumberName": {
+        "First": "Master",
+        "FirstAndLast": "Master sdaf",
+        "Last": "sdaf",
+        "Middle": null,
+        "MiddleInitial": null,
+        "Prefix": null,
+        "Suffix": null
+      },
+      "DefendantItemNumberType": "dsfa",
+      "DefendantItemNumberManagerOwner": "Manager",
+      "ItemNumber": 1
+    }
+  ],
+  "DefendantDetails2_Minimum": 1,
+  "DefendantDetails2_Maximum": 10,
+  "Full_Address": {
+    "City": "Los Angeles",
+    "CityStatePostalCode": "Los Angeles, North Carolina 28027",
+    "Country": "United States",
+    "CountryCode": "US",
+    "FullAddress": "1331 Yorkshire Place NW, Los Angeles, North Carolina 28027",
+    "FullInternationalAddress": "1331 Yorkshire Place NW, Los Angeles, North Carolina 28027, United States",
+    "Latitude": null,
+    "Line1": "1331 Yorkshire Place NW",
+    "Line2": null,
+    "Line3": null,
+    "Longitude": null,
+    "PostalCode": "28027",
+    "State": "North Carolina",
+    "StreetAddress": "1331 Yorkshire Place NW",
+    "Type": "Home"
+  },
+  "Filing city": "Los Angeles",
+  "Filing county": "North Carolina",
+  "Notification Email Opt-In": false,
+  "Notification Email": null,
+  "serverTimestamp": "2025-10-20T14:56:23.743Z"
+}

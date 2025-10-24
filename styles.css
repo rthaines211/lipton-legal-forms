@@ -1,0 +1,321 @@
+/*
+ * Lipton Legal - Repeating Form Styles
+ *
+ * A responsive CSS file for a dynamic form with repeating sections.
+ * Features smooth animations, error states, and mobile-friendly design.
+ *
+ * Brand Colors (matching Lipton Legal Style Guide):
+ * - Primary Navy: #1F2A44 (headers, buttons)
+ * - Secondary Teal: #00AEEF (accents, hover states)
+ * - Neutral Gray: #F5F5F5 (backgrounds)
+ * - Text: #333333 (body text)
+ *
+ * Typography:
+ * - Headings: Open Sans (bold)
+ * - Body: Open Sans (regular/medium)
+ *
+ * Updated: 2025-10-08 - Color consistency improvements
+ */
+
+/* Reset and base styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', Arial, sans-serif; /* Updated to match brand */
+    line-height: 1.6;
+    color: #333333; /* Updated to match brand */
+    background-color: #F5F5F5; /* Updated to match brand */
+    padding: 20px;
+    font-size: 18px; /* Improved base font size */
+}
+
+.container {
+    max-width: 1000px; /* Updated to match form-shell-width */
+    margin: 0 auto;
+    background: white;
+    padding: 32px; /* Increased for better spacing */
+    border-radius: 12px; /* Updated to match main form */
+    box-shadow: 0 4px 20px rgba(31, 42, 68, 0.15); /* Updated to match brand */
+    border: 1px solid #E2E8F0;
+}
+
+h1 {
+    text-align: center;
+    color: #1F2A44; /* Updated to match brand navy */
+    margin-bottom: 32px; /* Improved spacing */
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+h2 {
+    color: #1F2A44; /* Updated to match brand navy */
+    margin-bottom: 16px; /* Improved spacing */
+    border-bottom: 2px solid #00AEEF; /* Updated to brand teal */
+    padding-bottom: 10px;
+    font-weight: 700;
+}
+
+.form-section {
+    margin-bottom: 24px; /* Increased for better spacing */
+    padding: 20px; /* Increased for better content spacing */
+    background-color: #F8FAFC; /* Updated to match brand */
+    border-radius: 10px; /* Updated to match main form */
+    border-left: 4px solid #00AEEF; /* Updated to brand teal */
+}
+
+.repeating-container {
+    margin-bottom: 30px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.repeating-sections {
+    border: 2px dashed #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    min-height: 150px;
+    background-color: #fafafa;
+}
+
+.repeating-section {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 12px;
+    position: relative;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.repeating-section:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.repeating-section:last-child {
+    margin-bottom: 0;
+}
+
+.form-group {
+    margin-bottom: 16px; /* Increased for better form field spacing */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px; /* Increased for better label spacing */
+    font-weight: 600; /* Updated to medium weight */
+    color: #1F2A44; /* Updated to brand navy */
+    font-size: 0.95rem;
+}
+
+.form-group.inline-field {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.form-group.inline-field label {
+    margin-bottom: 0;
+    white-space: nowrap;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px; /* Increased for better touch targets */
+    border: 2px solid #E2E8F0; /* Updated to match brand */
+    border-radius: 6px; /* Slightly increased */
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'Open Sans', Arial, sans-serif;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #00AEEF; /* Updated to brand teal */
+    box-shadow: 0 0 0 3px rgba(0, 174, 239, 0.1); /* Updated to brand teal */
+}
+
+.add-section-btn {
+    background-color: #00AEEF; /* Updated to brand teal */
+    color: white;
+    padding: 12px 24px; /* Increased for better touch targets */
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px; /* Increased from 14px */
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-family: 'Open Sans', Arial, sans-serif;
+}
+
+.add-section-btn:hover {
+    background-color: #0099D4; /* Darker teal for hover */
+    transform: translateY(-2px); /* Increased lift effect */
+    box-shadow: 0 4px 8px rgba(31, 42, 68, 0.15);
+}
+
+.remove-section-btn {
+    background-color: #E53E3E; /* Updated to consistent red */
+    color: white;
+    padding: 10px 20px; /* Increased for better touch targets */
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px; /* Increased from 12px */
+    font-weight: 600;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    font-family: 'Open Sans', Arial, sans-serif;
+}
+
+.remove-section-btn:hover {
+    background-color: #C53030; /* Darker red for hover */
+    transform: scale(1.05);
+    box-shadow: 0 2px 6px rgba(229, 62, 62, 0.3);
+}
+
+.form-actions {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px solid #eee;
+}
+
+.form-actions button {
+    padding: 12px 30px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button[type="submit"] {
+    background-color: #1F2A44; /* Updated to brand navy */
+    color: white;
+    font-weight: 600;
+}
+
+button[type="submit"]:hover {
+    background-color: #16202E; /* Darker navy for hover */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(31, 42, 68, 0.3);
+}
+
+button[type="reset"] {
+    background-color: #64748B; /* Updated to neutral gray-blue */
+    color: white;
+    font-weight: 600;
+}
+
+button[type="reset"]:hover {
+    background-color: #475569; /* Darker gray for hover */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(100, 116, 139, 0.3);
+}
+
+.error {
+    border-color: #E53E3E !important; /* Updated to consistent red */
+    background-color: #FEF2F2; /* Lighter red background */
+}
+
+.success-message {
+    background-color: #D1FAE5; /* Updated green */
+    color: #065F46; /* Darker green text */
+    padding: 16px;
+    border-radius: 8px; /* Increased border radius */
+    margin-bottom: 20px;
+    border: 1px solid #6EE7B7; /* Updated border */
+    font-weight: 500;
+}
+
+.error-message {
+    background-color: #FEE2E2; /* Updated red */
+    color: #991B1B; /* Darker red text */
+    padding: 16px;
+    border-radius: 8px; /* Increased border radius */
+    margin-bottom: 20px;
+    border: 1px solid #FCA5A5; /* Updated border */
+    font-weight: 500;
+}
+
+/* Fix double-toggle bug: prevent direct clicks on checkboxes in checkbox-item and direct-issue-item containers */
+.checkbox-item input[type="checkbox"],
+.direct-issue-item input[type="checkbox"] {
+    pointer-events: none;
+}
+
+/*
+ * ========================================
+ * RESPONSIVE DESIGN - Mobile Optimization
+ * ========================================
+ * Breakpoints:
+ * - Mobile: < 768px
+ * - Tablet: 768px - 991px
+ * - Desktop: 992px+
+ */
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .add-section-btn {
+        width: 100%;
+    }
+
+    .form-actions button {
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .remove-section-btn {
+        position: static;
+        margin-top: 15px;
+        width: 100%;
+    }
+}
+
+/* Subsection styling for building issues */
+.subsection {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #00AEEF;
+}
+
+.subsection h3 {
+    margin: 0 0 20px 0;
+    color: #1F2A44;
+    font-size: 1.2rem;
+    font-weight: 600;
+}

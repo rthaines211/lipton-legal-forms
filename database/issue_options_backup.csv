@@ -1,0 +1,222 @@
+id,category_id,option_code,option_name,display_order,created_at,is_active,category_code,category_name
+bfd48045-f5f7-494e-9ed3-4384bb7c12a8,b15c6b49-e5fc-4b1e-819a-9352e42852e8,rats_mice,Rats/Mice,1,2025-10-07 20:22:12.219135-04,t,vermin,Vermin
+af650a3f-d3e8-40b7-87a6-6b9ead26cada,b15c6b49-e5fc-4b1e-819a-9352e42852e8,bedbugs,Bedbugs,2,2025-10-07 20:22:12.219135-04,t,vermin,Vermin
+95be18ae-b35a-4bb3-b6a0-49f74955f407,b15c6b49-e5fc-4b1e-819a-9352e42852e8,squirrels,Squirrels,3,2025-10-07 20:22:12.219135-04,t,vermin,Vermin
+3ab453a9-83e4-40a7-b3da-546bed1495b4,b15c6b49-e5fc-4b1e-819a-9352e42852e8,raccoons,Raccoons,4,2025-10-07 20:22:12.219135-04,t,vermin,Vermin
+47e7c42a-7e67-46ea-a270-12d8b0c53c7e,b15c6b49-e5fc-4b1e-819a-9352e42852e8,opossums,Opossums,5,2025-10-07 20:22:12.219135-04,t,vermin,Vermin
+50fde312-a806-47fb-b134-ab67d0b45f42,b15c6b49-e5fc-4b1e-819a-9352e42852e8,bats,Bats,6,2025-10-07 20:22:12.219135-04,t,vermin,Vermin
+1ca6dcdb-af58-4094-85c5-5be17fcc528b,b15c6b49-e5fc-4b1e-819a-9352e42852e8,other_vermin,Other Vermin,7,2025-10-07 20:22:12.219135-04,t,vermin,Vermin
+3143a83e-2e15-4723-9ae3-8ec32ccdc8c6,b15c6b49-e5fc-4b1e-819a-9352e42852e8,skunks,Skunks,8,2025-10-07 20:33:30.312935-04,t,vermin,Vermin
+2abf1e06-0e9d-478a-9feb-07fc86c5e655,b15c6b49-e5fc-4b1e-819a-9352e42852e8,pigeons,Pigeons,9,2025-10-07 20:33:30.312935-04,t,vermin,Vermin
+a9c00591-dd95-4d59-bee6-5f0b7cbb2129,6dca4650-7f72-4477-af05-1cba30213079,roaches,Roaches,1,2025-10-07 20:22:12.238091-04,t,insects,Insects
+83d0f8cf-ea70-40b6-acb8-bb0e41c03e5e,6dca4650-7f72-4477-af05-1cba30213079,ants,Ants,2,2025-10-07 20:22:12.238091-04,t,insects,Insects
+f234c997-6cc6-475d-85ef-a3c97de269d2,6dca4650-7f72-4477-af05-1cba30213079,flies,Flies,3,2025-10-07 20:22:12.238091-04,t,insects,Insects
+50c9454f-3eaf-46e2-8ea5-14f2b906dfc1,6dca4650-7f72-4477-af05-1cba30213079,mosquitoes,Mosquitoes,4,2025-10-07 20:22:12.238091-04,t,insects,Insects
+cb05a889-a51e-4f73-900d-56e268948a28,6dca4650-7f72-4477-af05-1cba30213079,termites,Termites,5,2025-10-07 20:22:12.238091-04,t,insects,Insects
+32253ea4-1d28-4854-93cc-160e9ab42605,6dca4650-7f72-4477-af05-1cba30213079,wasps_bees,Wasps,6,2025-10-07 20:22:12.238091-04,t,insects,Insects
+08a683d4-2fe3-4779-9cd3-fc38ff6311b2,6dca4650-7f72-4477-af05-1cba30213079,fleas,Fleas,7,2025-10-07 20:22:12.238091-04,t,insects,Insects
+8930310a-3221-4252-83f7-100ac306097b,6dca4650-7f72-4477-af05-1cba30213079,spiders,Spiders,8,2025-10-07 20:22:12.238091-04,t,insects,Insects
+fef35fc1-ed42-45fa-af7e-b4fa03957f55,6dca4650-7f72-4477-af05-1cba30213079,other_insects,Other Insects,9,2025-10-07 20:22:12.238091-04,t,insects,Insects
+03e69087-04bb-48e7-995b-3267966365d4,6dca4650-7f72-4477-af05-1cba30213079,hornets,Hornets,10,2025-10-07 20:33:30.502631-04,t,insects,Insects
+04e69f4c-6470-4dc6-9aa2-a7a1bac695e8,6dca4650-7f72-4477-af05-1cba30213079,bees,Bees,11,2025-10-07 20:33:30.502631-04,t,insects,Insects
+830ebd98-26bf-4850-8772-21d4038f4353,be3b88cd-ffa8-4e34-b8df-a979b1e15883,no_heat,No Heat,1,2025-10-07 20:22:12.244865-04,t,hvac,HVAC
+328673c3-cc49-4556-bf7a-ac34a4a277da,be3b88cd-ffa8-4e34-b8df-a979b1e15883,inadequate_heat,Inadequate Heat,2,2025-10-07 20:22:12.244865-04,t,hvac,HVAC
+f498bba2-58cf-43a6-a750-ea1528d32766,be3b88cd-ffa8-4e34-b8df-a979b1e15883,no_ac,No Air Conditioning,3,2025-10-07 20:22:12.244865-04,t,hvac,HVAC
+b64dbebe-ad91-4275-9853-3c4b2c0ed492,be3b88cd-ffa8-4e34-b8df-a979b1e15883,inadequate_ac,Inadequate Air Conditioning,4,2025-10-07 20:22:12.244865-04,t,hvac,HVAC
+a46b2cc0-de44-4382-9fa3-09c945ee4a4a,be3b88cd-ffa8-4e34-b8df-a979b1e15883,broken_thermostat,Broken Thermostat,5,2025-10-07 20:22:12.244865-04,t,hvac,HVAC
+5fe45156-ac3f-4039-bb87-e41873afc537,be3b88cd-ffa8-4e34-b8df-a979b1e15883,poor_ventilation,Poor Ventilation,6,2025-10-07 20:22:12.244865-04,t,hvac,HVAC
+70495487-32a2-4c33-95a9-0a9246c418a5,be3b88cd-ffa8-4e34-b8df-a979b1e15883,hvac_noise,HVAC System Noise,7,2025-10-07 20:22:12.244865-04,t,hvac,HVAC
+bd181bcb-4b47-40d1-9d95-a16ea25f8905,be3b88cd-ffa8-4e34-b8df-a979b1e15883,dirty_filters,Dirty/Unmaintained Filters,8,2025-10-07 20:22:12.244865-04,t,hvac,HVAC
+f31ca7d6-f4f3-462c-b896-37e63fec597d,be3b88cd-ffa8-4e34-b8df-a979b1e15883,other_hvac,Other HVAC Issues,9,2025-10-07 20:22:12.244865-04,t,hvac,HVAC
+5d79f605-7e40-4cde-b1aa-e8b695448beb,039e99ab-f080-4580-b90a-d7398bfb766e,no_power,No Power,1,2025-10-07 20:22:12.246873-04,t,electrical,Electrical
+534127d9-baf2-437b-b8c6-495fcf7abca4,039e99ab-f080-4580-b90a-d7398bfb766e,frequent_outages,Frequent Power Outages,2,2025-10-07 20:22:12.246873-04,t,electrical,Electrical
+3fd57cce-a17a-4698-bf10-5412f023456c,039e99ab-f080-4580-b90a-d7398bfb766e,broken_outlets,Broken Outlets,3,2025-10-07 20:22:12.246873-04,t,electrical,Electrical
+bfad90b0-b58f-40b7-9393-7f470aff662a,039e99ab-f080-4580-b90a-d7398bfb766e,broken_switches,Broken Light Switches,4,2025-10-07 20:22:12.246873-04,t,electrical,Electrical
+38e047ee-f6f4-44b8-93f8-483cd51569d7,039e99ab-f080-4580-b90a-d7398bfb766e,exposed_wiring,Exposed Wiring,5,2025-10-07 20:22:12.246873-04,t,electrical,Electrical
+c57e02b8-3837-4fff-bd6e-7e424587b04b,039e99ab-f080-4580-b90a-d7398bfb766e,sparking_outlets,Sparking Outlets/Switches,6,2025-10-07 20:22:12.246873-04,t,electrical,Electrical
+bd4a590e-10b4-4fce-9c85-20a671415b84,039e99ab-f080-4580-b90a-d7398bfb766e,insufficient_outlets,Insufficient Outlets,7,2025-10-07 20:22:12.246873-04,t,electrical,Electrical
+4adc41b0-a787-40e2-a22b-51b50aead89d,039e99ab-f080-4580-b90a-d7398bfb766e,flickering_lights,Flickering Lights,8,2025-10-07 20:22:12.246873-04,t,electrical,Electrical
+277e46d0-6242-4403-9da4-a6a86bf52872,039e99ab-f080-4580-b90a-d7398bfb766e,tripping_breakers,Frequently Tripping Breakers,9,2025-10-07 20:22:12.246873-04,t,electrical,Electrical
+537a77d0-1743-40b5-87bf-9c340b88620b,039e99ab-f080-4580-b90a-d7398bfb766e,other_electrical,Other Electrical Issues,10,2025-10-07 20:22:12.246873-04,t,electrical,Electrical
+c8d241c1-9244-4e5f-b354-0970d8b7feb9,001dfaea-3764-4a40-b1cb-896f7ee4e49b,no_smoke_detector,No Smoke Detector,1,2025-10-07 20:22:12.249711-04,t,fire_hazard,Fire Hazard
+b73dab53-0c4c-4945-95b8-6b6166e6dd5f,001dfaea-3764-4a40-b1cb-896f7ee4e49b,broken_smoke_detector,Broken Smoke Detector,2,2025-10-07 20:22:12.249711-04,t,fire_hazard,Fire Hazard
+21765896-53b6-457c-90aa-8ff7b77686c0,001dfaea-3764-4a40-b1cb-896f7ee4e49b,no_co_detector,No Carbon Monoxide Detector,3,2025-10-07 20:22:12.249711-04,t,fire_hazard,Fire Hazard
+6d0344d7-6254-4d1e-acbb-f5e86d79e550,001dfaea-3764-4a40-b1cb-896f7ee4e49b,broken_co_detector,Broken Carbon Monoxide Detector,4,2025-10-07 20:22:12.249711-04,t,fire_hazard,Fire Hazard
+7237b74e-0e89-4827-9c57-7c8b421f741b,001dfaea-3764-4a40-b1cb-896f7ee4e49b,no_fire_extinguisher,No Fire Extinguisher,5,2025-10-07 20:22:12.249711-04,t,fire_hazard,Fire Hazard
+3b7a964c-3142-40c2-8351-84eed1fd6faf,001dfaea-3764-4a40-b1cb-896f7ee4e49b,blocked_fire_exits,Blocked Fire Exits,6,2025-10-07 20:22:12.249711-04,t,fire_hazard,Fire Hazard
+013879f7-2059-491e-9281-d04bf22c83a8,001dfaea-3764-4a40-b1cb-896f7ee4e49b,faulty_sprinklers,Faulty Sprinkler System,7,2025-10-07 20:22:12.249711-04,t,fire_hazard,Fire Hazard
+d437ea51-a5e9-46ea-9517-a6cc7610c708,001dfaea-3764-4a40-b1cb-896f7ee4e49b,combustible_materials,Improper Storage of Combustible Materials,8,2025-10-07 20:22:12.249711-04,t,fire_hazard,Fire Hazard
+66f282a4-9be2-4768-9272-c8a33c3f95ea,001dfaea-3764-4a40-b1cb-896f7ee4e49b,other_fire_hazard,Other Fire Hazards,9,2025-10-07 20:22:12.249711-04,t,fire_hazard,Fire Hazard
+42a9ee2a-d1e4-4cd0-b6ff-097fa83dd710,50777d72-e4db-412f-b039-a22385fd8c28,broken_stove,Broken Stove/Oven,1,2025-10-07 20:22:12.250811-04,t,appliances,Appliances
+4a3227f4-8f6e-4cb7-a691-6724b20741c6,50777d72-e4db-412f-b039-a22385fd8c28,broken_refrigerator,Broken Refrigerator,2,2025-10-07 20:22:12.250811-04,t,appliances,Appliances
+7e67b017-ad57-41f3-9ae7-0115922b6751,50777d72-e4db-412f-b039-a22385fd8c28,broken_dishwasher,Broken Dishwasher,3,2025-10-07 20:22:12.250811-04,t,appliances,Appliances
+4f3edaa3-3ba4-47da-ac50-4f6ca479aae3,50777d72-e4db-412f-b039-a22385fd8c28,broken_microwave,Broken Microwave,4,2025-10-07 20:22:12.250811-04,t,appliances,Appliances
+667757ed-791d-4d63-9668-8f619637a739,50777d72-e4db-412f-b039-a22385fd8c28,broken_washer,Broken Washing Machine,5,2025-10-07 20:22:12.250811-04,t,appliances,Appliances
+1411dfee-e97b-4427-ba7a-3494e51e435d,50777d72-e4db-412f-b039-a22385fd8c28,broken_dryer,Broken Dryer,6,2025-10-07 20:22:12.250811-04,t,appliances,Appliances
+ba131145-7a3a-4f0a-a933-5e6f3812548c,50777d72-e4db-412f-b039-a22385fd8c28,broken_water_heater,Broken Water Heater,7,2025-10-07 20:22:12.250811-04,t,appliances,Appliances
+fcee1217-86c3-4afa-a605-8d5ac966c434,50777d72-e4db-412f-b039-a22385fd8c28,broken_garbage_disposal,Broken Garbage Disposal,8,2025-10-07 20:22:12.250811-04,t,appliances,Appliances
+7a3946ac-c52b-4e2a-8b54-4e1110d7180d,50777d72-e4db-412f-b039-a22385fd8c28,other_appliance,Other Appliance Issues,9,2025-10-07 20:22:12.250811-04,t,appliances,Appliances
+7ca20443-af0d-40f4-919a-473a36f7294c,bb9a3b6f-3c62-47b0-93f3-15d554741cca,no_hot_water,No Hot Water,1,2025-10-07 20:22:12.25435-04,t,plumbing,Plumbing
+a41ca1d0-9523-40f4-9775-c835866c22b6,bb9a3b6f-3c62-47b0-93f3-15d554741cca,no_running_water,No Running Water,2,2025-10-07 20:22:12.25435-04,t,plumbing,Plumbing
+250cea06-69ef-4899-ba4f-ec3a652025a6,bb9a3b6f-3c62-47b0-93f3-15d554741cca,low_water_pressure,Low Water Pressure,3,2025-10-07 20:22:12.25435-04,t,plumbing,Plumbing
+c5523e15-c46a-472f-b4cc-06abcd5e32ec,bb9a3b6f-3c62-47b0-93f3-15d554741cca,leaking_pipes,Leaking Pipes,4,2025-10-07 20:22:12.25435-04,t,plumbing,Plumbing
+f5fa6b91-a2ac-477f-af19-6ddbbe120dd9,bb9a3b6f-3c62-47b0-93f3-15d554741cca,clogged_drains,Clogged Drains,5,2025-10-07 20:22:12.25435-04,t,plumbing,Plumbing
+25bc01cc-29d5-40db-ad50-eb985ee2edc3,bb9a3b6f-3c62-47b0-93f3-15d554741cca,toilet_not_working,Toilet Not Working,6,2025-10-07 20:22:12.25435-04,t,plumbing,Plumbing
+0aac62e6-5094-4778-9a97-b26a72374743,bb9a3b6f-3c62-47b0-93f3-15d554741cca,toilet_constantly_running,Toilet Constantly Running,7,2025-10-07 20:22:12.25435-04,t,plumbing,Plumbing
+6415d951-16be-40c7-9521-508297ae4799,bb9a3b6f-3c62-47b0-93f3-15d554741cca,leaking_faucets,Leaking Faucets,8,2025-10-07 20:22:12.25435-04,t,plumbing,Plumbing
+024f8c8b-54f8-4385-9c62-ab0c60745209,bb9a3b6f-3c62-47b0-93f3-15d554741cca,sewage_backup,Sewage Backup,9,2025-10-07 20:22:12.25435-04,t,plumbing,Plumbing
+ef1d5bf4-468d-44b8-ac53-0c758d1f7f17,bb9a3b6f-3c62-47b0-93f3-15d554741cca,rusty_water,Rusty/Discolored Water,10,2025-10-07 20:22:12.25435-04,t,plumbing,Plumbing
+261ea93d-3849-4af6-8bc7-1e049c2a0f0e,bb9a3b6f-3c62-47b0-93f3-15d554741cca,frozen_pipes,Frozen Pipes,11,2025-10-07 20:22:12.25435-04,t,plumbing,Plumbing
+315cecd4-775b-42ca-befd-a66bceecd875,bb9a3b6f-3c62-47b0-93f3-15d554741cca,other_plumbing,Other Plumbing Issues,12,2025-10-07 20:22:12.25435-04,t,plumbing,Plumbing
+2915094e-3bea-41a4-a845-5158e242a6a8,2bb54c20-e1e9-4c8d-9272-316864a843b3,broken_cabinet_doors,Broken Cabinet Doors,1,2025-10-07 20:22:12.25606-04,t,cabinets,Cabinets
+64dff490-c349-4f7d-a40f-68b0e2294dcd,2bb54c20-e1e9-4c8d-9272-316864a843b3,missing_cabinet_doors,Missing Cabinet Doors,2,2025-10-07 20:22:12.25606-04,t,cabinets,Cabinets
+ef471c4d-f138-408a-84ae-b55ab344967f,2bb54c20-e1e9-4c8d-9272-316864a843b3,broken_hinges,Broken Hinges,3,2025-10-07 20:22:12.25606-04,t,cabinets,Cabinets
+40ade5a3-50a9-434f-aa4c-a3cc1be36311,2bb54c20-e1e9-4c8d-9272-316864a843b3,broken_handles,Broken Handles/Knobs,4,2025-10-07 20:22:12.25606-04,t,cabinets,Cabinets
+ef2765f5-58da-4841-8b94-6184af8720dd,2bb54c20-e1e9-4c8d-9272-316864a843b3,damaged_shelving,Damaged Shelving,5,2025-10-07 20:22:12.25606-04,t,cabinets,Cabinets
+fead437d-5a40-4d08-a59e-472d154dd703,2bb54c20-e1e9-4c8d-9272-316864a843b3,water_damaged_cabinets,Water Damaged Cabinets,6,2025-10-07 20:22:12.25606-04,t,cabinets,Cabinets
+84b1c9e9-74ae-448d-9295-dbb5c74a40dc,2bb54c20-e1e9-4c8d-9272-316864a843b3,pest_damage_cabinets,Pest Damage to Cabinets,7,2025-10-07 20:22:12.25606-04,t,cabinets,Cabinets
+ba3c6c90-612f-4f78-b2e0-c768aed7aafa,2bb54c20-e1e9-4c8d-9272-316864a843b3,other_cabinet,Other Cabinet Issues,8,2025-10-07 20:22:12.25606-04,t,cabinets,Cabinets
+d4eb354e-5f81-4841-8c6e-257ffdf0f2df,5431c348-fe06-40e3-8a0c-692e6da332fb,damaged_flooring,Damaged Flooring,1,2025-10-07 20:22:12.256893-04,t,flooring,Flooring
+3c95bafc-d5d9-4637-92e7-b881417753ee,5431c348-fe06-40e3-8a0c-692e6da332fb,loose_flooring,Loose Flooring,2,2025-10-07 20:22:12.256893-04,t,flooring,Flooring
+a8159d1c-058a-4714-bfc2-3b6e87f847a0,5431c348-fe06-40e3-8a0c-692e6da332fb,uneven_floors,Uneven Floors,3,2025-10-07 20:22:12.256893-04,t,flooring,Flooring
+a2631838-bbe4-401f-95f4-9d304237e661,5431c348-fe06-40e3-8a0c-692e6da332fb,holes_in_floor,Holes in Floor,4,2025-10-07 20:22:12.256893-04,t,flooring,Flooring
+2a4aab34-bb93-499a-9f8f-1d6a814ea950,5431c348-fe06-40e3-8a0c-692e6da332fb,water_damaged_floor,Water Damaged Flooring,5,2025-10-07 20:22:12.256893-04,t,flooring,Flooring
+a7b1fc8a-4f55-454c-b161-7f53305ebff1,5431c348-fe06-40e3-8a0c-692e6da332fb,carpet_stains,Severe Carpet Stains/Damage,6,2025-10-07 20:22:12.256893-04,t,flooring,Flooring
+f5d4e010-f024-445b-b8a0-58f21c045c50,5431c348-fe06-40e3-8a0c-692e6da332fb,missing_tiles,Missing Tiles,7,2025-10-07 20:22:12.256893-04,t,flooring,Flooring
+b48b00b0-6337-4328-abfd-6b23ffa97aa7,5431c348-fe06-40e3-8a0c-692e6da332fb,cracked_tiles,Cracked Tiles,8,2025-10-07 20:22:12.256893-04,t,flooring,Flooring
+bde01b46-2996-4453-abb9-99422cb212b0,5431c348-fe06-40e3-8a0c-692e6da332fb,other_flooring,Other Flooring Issues,9,2025-10-07 20:22:12.256893-04,t,flooring,Flooring
+8292f0b8-9279-4b55-89ab-cfcab9110226,ba357de4-f21b-4118-a9b3-2a5dfce7b435,broken_windows,Broken Windows,1,2025-10-07 20:22:12.257841-04,t,windows,Windows
+fee8ab0c-a8ed-41b6-ad6a-68487a475a6a,ba357de4-f21b-4118-a9b3-2a5dfce7b435,cracked_windows,Cracked Windows,2,2025-10-07 20:22:12.257841-04,t,windows,Windows
+caa7efda-0e28-4a86-a4fd-752266ab9232,ba357de4-f21b-4118-a9b3-2a5dfce7b435,windows_wont_open,Windows Won't Open,3,2025-10-07 20:22:12.257841-04,t,windows,Windows
+4624bb9d-d3ed-4cc7-aa7a-e5fbc3701f81,ba357de4-f21b-4118-a9b3-2a5dfce7b435,windows_wont_close,Windows Won't Close/Lock,4,2025-10-07 20:22:12.257841-04,t,windows,Windows
+c5894c71-0a00-44ca-a3db-5336825599d1,ba357de4-f21b-4118-a9b3-2a5dfce7b435,drafty_windows,Drafty Windows,5,2025-10-07 20:22:12.257841-04,t,windows,Windows
+43f5564d-99dd-471c-8395-9a8f2909d3f2,ba357de4-f21b-4118-a9b3-2a5dfce7b435,missing_screens,Missing Window Screens,6,2025-10-07 20:22:12.257841-04,t,windows,Windows
+9caaa578-7d62-4793-b30c-5970de136383,ba357de4-f21b-4118-a9b3-2a5dfce7b435,broken_window_locks,Broken Window Locks,7,2025-10-07 20:22:12.257841-04,t,windows,Windows
+71b228f7-73a5-4b6c-997c-ad03bd6a1eed,ba357de4-f21b-4118-a9b3-2a5dfce7b435,water_leaks_windows,Water Leaks Around Windows,8,2025-10-07 20:22:12.257841-04,t,windows,Windows
+f98778b0-cb89-485e-b42a-4618ab5b7dea,ba357de4-f21b-4118-a9b3-2a5dfce7b435,other_window,Other Window Issues,9,2025-10-07 20:22:12.257841-04,t,windows,Windows
+17b444a3-a19e-4a05-91ff-567bdc9eb00b,f2d7a2d0-7e13-45a1-8ec4-e017d234964c,broken_entry_door,Broken Entry Door,1,2025-10-07 20:22:12.258602-04,t,doors,Doors
+7d22fbe6-024d-4b17-8697-85247c35079b,f2d7a2d0-7e13-45a1-8ec4-e017d234964c,door_wont_lock,Door Won't Lock,2,2025-10-07 20:22:12.258602-04,t,doors,Doors
+ff2010b8-92c3-4ecc-a3b6-c3953e75c236,f2d7a2d0-7e13-45a1-8ec4-e017d234964c,broken_door_lock,Broken Door Lock,3,2025-10-07 20:22:12.258602-04,t,doors,Doors
+8724697e-6092-4698-b0e7-f6632bfc465e,f2d7a2d0-7e13-45a1-8ec4-e017d234964c,missing_keys,Missing Keys,4,2025-10-07 20:22:12.258602-04,t,doors,Doors
+abbde5c4-58e7-4680-94e1-3bbac2d30a60,f2d7a2d0-7e13-45a1-8ec4-e017d234964c,door_wont_close,Door Won't Close Properly,5,2025-10-07 20:22:12.258602-04,t,doors,Doors
+f8a1014c-b517-470b-b9d6-7a16fb35a2a8,f2d7a2d0-7e13-45a1-8ec4-e017d234964c,broken_hinges_door,Broken Door Hinges,6,2025-10-07 20:22:12.258602-04,t,doors,Doors
+69739324-49f6-4d84-a9c4-1ed2212a1a9c,f2d7a2d0-7e13-45a1-8ec4-e017d234964c,damaged_door_frame,Damaged Door Frame,7,2025-10-07 20:22:12.258602-04,t,doors,Doors
+7338be1a-d62b-4c81-a0c0-88c5b328d736,f2d7a2d0-7e13-45a1-8ec4-e017d234964c,drafty_doors,Drafty Doors,8,2025-10-07 20:22:12.258602-04,t,doors,Doors
+706c63b8-c083-4925-8c55-b01a2aae2b7e,f2d7a2d0-7e13-45a1-8ec4-e017d234964c,security_concerns_door,Security Concerns with Door,9,2025-10-07 20:22:12.258602-04,t,doors,Doors
+10192015-0110-4589-acd7-125f3b81dc11,f2d7a2d0-7e13-45a1-8ec4-e017d234964c,other_door,Other Door Issues,10,2025-10-07 20:22:12.258602-04,t,doors,Doors
+5c9942f2-a0c6-4bad-bd39-19b0c8d5a50a,04f8e4a9-bb0f-43d5-be81-048449955dd5,roof_leaks,Roof Leaks,1,2025-10-07 20:22:12.259422-04,t,structure,Structure
+903c9ccf-2062-4223-86fa-48436677344f,04f8e4a9-bb0f-43d5-be81-048449955dd5,ceiling_damage,Ceiling Damage,2,2025-10-07 20:22:12.259422-04,t,structure,Structure
+c1e6a11a-3e42-4746-9158-2b0a0aac675b,04f8e4a9-bb0f-43d5-be81-048449955dd5,wall_damage,Wall Damage,3,2025-10-07 20:22:12.259422-04,t,structure,Structure
+1206898f-c58a-4275-8919-df539de7d8d9,04f8e4a9-bb0f-43d5-be81-048449955dd5,holes_in_walls,Holes in Walls,4,2025-10-07 20:22:12.259422-04,t,structure,Structure
+46bbfea5-8e99-40b1-828d-d61a92fd56bd,04f8e4a9-bb0f-43d5-be81-048449955dd5,cracks_in_walls,Cracks in Walls,5,2025-10-07 20:22:12.259422-04,t,structure,Structure
+5882bdc9-c737-4e57-8bb5-58a987c8305c,04f8e4a9-bb0f-43d5-be81-048449955dd5,foundation_issues,Foundation Issues,6,2025-10-07 20:22:12.259422-04,t,structure,Structure
+6b2eff7f-8ee4-4c60-a82c-eb509589add9,04f8e4a9-bb0f-43d5-be81-048449955dd5,water_damage_structure,Water Damage (Structural),7,2025-10-07 20:22:12.259422-04,t,structure,Structure
+a26b2b06-266a-454f-9119-ab6c478c55b7,04f8e4a9-bb0f-43d5-be81-048449955dd5,mold_growth,Mold Growth,8,2025-10-07 20:22:12.259422-04,t,structure,Structure
+f19e72cc-0cdf-4308-b777-220df3196e49,04f8e4a9-bb0f-43d5-be81-048449955dd5,peeling_paint,Peeling/Chipping Paint,9,2025-10-07 20:22:12.259422-04,t,structure,Structure
+495695d2-5db6-4aa6-9208-7af626108012,04f8e4a9-bb0f-43d5-be81-048449955dd5,lead_paint,Lead Paint,10,2025-10-07 20:22:12.259422-04,t,structure,Structure
+21360cc7-c4a5-44cd-895f-b8f20497b2a3,04f8e4a9-bb0f-43d5-be81-048449955dd5,asbestos,Asbestos,11,2025-10-07 20:22:12.259422-04,t,structure,Structure
+7cc2890b-33c2-4b33-878b-55a2aa970f52,04f8e4a9-bb0f-43d5-be81-048449955dd5,sagging_ceiling,Sagging Ceiling,12,2025-10-07 20:22:12.259422-04,t,structure,Structure
+003cca55-9c79-42c8-a7d2-0992a50ff746,04f8e4a9-bb0f-43d5-be81-048449955dd5,structural_instability,Structural Instability,13,2025-10-07 20:22:12.259422-04,t,structure,Structure
+d69b43f5-f13c-4789-bf77-1009e912f049,04f8e4a9-bb0f-43d5-be81-048449955dd5,other_structural,Other Structural Issues,14,2025-10-07 20:22:12.259422-04,t,structure,Structure
+5947651d-fe9b-45bf-9911-de6f0f9fd446,8fae70dd-e8df-4665-9cf6-dffe9b4488ce,broken_stairs,Broken/Unsafe Stairs,1,2025-10-07 20:22:12.264775-04,t,common_areas,Common Areas
+7b8c0632-4698-412e-b0ff-601e006f11e0,8fae70dd-e8df-4665-9cf6-dffe9b4488ce,broken_railings,Broken Railings,2,2025-10-07 20:22:12.264775-04,t,common_areas,Common Areas
+4c9f6a32-4d38-4b6a-8840-c023d78a07da,8fae70dd-e8df-4665-9cf6-dffe9b4488ce,poor_lighting_common,Poor Lighting,3,2025-10-07 20:22:12.264775-04,t,common_areas,Common Areas
+9332536f-65ae-4563-842b-4dad962a267f,8fae70dd-e8df-4665-9cf6-dffe9b4488ce,dirty_common_areas,Dirty/Unmaintained Common Areas,4,2025-10-07 20:22:12.264775-04,t,common_areas,Common Areas
+bae37c52-27e0-4b0f-8bb7-39fb4d7fd48b,8fae70dd-e8df-4665-9cf6-dffe9b4488ce,broken_elevator,Broken Elevator,5,2025-10-07 20:22:12.264775-04,t,common_areas,Common Areas
+55593a14-f961-4b59-b4ef-3c51baae86cc,8fae70dd-e8df-4665-9cf6-dffe9b4488ce,broken_intercom,Broken Intercom/Buzzer System,6,2025-10-07 20:22:12.264775-04,t,common_areas,Common Areas
+070b598d-5922-4921-9e4e-450bfb1f9af7,8fae70dd-e8df-4665-9cf6-dffe9b4488ce,broken_mailboxes,Broken Mailboxes,7,2025-10-07 20:22:12.264775-04,t,common_areas,Common Areas
+6d0f1d16-d30d-4a59-8a30-11d3c09af4f3,8fae70dd-e8df-4665-9cf6-dffe9b4488ce,laundry_issues,Laundry Room Issues,8,2025-10-07 20:22:12.264775-04,t,common_areas,Common Areas
+63ccdb80-42a9-4b12-bb75-1cf0b24f62ce,8fae70dd-e8df-4665-9cf6-dffe9b4488ce,parking_issues,Parking Issues,9,2025-10-07 20:22:12.264775-04,t,common_areas,Common Areas
+0a2d7e56-6a31-4965-812b-479855db800d,8fae70dd-e8df-4665-9cf6-dffe9b4488ce,security_common_areas,Security Issues in Common Areas,10,2025-10-07 20:22:12.264775-04,t,common_areas,Common Areas
+57bb91b9-284e-4cae-a158-8256b9df9f2a,8fae70dd-e8df-4665-9cf6-dffe9b4488ce,other_common_area,Other Common Area Issues,11,2025-10-07 20:22:12.264775-04,t,common_areas,Common Areas
+60504b8e-9c24-46fe-872d-a44fbcc74d5e,3f2bf070-bc95-4ccf-82f2-0ac681314bc2,overflowing_trash,Overflowing Trash,1,2025-10-07 20:22:12.266282-04,t,trash_problems,Trash Problems
+8072442a-22be-4224-bb15-87403d119826,3f2bf070-bc95-4ccf-82f2-0ac681314bc2,no_trash_service,No Trash Service,2,2025-10-07 20:22:12.266282-04,t,trash_problems,Trash Problems
+e2211bea-4928-49e7-8f37-c7ad7f762b8c,3f2bf070-bc95-4ccf-82f2-0ac681314bc2,insufficient_bins,Insufficient Trash Bins,3,2025-10-07 20:22:12.266282-04,t,trash_problems,Trash Problems
+07197a4e-c1d4-4a06-a32f-4dc8ddd15e13,3f2bf070-bc95-4ccf-82f2-0ac681314bc2,trash_attracts_pests,Trash Attracting Pests,4,2025-10-07 20:22:12.266282-04,t,trash_problems,Trash Problems
+8e751155-508f-4c58-b8a2-8362c448809b,3f2bf070-bc95-4ccf-82f2-0ac681314bc2,illegal_dumping,Illegal Dumping on Property,5,2025-10-07 20:22:12.266282-04,t,trash_problems,Trash Problems
+b1fa6be9-eaed-418c-96f0-f20a91952482,3f2bf070-bc95-4ccf-82f2-0ac681314bc2,recycling_issues,Recycling Issues,6,2025-10-07 20:22:12.266282-04,t,trash_problems,Trash Problems
+837f87ac-9365-4c79-87f9-9fd531b6d68e,3f2bf070-bc95-4ccf-82f2-0ac681314bc2,other_trash,Other Trash Issues,7,2025-10-07 20:22:12.266282-04,t,trash_problems,Trash Problems
+b429c584-21f3-4d8e-8735-4d16ea0bbc60,7feb6c58-829d-488d-8ef2-ef08582e80f0,noise_disturbances,Noise Disturbances,1,2025-10-07 20:22:12.267525-04,t,nuisance,Nuisance
+eddda55f-e3cc-4a90-93ce-b0cdb39207f6,7feb6c58-829d-488d-8ef2-ef08582e80f0,neighbor_harassment,Neighbor Harassment,2,2025-10-07 20:22:12.267525-04,t,nuisance,Nuisance
+f0c771f7-0faf-47e8-91cd-04556d7a57fe,7feb6c58-829d-488d-8ef2-ef08582e80f0,landlord_harassment,Landlord Harassment,3,2025-10-07 20:22:12.267525-04,t,nuisance,Nuisance
+964623f6-88f1-48cb-9c3c-e062ee025192,7feb6c58-829d-488d-8ef2-ef08582e80f0,illegal_entry,Illegal Entry by Landlord,4,2025-10-07 20:22:12.267525-04,t,nuisance,Nuisance
+0873b268-f0f6-4529-a133-1c0aaf502fc3,7feb6c58-829d-488d-8ef2-ef08582e80f0,privacy_violations,Privacy Violations,5,2025-10-07 20:22:12.267525-04,t,nuisance,Nuisance
+edecc2da-84b7-42d3-a0f8-6713af082fa5,7feb6c58-829d-488d-8ef2-ef08582e80f0,drug_activity,Drug Activity on Property,6,2025-10-07 20:22:12.267525-04,t,nuisance,Nuisance
+79688a70-0417-4faf-8eb9-422c5be2bf20,7feb6c58-829d-488d-8ef2-ef08582e80f0,criminal_activity,Criminal Activity on Property,7,2025-10-07 20:22:12.267525-04,t,nuisance,Nuisance
+abc4beea-4ed5-4f15-aa57-cc45c109cf3e,7feb6c58-829d-488d-8ef2-ef08582e80f0,excessive_odors,Excessive Odors,8,2025-10-07 20:22:12.267525-04,t,nuisance,Nuisance
+7557c63b-42d0-471e-899a-c1f5e5861460,7feb6c58-829d-488d-8ef2-ef08582e80f0,other_nuisance,Other Nuisance Issues,9,2025-10-07 20:22:12.267525-04,t,nuisance,Nuisance
+aabda80c-2f56-43ec-a6e6-64f00792afdc,ce13763e-94eb-448b-a52b-ea94830bf623,mold_health,Mold (Health Hazard),1,2025-10-07 20:22:12.269252-04,t,health_hazard,Health Hazard
+a5e3849e-2e9a-4be8-88ee-f07abec0585d,ce13763e-94eb-448b-a52b-ea94830bf623,lead_exposure,Lead Exposure,2,2025-10-07 20:22:12.269252-04,t,health_hazard,Health Hazard
+f882ad58-89b1-4f4a-90f5-8d8de6a347f1,ce13763e-94eb-448b-a52b-ea94830bf623,asbestos_exposure,Asbestos Exposure,3,2025-10-07 20:22:12.269252-04,t,health_hazard,Health Hazard
+bbd83b35-ffd3-4e94-843b-99b2a1253afe,ce13763e-94eb-448b-a52b-ea94830bf623,radon,Radon,4,2025-10-07 20:22:12.269252-04,t,health_hazard,Health Hazard
+11ab67e2-e426-4025-ad23-d1524beb3f7d,ce13763e-94eb-448b-a52b-ea94830bf623,carbon_monoxide_leak,Carbon Monoxide Leak,5,2025-10-07 20:22:12.269252-04,t,health_hazard,Health Hazard
+0ce830ab-149e-42bd-9806-58faf9b9bc70,ce13763e-94eb-448b-a52b-ea94830bf623,gas_leak,Gas Leak,6,2025-10-07 20:22:12.269252-04,t,health_hazard,Health Hazard
+00b28d90-7cbb-4cf2-9249-92b3e5e6f190,ce13763e-94eb-448b-a52b-ea94830bf623,sewage_exposure,Sewage Exposure,7,2025-10-07 20:22:12.269252-04,t,health_hazard,Health Hazard
+2bfd39f3-91a7-44b2-b7de-1ad2292f661d,ce13763e-94eb-448b-a52b-ea94830bf623,contaminated_water,Contaminated Water,8,2025-10-07 20:22:12.269252-04,t,health_hazard,Health Hazard
+da453d09-514c-4107-9981-b46e22bf12b0,ce13763e-94eb-448b-a52b-ea94830bf623,pest_infestation_health,Pest Infestation (Health Risk),9,2025-10-07 20:22:12.269252-04,t,health_hazard,Health Hazard
+fdba907b-bd1d-4806-a459-48d43e5489bc,ce13763e-94eb-448b-a52b-ea94830bf623,unsanitary_conditions,Unsanitary Conditions,10,2025-10-07 20:22:12.269252-04,t,health_hazard,Health Hazard
+2f2cb5da-6468-4370-a803-a47a548d6307,ce13763e-94eb-448b-a52b-ea94830bf623,allergen_exposure,Excessive Allergen Exposure,11,2025-10-07 20:22:12.269252-04,t,health_hazard,Health Hazard
+5d3b317b-45a1-4a2b-b6ae-d820ac3be8dc,ce13763e-94eb-448b-a52b-ea94830bf623,other_health_hazard,Other Health Hazards,12,2025-10-07 20:22:12.269252-04,t,health_hazard,Health Hazard
+811601b8-14ec-4104-873a-e657eab4e399,1ea2cbd7-ddb4-45af-889e-f4c1b0d9e5e9,inadequate_locks,Inadequate Locks,1,2025-10-07 20:22:12.28393-04,t,safety,Safety
+e94296be-8ec2-49da-83b4-aa257368a1f0,1ea2cbd7-ddb4-45af-889e-f4c1b0d9e5e9,Locks,Lock Issues,1,2025-10-07 20:15:54.760831-04,t,safety,Safety
+d1d7fb1e-b3d2-40eb-b47e-a8060b80c4e3,1ea2cbd7-ddb4-45af-889e-f4c1b0d9e5e9,SmokeDetectors,Smoke Detector Issues,2,2025-10-07 20:15:54.760831-04,t,safety,Safety
+3933d758-f6e9-4bb9-bef7-0e1ba34fc186,1ea2cbd7-ddb4-45af-889e-f4c1b0d9e5e9,no_deadbolt,No Deadbolt,2,2025-10-07 20:22:12.28393-04,t,safety,Safety
+59936c9d-64ff-44c6-af41-1ec663ece796,1ea2cbd7-ddb4-45af-889e-f4c1b0d9e5e9,CarbonMonoxide,Carbon Monoxide Detector Issues,3,2025-10-07 20:15:54.760831-04,t,safety,Safety
+30e1c4c6-18e8-4f19-a451-8845fb275a2d,1ea2cbd7-ddb4-45af-889e-f4c1b0d9e5e9,broken_security_system,Broken Security System,3,2025-10-07 20:22:12.28393-04,t,safety,Safety
+1aa09f52-4bce-41a0-b553-c3944eb4d5cc,1ea2cbd7-ddb4-45af-889e-f4c1b0d9e5e9,FireHazards,Fire Hazards,4,2025-10-07 20:15:54.760831-04,t,safety,Safety
+ce05077b-f9ae-4443-a805-e32dbbd59214,1ea2cbd7-ddb4-45af-889e-f4c1b0d9e5e9,inadequate_lighting,Inadequate Lighting,4,2025-10-07 20:22:12.28393-04,t,safety,Safety
+168ce8fa-536d-44f6-b5f3-2df53fa5ee91,1ea2cbd7-ddb4-45af-889e-f4c1b0d9e5e9,unsafe_stairs,Unsafe Stairs/Steps,5,2025-10-07 20:22:12.28393-04,t,safety,Safety
+3e6e864c-8b9f-4127-aebd-6099004a481d,1ea2cbd7-ddb4-45af-889e-f4c1b0d9e5e9,trip_hazards,Trip Hazards,6,2025-10-07 20:22:12.28393-04,t,safety,Safety
+ffa1e45c-2021-4d60-bf51-fec196b3336a,1ea2cbd7-ddb4-45af-889e-f4c1b0d9e5e9,exposed_hazards,Exposed Hazardous Materials,7,2025-10-07 20:22:12.28393-04,t,safety,Safety
+2f27e877-60dc-456c-b4e1-d3882ffe19a2,1ea2cbd7-ddb4-45af-889e-f4c1b0d9e5e9,broken_security_gates,Broken Security Gates/Doors,8,2025-10-07 20:22:12.28393-04,t,safety,Safety
+9684e72a-d119-46a2-89b1-31b41fb15570,1ea2cbd7-ddb4-45af-889e-f4c1b0d9e5e9,inadequate_fire_escape,Inadequate Fire Escape,9,2025-10-07 20:22:12.28393-04,t,safety,Safety
+a380dd98-af2d-4378-b484-641a2f02859c,1ea2cbd7-ddb4-45af-889e-f4c1b0d9e5e9,dangerous_construction,Dangerous Construction/Repairs,10,2025-10-07 20:22:12.28393-04,t,safety,Safety
+d95ffb5a-222a-41aa-b98f-a9efe88ab64a,1ea2cbd7-ddb4-45af-889e-f4c1b0d9e5e9,other_safety,Other Safety Issues,11,2025-10-07 20:22:12.28393-04,t,safety,Safety
+1b517318-69be-4c9a-863d-67ac22b9d957,1489fa11-d059-4669-b71a-04ae109cbac0,unlawful_detainer,Unlawful Detainer,1,2025-10-07 20:33:30.5124-04,t,harassment,Harassment
+ad213025-484e-41b9-a68b-7cfea43d27d4,1489fa11-d059-4669-b71a-04ae109cbac0,eviction_threats,Eviction threats,2,2025-10-07 20:33:30.5124-04,t,harassment,Harassment
+094bef56-5f53-49b2-95db-42e2e6398a70,1489fa11-d059-4669-b71a-04ae109cbac0,by_defendant,By defendant,3,2025-10-07 20:33:30.5124-04,t,harassment,Harassment
+2c45e52d-b1e6-4ecf-8134-4bf8e5926c3c,1489fa11-d059-4669-b71a-04ae109cbac0,by_maintenance,By maintenance man/workers,4,2025-10-07 20:33:30.5124-04,t,harassment,Harassment
+ea7054f6-af27-486c-9c19-2d64db7c275b,1489fa11-d059-4669-b71a-04ae109cbac0,by_manager,By manager/building staff,5,2025-10-07 20:33:30.5124-04,t,harassment,Harassment
+44d8b89b-757a-4890-81d4-a6da83cddf27,1489fa11-d059-4669-b71a-04ae109cbac0,by_owner,By owner,6,2025-10-07 20:33:30.5124-04,t,harassment,Harassment
+151078e5-b78c-44d8-97a7-e921e849f85d,1489fa11-d059-4669-b71a-04ae109cbac0,other_tenants,Other tenants,7,2025-10-07 20:33:30.5124-04,t,harassment,Harassment
+2eb0d674-7cb7-41b2-b724-76d93bc918b8,1489fa11-d059-4669-b71a-04ae109cbac0,illegitimate_notices,Illegitimate notices,8,2025-10-07 20:33:30.5124-04,t,harassment,Harassment
+76348e4c-df87-4684-80b7-f1db2c665e0f,1489fa11-d059-4669-b71a-04ae109cbac0,refusal_repairs,Refusal to make timely repairs,9,2025-10-07 20:33:30.5124-04,t,harassment,Harassment
+0b765545-bf09-416d-a142-9673f4acec1c,1489fa11-d059-4669-b71a-04ae109cbac0,written_threats,Written threats,10,2025-10-07 20:33:30.5124-04,t,harassment,Harassment
+46554721-1676-4c13-b3ed-7b2a422c98bc,1489fa11-d059-4669-b71a-04ae109cbac0,aggressive_language,Aggressive/inappropriate language,11,2025-10-07 20:33:30.5124-04,t,harassment,Harassment
+b34c1b64-fff1-4d02-9c36-3be9ce5b5493,1489fa11-d059-4669-b71a-04ae109cbac0,physical_threats,Physical threats or touching,12,2025-10-07 20:33:30.5124-04,t,harassment,Harassment
+83d647e4-5d40-49dd-b0dd-84b3a14d2559,1489fa11-d059-4669-b71a-04ae109cbac0,selective_notices,"Notices singling out one tenant, but not uniformly given to all tenants",13,2025-10-07 20:33:30.5124-04,t,harassment,Harassment
+3c785723-c211-401e-81cf-9c72275800da,1489fa11-d059-4669-b71a-04ae109cbac0,duplicative_notices,Duplicative notices,14,2025-10-07 20:33:30.5124-04,t,harassment,Harassment
+de153bfb-d236-4f36-85ea-c40a0fab2c3b,1489fa11-d059-4669-b71a-04ae109cbac0,untimely_response,Untimely Response from Landlord,15,2025-10-07 20:33:30.5124-04,t,harassment,Harassment
+b55db108-f0c0-4f1c-bd20-d66f213f0e88,c7bed7f9-4cf1-4c47-9a9a-bd7e3a0779b0,verbal_notice,Verbal Notice to Landlord,1,2025-10-07 20:22:12.285031-04,t,notices,Notices
+df5c05ce-ba51-4b1c-ad23-80d64c6090b6,c7bed7f9-4cf1-4c47-9a9a-bd7e3a0779b0,written_notice,Written Notice to Landlord,2,2025-10-07 20:22:12.285031-04,t,notices,Notices
+46451065-057a-4991-b8b3-35abed2030b5,c7bed7f9-4cf1-4c47-9a9a-bd7e3a0779b0,email_notice,Email Notice to Landlord,3,2025-10-07 20:22:12.285031-04,t,notices,Notices
+76ca8ec9-3b71-4867-9286-20ff65a99efe,c7bed7f9-4cf1-4c47-9a9a-bd7e3a0779b0,certified_mail_notice,Certified Mail Notice,4,2025-10-07 20:22:12.285031-04,t,notices,Notices
+7d66e3ac-1e38-477f-bda2-0941335ccc34,c7bed7f9-4cf1-4c47-9a9a-bd7e3a0779b0,text_message_notice,Text Message Notice,5,2025-10-07 20:22:12.285031-04,t,notices,Notices
+7ee54d20-343a-4ff0-a9bc-69f2b25dca27,c7bed7f9-4cf1-4c47-9a9a-bd7e3a0779b0,portal_request,Online Portal Maintenance Request,6,2025-10-07 20:22:12.285031-04,t,notices,Notices
+63e1232d-b23c-4c46-af6d-6f2a03ebb21d,c7bed7f9-4cf1-4c47-9a9a-bd7e3a0779b0,emergency_notice,Emergency Notice,7,2025-10-07 20:22:12.285031-04,t,notices,Notices
+878be7b1-6354-4046-b3fe-267ab163855b,c7bed7f9-4cf1-4c47-9a9a-bd7e3a0779b0,no_response_to_notice,No Response to Notice,8,2025-10-07 20:22:12.285031-04,t,notices,Notices
+71b9b1c8-2f16-4b40-b46d-6ce203b7b860,c7bed7f9-4cf1-4c47-9a9a-bd7e3a0779b0,landlord_aware_no_repair,Landlord Aware But No Repair,9,2025-10-07 20:22:12.285031-04,t,notices,Notices
+4c8f3534-0a3d-4ba0-836e-d47e94ececae,c7bed7f9-4cf1-4c47-9a9a-bd7e3a0779b0,other_notice,Other Notice Type,10,2025-10-07 20:22:12.285031-04,t,notices,Notices
+ff1729fb-357e-4049-812d-547abc69f97c,b892fb73-f511-4a6f-9049-61d546b5e3b7,gas_leak,Gas leak,1,2025-10-07 20:33:30.55921-04,t,utilities,Utilities
+0a2e432b-f834-4b21-bc32-9ed1967442bd,b892fb73-f511-4a6f-9049-61d546b5e3b7,water_shutoffs,Water shutoffs,2,2025-10-07 20:33:30.55921-04,t,utilities,Utilities
+ebf7767b-b283-4070-a325-6c10acd4a278,b892fb73-f511-4a6f-9049-61d546b5e3b7,electricity_shutoffs,Electricity shutoffs,3,2025-10-07 20:33:30.55921-04,t,utilities,Utilities
+61e001cf-e6e0-4678-8d82-4f18655d5631,b892fb73-f511-4a6f-9049-61d546b5e3b7,heat_shutoff,Heat Shutoff,4,2025-10-07 20:33:30.55921-04,t,utilities,Utilities
+db31b246-ade3-44c5-8a49-3c2e94139d26,b892fb73-f511-4a6f-9049-61d546b5e3b7,gas_shutoff,Gas Shutoff,5,2025-10-07 20:33:30.55921-04,t,utilities,Utilities
+6ed0efa4-e54f-48be-8b6e-ca8f387f89a7,06304cd2-0f86-42d1-b0ce-5e846bf02605,age_discrimination,Age discrimination,1,2025-10-07 20:33:30.609704-04,t,discrimination,Discrimination
+a050c156-099f-4113-b9d0-62458940a6c3,06304cd2-0f86-42d1-b0ce-5e846bf02605,racial_discrimination,Racial Discrimination,2,2025-10-07 20:33:30.609704-04,t,discrimination,Discrimination
+be9d1105-11c8-4fe7-a3e4-daaf500cb29b,06304cd2-0f86-42d1-b0ce-5e846bf02605,disability_discrimination,Disability discrimination,3,2025-10-07 20:33:30.609704-04,t,discrimination,Discrimination
+7c852e5e-c19f-43a4-a5ec-5aa028719347,53d27521-8447-4ec5-aa5f-d36a30f34082,local_housing_authority,Local Housing Authority,1,2025-10-07 20:22:12.285882-04,t,government_entities,Government Entities
+7dd83d8c-447b-4a73-b916-396acbb532f2,53d27521-8447-4ec5-aa5f-d36a30f34082,housing_inspection_dept,Housing Inspection Department,2,2025-10-07 20:22:12.285882-04,t,government_entities,Government Entities
+ccd83672-d5b1-4f65-8681-1c4b5146e9e8,53d27521-8447-4ec5-aa5f-d36a30f34082,code_enforcement,Code Enforcement,3,2025-10-07 20:22:12.285882-04,t,government_entities,Government Entities
+4feb51c7-c2e8-4e2f-9ba1-e6efacf7e72f,53d27521-8447-4ec5-aa5f-d36a30f34082,health_department,Health Department,4,2025-10-07 20:22:12.285882-04,t,government_entities,Government Entities
+aa1597ba-14e8-4b43-b7bd-9a05daf07127,53d27521-8447-4ec5-aa5f-d36a30f34082,building_dept,Building Department,5,2025-10-07 20:22:12.285882-04,t,government_entities,Government Entities
+312d2583-bbf3-4457-ac27-45b1bf80fe0b,53d27521-8447-4ec5-aa5f-d36a30f34082,fire_department,Fire Department,6,2025-10-07 20:22:12.285882-04,t,government_entities,Government Entities
+5bf0707a-2951-478b-bc1c-a6e116dd8403,53d27521-8447-4ec5-aa5f-d36a30f34082,police_department,Police Department,7,2025-10-07 20:22:12.285882-04,t,government_entities,Government Entities
+97a68757-00bd-48f5-9087-9f5d92ed97ff,53d27521-8447-4ec5-aa5f-d36a30f34082,legal_aid_services,Legal Aid Services,8,2025-10-07 20:22:12.285882-04,t,government_entities,Government Entities
+df907b9d-d49a-49fe-906d-aea979a1d553,53d27521-8447-4ec5-aa5f-d36a30f34082,tenant_rights_org,Tenant Rights Organization,9,2025-10-07 20:22:12.285882-04,t,government_entities,Government Entities
+f7a99c34-d013-4f57-88bd-c931f2763311,53d27521-8447-4ec5-aa5f-d36a30f34082,fair_housing_agency,Fair Housing Agency,10,2025-10-07 20:22:12.285882-04,t,government_entities,Government Entities
+79d2ea73-bd22-4c95-a38c-cd3709a8394b,53d27521-8447-4ec5-aa5f-d36a30f34082,housing_court,Housing Court,11,2025-10-07 20:22:12.285882-04,t,government_entities,Government Entities
+1dc8c992-686b-4339-9ba9-462ef9221a30,53d27521-8447-4ec5-aa5f-d36a30f34082,attorney_general,Attorney General Office,12,2025-10-07 20:22:12.285882-04,t,government_entities,Government Entities
+d00644b9-0585-4d20-b848-ef151db2f5bb,53d27521-8447-4ec5-aa5f-d36a30f34082,hud,HUD (Housing and Urban Development),13,2025-10-07 20:22:12.285882-04,t,government_entities,Government Entities
+d5e7e4f1-3e18-4e8f-86df-8ba14670261e,53d27521-8447-4ec5-aa5f-d36a30f34082,rent_board,Rent Board/Commission,14,2025-10-07 20:22:12.285882-04,t,government_entities,Government Entities
+4dc115e5-96c0-4274-8ba4-a3629f01f2cd,53d27521-8447-4ec5-aa5f-d36a30f34082,other_government,Other Government Entity,15,2025-10-07 20:22:12.285882-04,t,government_entities,Government Entities

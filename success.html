@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Submitted Successfully - Lipton Legal</title>
+    <!--
+        Lipton Legal - Success Page
+
+        Displays confirmation after successful form submission with:
+        - Animated success icon
+        - Submission details (ID, timestamp, status)
+        - Next steps information
+        - Actions (submit another form, print confirmation)
+
+        Design Features:
+        - Brand-consistent gradient header (Teal to Navy)
+        - Clean card layout with proper spacing
+        - Professional typography matching main form
+        - Responsive design for all devices
+
+        Updated: 2025-10-08
+        - Improved visual hierarchy with increased font sizes
+        - Enhanced spacing throughout (padding, margins increased)
+        - Better touch targets on buttons (14px → 28px padding)
+        - Consistent line-heights for readability (1.6)
+        - Improved heading weights (500/600 → 700)
+        - All spacing now follows 4px/8px grid system
+    -->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6; /* Improved from 1.4 for better readability */
+            margin: 0;
+            padding: 24px; /* Increased from 20px for better spacing */
+            background: #F5F5F5;
+            min-height: 100vh;
+            color: #333333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px; /* Added base font size */
+        }
+
+        .success-container {
+            max-width: 600px;
+            background: #FFFFFF;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(31, 42, 68, 0.15);
+            overflow: hidden;
+            border: 1px solid #E2E8F0;
+            text-align: center;
+        }
+
+        .success-header {
+            background: linear-gradient(135deg, #00AEEF 0%, #1F2A44 100%);
+            color: #FFFFFF;
+            padding: 48px 40px; /* Increased from 40px 30px for better spacing */
+            position: relative;
+        }
+
+        .success-header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #00AEEF 0%, #F2C8D0 100%);
+        }
+
+        .success-icon {
+            font-size: 4rem;
+            color: #FFFFFF;
+            margin-bottom: 20px;
+            animation: bounceIn 0.8s ease-out;
+        }
+
+        @keyframes bounceIn {
+            0% { transform: scale(0.3); opacity: 0; }
+            50% { transform: scale(1.05); }
+            70% { transform: scale(0.9); }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        .success-header h1 {
+            margin: 0;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 2.2rem; /* Increased from 2rem for better hierarchy */
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .success-header .subtitle {
+            margin: 12px 0 0 0; /* Increased from 10px */
+            font-size: 1.15rem; /* Slightly increased from 1.1rem */
+            opacity: 0.9;
+            font-weight: 400;
+        }
+
+        .success-content {
+            padding: 48px 40px; /* Increased from 40px 30px for better spacing */
+        }
+
+        .entry-details {
+            background: #F8FAFC;
+            border: 1px solid #E2E8F0;
+            border-radius: 10px; /* Increased from 8px */
+            padding: 24px; /* Increased from 20px for better spacing */
+            margin: 24px 0; /* Increased from 20px */
+            text-align: left;
+        }
+
+        .entry-details h3 {
+            margin: 0 0 20px 0; /* Increased from 15px for better separation */
+            color: #1F2A44;
+            font-size: 1.2rem; /* Increased from 1.1rem */
+            font-weight: 700; /* Increased from 600 */
+        }
+
+        .detail-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0; /* Increased from 8px for better row spacing */
+            border-bottom: 1px solid #E2E8F0;
+        }
+
+        .detail-row:last-child {
+            border-bottom: none;
+        }
+
+        .detail-label {
+            font-weight: 600; /* Increased from 500 for better emphasis */
+            color: #64748B;
+            font-size: 0.95rem;
+        }
+
+        .detail-value {
+            font-weight: 700; /* Increased from 600 for better emphasis */
+            color: #1F2A44;
+            font-family: monospace;
+            font-size: 0.95rem;
+        }
+
+        .actions {
+            margin-top: 32px; /* Increased from 30px */
+            display: flex;
+            gap: 16px; /* Increased from 15px */
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px; /* Increased from 8px */
+            padding: 14px 28px; /* Increased from 12px 24px for better touch targets */
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 600; /* Increased from 500 */
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .btn-primary {
+            background: #00AEEF;
+            color: #FFFFFF;
+        }
+
+        .btn-primary:hover {
+            background: #0099D4;
+            transform: translateY(-1px);
+        }
+
+        .btn-secondary {
+            background: #FFFFFF;
+            color: #1F2A44;
+            border: 2px solid #1F2A44;
+        }
+
+        .btn-secondary:hover {
+            background: #1F2A44;
+            color: #FFFFFF;
+            transform: translateY(-1px);
+        }
+
+        .logo {
+            height: 60px;
+            width: auto;
+            margin-bottom: 20px;
+            filter: brightness(0) invert(1);
+        }
+
+        .next-steps {
+            background: #FEF9E7;
+            border: 1px solid #F59E0B;
+            border-radius: 10px; /* Increased from 8px */
+            padding: 24px; /* Increased from 20px */
+            margin: 24px 0; /* Increased from 20px */
+            text-align: left;
+        }
+
+        .next-steps h4 {
+            margin: 0 0 16px 0; /* Increased from 10px for better separation */
+            color: #92400E;
+            font-size: 1.1rem; /* Increased from 1rem */
+            font-weight: 700; /* Increased from 600 */
+        }
+
+        .next-steps ul {
+            margin: 0;
+            padding-left: 24px; /* Increased from 20px */
+            color: #92400E;
+        }
+
+        .next-steps li {
+            margin: 8px 0; /* Increased from 5px for better item spacing */
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="success-container">
+        <div class="success-header">
+            <img src="/logo.png" alt="Lipton Legal" class="logo">
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h1>Form Submitted Successfully!</h1>
+            <p class="subtitle">Your information has been securely saved</p>
+        </div>
+
+        <div class="success-content">
+            <div class="entry-details">
+                <h3><i class="fas fa-file-text"></i> Submission Details</h3>
+                <div class="detail-row">
+                    <span class="detail-label">Entry ID:</span>
+                    <span class="detail-value" id="entry-id">Loading...</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Submitted At:</span>
+                    <span class="detail-value" id="submitted-at">Loading...</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Status:</span>
+                    <span class="detail-value" style="color: #059669;">✓ Saved Successfully</span>
+                </div>
+            </div>
+
+            <div class="next-steps">
+                <h4><i class="fas fa-info-circle"></i> What Happens Next?</h4>
+                <ul>
+                    <li>Our legal team will review your submission within 24-48 hours</li>
+                    <li>You will receive a confirmation email at the provided address</li>
+                    <li>A case specialist may contact you for additional information</li>
+                    <li>Keep your Entry ID for future reference</li>
+                </ul>
+            </div>
+
+            <div class="actions">
+                <a href="/" class="btn btn-primary">
+                    <i class="fas fa-plus"></i> Submit Another Form
+                </a>
+                <button onclick="window.print()" class="btn btn-secondary">
+                    <i class="fas fa-print"></i> Print Confirmation
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Extract entry details from URL parameters or localStorage
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const entryId = urlParams.get('id') || localStorage.getItem('lastEntryId') || 'N/A';
+            const submittedAt = urlParams.get('timestamp') || localStorage.getItem('lastSubmissionTime') || new Date().toLocaleString();
+
+            document.getElementById('entry-id').textContent = entryId;
+            document.getElementById('submitted-at').textContent = submittedAt;
+
+            // Clear localStorage after displaying
+            localStorage.removeItem('lastEntryId');
+            localStorage.removeItem('lastSubmissionTime');
+        });
+    </script>
+</body>
+</html>

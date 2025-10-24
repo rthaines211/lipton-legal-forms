@@ -1,0 +1,88 @@
+# Prometheus Configuration for Legal Form Application
+#
+# This configuration sets up Prometheus to scrape metrics from:
+# - The Legal Form Application (Node.js Express server)
+# - Prometheus itself (self-monitoring)
+#
+# For local development on macOS/Windows, use host.docker.internal
+# For Linux, use your machine's IP address (e.g., 192.168.1.x)
+
+global:
+  # How frequently to scrape targets by default
+  scrape_interval: 15s
+
+  # How frequently to evaluate rules
+  evaluation_interval: 15s
+
+  # External labels to attach to any time series or alerts
+  external_labels:
+    cluster: 'local-development'
+    environment: 'development'
+    service: 'legal-form-app'
+
+# Alertmanager configuration (optional - for future use)
+# alerting:
+#   alertmanagers:
+#     - static_configs:
+#         - targets:
+#           - 'alertmanager:9093'
+
+# Load rules once and periodically evaluate them
+rule_files:
+  - '/etc/prometheus/alerts/*.yml'
+
+# Scrape configurations
+scrape_configs:
+  # Scrape Prometheus itself for self-monitoring
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090']
+        labels:
+          instance: 'prometheus'
+          job_type: 'monitoring'
+
+  # Scrape the Legal Form Application
+  - job_name: 'legal-form-app'
+
+    # Scrape interval for this job (overrides global)
+    scrape_interval: 10s
+
+    # Timeout for scraping (must be less than scrape_interval)
+    scrape_timeout: 5s
+
+    # Metrics path (where the app exposes metrics)
+    metrics_path: '/metrics'
+
+    # Scheme (http or https)
+    scheme: http
+
+    # Static targets to scrape
+    static_configs:
+      - targets:
+          # For macOS/Windows Docker Desktop
+          - 'host.docker.internal:3000'
+
+          # For Linux, uncomment and use your machine's IP:
+          # - '192.168.1.100:3000'
+
+        labels:
+          instance: 'legal-form-app-local'
+          job_type: 'application'
+          app: 'legal-form'
+          tier: 'backend'
+
+    # Relabeling to clean up metric labels
+    metric_relabel_configs:
+      # Drop metrics we don't need to save storage
+      - source_labels: [__name__]
+        regex: 'go_.*'
+        action: drop
+
+      # Add custom labels
+      - target_label: 'environment'
+        replacement: 'development'
+
+  # Future: Add more scrape jobs here
+  # - PostgreSQL exporter
+  # - Node exporter (system metrics)
+  # - Python pipeline API

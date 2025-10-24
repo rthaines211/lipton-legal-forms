@@ -1,0 +1,823 @@
+{
+  "datasets": [
+    {
+      "dataset_id": "1-VTSxIZ-t5dfqS",
+      "case_id": "1",
+      "plaintiff": {
+        "plaintiff_id": "VTSxIZ",
+        "first_name": "Clark",
+        "last_name": "Kent",
+        "full_name": "Clark Kent",
+        "unit_number": "1"
+      },
+      "defendant": {
+        "defendant_id": "t5dfqS",
+        "first_name": "Tony",
+        "last_name": "Stark",
+        "full_name": "Tony Stark",
+        "entity_type": "LLC",
+        "role": "Manager"
+      },
+      "case_metadata": {
+        "property_address": "1331 Yorkshire Place NW",
+        "property_address_with_unit": "1331 Yorkshire Place NW Unit 1",
+        "city": "Los Angeles",
+        "state": "North Carolina",
+        "zip": "28027",
+        "filing_city": "Los Charlotte",
+        "filing_county": "Los Angeles"
+      },
+      "discovery_data": {
+        "vermin": [
+          "Rats/Mice",
+          "Skunks",
+          "Bats",
+          "Raccoons",
+          "Pigeons",
+          "Opossums"
+        ],
+        "insects": [
+          "Ants",
+          "Roaches",
+          "Flies",
+          "Bedbugs",
+          "Wasps",
+          "Hornets",
+          "Spiders",
+          "Termites",
+          "Mosquitos",
+          "Bees"
+        ],
+        "hvac": [
+          "Air Conditioner",
+          "Heater",
+          "Ventilation"
+        ],
+        "electrical": [
+          "Outlets",
+          "Panel",
+          "Wall Switches",
+          "Exterior Lighting",
+          "Interior Lighting",
+          "Light Fixtures",
+          "Fans"
+        ],
+        "fire_hazard": [
+          "Smoke Alarms",
+          "Fire Extinguisher",
+          "Non-compliant electricity",
+          "Non-GFI outlets near water",
+          "Carbon monoxide detectors"
+        ],
+        "government_entities": [
+          "Health Department",
+          "Housing Authority",
+          "Code Enforcement",
+          "Fire Department",
+          "Police Department",
+          "Department of Environmental Health",
+          "Department of Health Services"
+        ],
+        "appliances": [
+          "Stove",
+          "Dishwasher",
+          "Washer/dryer",
+          "Oven",
+          "Microwave",
+          "Garbage disposal",
+          "Refrigerator"
+        ],
+        "plumbing": [
+          "Toilet",
+          "Insufficient water pressure",
+          "Clogged bath",
+          "Shower",
+          "No hot water",
+          "Clogged sinks",
+          "Bath",
+          "No cold water",
+          "Clogged shower",
+          "Fixtures",
+          "Sewage coming out",
+          "No Clean Water Supply",
+          "Leaks",
+          "Clogged toilets",
+          "Unsanitary water"
+        ],
+        "cabinets": [
+          "Broken",
+          "Hinges",
+          "Alignment"
+        ],
+        "flooring": [
+          "Uneven",
+          "Carpet",
+          "Nails sticking out",
+          "Tiles"
+        ],
+        "windows": [
+          "Broken",
+          "Screens",
+          "Leaks",
+          "Do not lock",
+          "Missing windows",
+          "Broken or missing screens"
+        ],
+        "doors": [
+          "Broken",
+          "Knobs",
+          "Locks",
+          "Broken hinges",
+          "Sliding glass doors",
+          "Ineffective waterproofing",
+          "Water intrusion and/or insects",
+          "Do not close properly"
+        ],
+        "structure": [
+          "Bumps in ceiling",
+          "Hole in ceiling",
+          "Water stains on ceiling",
+          "Water stains on wall",
+          "Hole in wall",
+          "Paint",
+          "Exterior deck/porch",
+          "Waterproof toilet",
+          "Waterproof tub",
+          "Staircase",
+          "Basement flood",
+          "Leaks in garage",
+          "Soft Spots due to Leaks",
+          "Ineffective waterproofing of the tubs or toilet",
+          "Ineffective Weatherproofing of any windows doors"
+        ],
+        "common_areas": [
+          "Mailbox broken",
+          "Parking area issues",
+          "Damage to cars",
+          "Flooding",
+          "Entrances blocked",
+          "Swimming pool",
+          "Jacuzzi",
+          "Laundry room",
+          "Recreation room",
+          "Gym",
+          "Elevator",
+          "Filth Rubbish Garbage",
+          "Vermin",
+          "Insects",
+          "Broken Gate",
+          "Blocked areas/doors"
+        ],
+        "trash_problems": [
+          "Inadequate number of receptacles",
+          "Properly servicing and emptying receptacles"
+        ],
+        "nuisance": [
+          "Drugs",
+          "Smoking",
+          "Noisy neighbors",
+          "Gangs"
+        ],
+        "health_hazard": [
+          "Mold",
+          "Mildew",
+          "Mushrooms",
+          "Raw sewage on exterior",
+          "Noxious fumes",
+          "Chemical/paint contamination",
+          "Toxic water pollution",
+          "Offensive odors"
+        ],
+        "harassment": [
+          "Unlawful Detainer",
+          "Eviction threats",
+          "By defendant",
+          "By maintenance man/workers",
+          "By manager/building staff",
+          "By owner",
+          "Other tenants",
+          "Illegitimate notices",
+          "Refusal to make timely repairs",
+          "Written threats",
+          "Aggressive/inappropriate language",
+          "Physical threats or touching",
+          "Notices singling out one tenant, but not uniformly given to all tenants",
+          "Duplicative notices",
+          "Untimely Response from Landlord"
+        ],
+        "notices": [
+          "3-day",
+          "24-hour",
+          "30-day",
+          "60-day",
+          "To quit",
+          "Perform or Quit"
+        ],
+        "utility_interruptions": [
+          "Gas leak",
+          "Water shutoffs",
+          "Electricity shutoffs",
+          "Heat shutoff",
+          "Gas shutoff"
+        ],
+        "safety_issues": [
+          "Broken/inoperable security gate",
+          "Broken doors",
+          "Unauthorized entries",
+          "Broken buzzer to get in",
+          "Security cameras",
+          "Inoperable locks"
+        ],
+        "has_injury": true,
+        "has_nonresponsive_landlord": true,
+        "has_unauthorized_entries": true,
+        "has_stolen_items": true,
+        "has_damaged_items": true,
+        "has_age_discrimination": true,
+        "has_racial_discrimination": true,
+        "has_disability_discrimination": true,
+        "has_security_deposit_issues": true
+      },
+      "case_context": {
+        "all_plaintiffs_summary": [
+          {
+            "plaintiff_id": "VTSxIZ",
+            "full_name": "Clark Kent",
+            "plaintiff_type": "Individual",
+            "unit_number": "1",
+            "is_head_of_household": true
+          },
+          {
+            "plaintiff_id": "4pyhfl",
+            "full_name": "Lois Lane",
+            "plaintiff_type": "Guardian",
+            "unit_number": "2",
+            "is_head_of_household": true
+          },
+          {
+            "plaintiff_id": "ZbKVgB",
+            "full_name": "Bruce Wayne",
+            "plaintiff_type": "Individual",
+            "unit_number": null,
+            "is_head_of_household": false
+          }
+        ],
+        "all_defendants_summary": [
+          {
+            "defendant_id": "t5dfqS",
+            "full_name": "Tony Stark",
+            "entity_type": "LLC",
+            "role": "Manager"
+          },
+          {
+            "defendant_id": "8WCXCG",
+            "full_name": "Steve Rogers",
+            "entity_type": "LLC",
+            "role": "Owner"
+          }
+        ],
+        "all_plaintiffs_upper_with_types": "CLARK KENT, INDIVIDUAL; LOIS LANE, GUARDIAN; BRUCE WAYNE, INDIVIDUAL",
+        "all_defendants_upper_with_types": "TONY STARK, MANAGER; STEVE ROGERS, OWNER",
+        "plaintiffs_array": [
+          "Clark Kent",
+          "Lois Lane",
+          "Bruce Wayne"
+        ],
+        "filing_county": "Los Angeles"
+      }
+    },
+    {
+      "dataset_id": "1-VTSxIZ-8WCXCG",
+      "case_id": "1",
+      "plaintiff": {
+        "plaintiff_id": "VTSxIZ",
+        "first_name": "Clark",
+        "last_name": "Kent",
+        "full_name": "Clark Kent",
+        "unit_number": "1"
+      },
+      "defendant": {
+        "defendant_id": "8WCXCG",
+        "first_name": "Steve",
+        "last_name": "Rogers",
+        "full_name": "Steve Rogers",
+        "entity_type": "LLC",
+        "role": "Owner"
+      },
+      "case_metadata": {
+        "property_address": "1331 Yorkshire Place NW",
+        "property_address_with_unit": "1331 Yorkshire Place NW Unit 1",
+        "city": "Los Angeles",
+        "state": "North Carolina",
+        "zip": "28027",
+        "filing_city": "Los Charlotte",
+        "filing_county": "Los Angeles"
+      },
+      "discovery_data": {
+        "vermin": [
+          "Rats/Mice",
+          "Skunks",
+          "Bats",
+          "Raccoons",
+          "Pigeons",
+          "Opossums"
+        ],
+        "insects": [
+          "Ants",
+          "Roaches",
+          "Flies",
+          "Bedbugs",
+          "Wasps",
+          "Hornets",
+          "Spiders",
+          "Termites",
+          "Mosquitos",
+          "Bees"
+        ],
+        "hvac": [
+          "Air Conditioner",
+          "Heater",
+          "Ventilation"
+        ],
+        "electrical": [
+          "Outlets",
+          "Panel",
+          "Wall Switches",
+          "Exterior Lighting",
+          "Interior Lighting",
+          "Light Fixtures",
+          "Fans"
+        ],
+        "fire_hazard": [
+          "Smoke Alarms",
+          "Fire Extinguisher",
+          "Non-compliant electricity",
+          "Non-GFI outlets near water",
+          "Carbon monoxide detectors"
+        ],
+        "government_entities": [
+          "Health Department",
+          "Housing Authority",
+          "Code Enforcement",
+          "Fire Department",
+          "Police Department",
+          "Department of Environmental Health",
+          "Department of Health Services"
+        ],
+        "appliances": [
+          "Stove",
+          "Dishwasher",
+          "Washer/dryer",
+          "Oven",
+          "Microwave",
+          "Garbage disposal",
+          "Refrigerator"
+        ],
+        "plumbing": [
+          "Toilet",
+          "Insufficient water pressure",
+          "Clogged bath",
+          "Shower",
+          "No hot water",
+          "Clogged sinks",
+          "Bath",
+          "No cold water",
+          "Clogged shower",
+          "Fixtures",
+          "Sewage coming out",
+          "No Clean Water Supply",
+          "Leaks",
+          "Clogged toilets",
+          "Unsanitary water"
+        ],
+        "cabinets": [
+          "Broken",
+          "Hinges",
+          "Alignment"
+        ],
+        "flooring": [
+          "Uneven",
+          "Carpet",
+          "Nails sticking out",
+          "Tiles"
+        ],
+        "windows": [
+          "Broken",
+          "Screens",
+          "Leaks",
+          "Do not lock",
+          "Missing windows",
+          "Broken or missing screens"
+        ],
+        "doors": [
+          "Broken",
+          "Knobs",
+          "Locks",
+          "Broken hinges",
+          "Sliding glass doors",
+          "Ineffective waterproofing",
+          "Water intrusion and/or insects",
+          "Do not close properly"
+        ],
+        "structure": [
+          "Bumps in ceiling",
+          "Hole in ceiling",
+          "Water stains on ceiling",
+          "Water stains on wall",
+          "Hole in wall",
+          "Paint",
+          "Exterior deck/porch",
+          "Waterproof toilet",
+          "Waterproof tub",
+          "Staircase",
+          "Basement flood",
+          "Leaks in garage",
+          "Soft Spots due to Leaks",
+          "Ineffective waterproofing of the tubs or toilet",
+          "Ineffective Weatherproofing of any windows doors"
+        ],
+        "common_areas": [
+          "Mailbox broken",
+          "Parking area issues",
+          "Damage to cars",
+          "Flooding",
+          "Entrances blocked",
+          "Swimming pool",
+          "Jacuzzi",
+          "Laundry room",
+          "Recreation room",
+          "Gym",
+          "Elevator",
+          "Filth Rubbish Garbage",
+          "Vermin",
+          "Insects",
+          "Broken Gate",
+          "Blocked areas/doors"
+        ],
+        "trash_problems": [
+          "Inadequate number of receptacles",
+          "Properly servicing and emptying receptacles"
+        ],
+        "nuisance": [
+          "Drugs",
+          "Smoking",
+          "Noisy neighbors",
+          "Gangs"
+        ],
+        "health_hazard": [
+          "Mold",
+          "Mildew",
+          "Mushrooms",
+          "Raw sewage on exterior",
+          "Noxious fumes",
+          "Chemical/paint contamination",
+          "Toxic water pollution",
+          "Offensive odors"
+        ],
+        "harassment": [
+          "Unlawful Detainer",
+          "Eviction threats",
+          "By defendant",
+          "By maintenance man/workers",
+          "By manager/building staff",
+          "By owner",
+          "Other tenants",
+          "Illegitimate notices",
+          "Refusal to make timely repairs",
+          "Written threats",
+          "Aggressive/inappropriate language",
+          "Physical threats or touching",
+          "Notices singling out one tenant, but not uniformly given to all tenants",
+          "Duplicative notices",
+          "Untimely Response from Landlord"
+        ],
+        "notices": [
+          "3-day",
+          "24-hour",
+          "30-day",
+          "60-day",
+          "To quit",
+          "Perform or Quit"
+        ],
+        "utility_interruptions": [
+          "Gas leak",
+          "Water shutoffs",
+          "Electricity shutoffs",
+          "Heat shutoff",
+          "Gas shutoff"
+        ],
+        "safety_issues": [
+          "Broken/inoperable security gate",
+          "Broken doors",
+          "Unauthorized entries",
+          "Broken buzzer to get in",
+          "Security cameras",
+          "Inoperable locks"
+        ],
+        "has_injury": true,
+        "has_nonresponsive_landlord": true,
+        "has_unauthorized_entries": true,
+        "has_stolen_items": true,
+        "has_damaged_items": true,
+        "has_age_discrimination": true,
+        "has_racial_discrimination": true,
+        "has_disability_discrimination": true,
+        "has_security_deposit_issues": true
+      },
+      "case_context": {
+        "all_plaintiffs_summary": [
+          {
+            "plaintiff_id": "VTSxIZ",
+            "full_name": "Clark Kent",
+            "plaintiff_type": "Individual",
+            "unit_number": "1",
+            "is_head_of_household": true
+          },
+          {
+            "plaintiff_id": "4pyhfl",
+            "full_name": "Lois Lane",
+            "plaintiff_type": "Guardian",
+            "unit_number": "2",
+            "is_head_of_household": true
+          },
+          {
+            "plaintiff_id": "ZbKVgB",
+            "full_name": "Bruce Wayne",
+            "plaintiff_type": "Individual",
+            "unit_number": null,
+            "is_head_of_household": false
+          }
+        ],
+        "all_defendants_summary": [
+          {
+            "defendant_id": "t5dfqS",
+            "full_name": "Tony Stark",
+            "entity_type": "LLC",
+            "role": "Manager"
+          },
+          {
+            "defendant_id": "8WCXCG",
+            "full_name": "Steve Rogers",
+            "entity_type": "LLC",
+            "role": "Owner"
+          }
+        ],
+        "all_plaintiffs_upper_with_types": "CLARK KENT, INDIVIDUAL; LOIS LANE, GUARDIAN; BRUCE WAYNE, INDIVIDUAL",
+        "all_defendants_upper_with_types": "TONY STARK, MANAGER; STEVE ROGERS, OWNER",
+        "plaintiffs_array": [
+          "Clark Kent",
+          "Lois Lane",
+          "Bruce Wayne"
+        ],
+        "filing_county": "Los Angeles"
+      }
+    },
+    {
+      "dataset_id": "1-4pyhfl-t5dfqS",
+      "case_id": "1",
+      "plaintiff": {
+        "plaintiff_id": "4pyhfl",
+        "first_name": "Lois",
+        "last_name": "Lane",
+        "full_name": "Lois Lane",
+        "unit_number": "2"
+      },
+      "defendant": {
+        "defendant_id": "t5dfqS",
+        "first_name": "Tony",
+        "last_name": "Stark",
+        "full_name": "Tony Stark",
+        "entity_type": "LLC",
+        "role": "Manager"
+      },
+      "case_metadata": {
+        "property_address": "1331 Yorkshire Place NW",
+        "property_address_with_unit": "1331 Yorkshire Place NW Unit 2",
+        "city": "Los Angeles",
+        "state": "North Carolina",
+        "zip": "28027",
+        "filing_city": "Los Charlotte",
+        "filing_county": "Los Angeles"
+      },
+      "discovery_data": {
+        "vermin": [
+          "Rats/Mice",
+          "Skunks",
+          "Raccoons",
+          "Pigeons"
+        ],
+        "insects": [
+          "Flies",
+          "Hornets",
+          "Termites",
+          "Bees"
+        ],
+        "hvac": [],
+        "electrical": [],
+        "fire_hazard": [],
+        "government_entities": [],
+        "appliances": [],
+        "plumbing": [],
+        "cabinets": [],
+        "flooring": [],
+        "windows": [],
+        "doors": [],
+        "structure": [],
+        "common_areas": [],
+        "trash_problems": [
+          "Inadequate number of receptacles",
+          "Properly servicing and emptying receptacles"
+        ],
+        "nuisance": [],
+        "health_hazard": [],
+        "harassment": [],
+        "notices": [],
+        "utility_interruptions": [],
+        "safety_issues": [],
+        "has_injury": false,
+        "has_nonresponsive_landlord": false,
+        "has_unauthorized_entries": false,
+        "has_stolen_items": false,
+        "has_damaged_items": false,
+        "has_age_discrimination": false,
+        "has_racial_discrimination": false,
+        "has_disability_discrimination": false,
+        "has_security_deposit_issues": false
+      },
+      "case_context": {
+        "all_plaintiffs_summary": [
+          {
+            "plaintiff_id": "VTSxIZ",
+            "full_name": "Clark Kent",
+            "plaintiff_type": "Individual",
+            "unit_number": "1",
+            "is_head_of_household": true
+          },
+          {
+            "plaintiff_id": "4pyhfl",
+            "full_name": "Lois Lane",
+            "plaintiff_type": "Guardian",
+            "unit_number": "2",
+            "is_head_of_household": true
+          },
+          {
+            "plaintiff_id": "ZbKVgB",
+            "full_name": "Bruce Wayne",
+            "plaintiff_type": "Individual",
+            "unit_number": null,
+            "is_head_of_household": false
+          }
+        ],
+        "all_defendants_summary": [
+          {
+            "defendant_id": "t5dfqS",
+            "full_name": "Tony Stark",
+            "entity_type": "LLC",
+            "role": "Manager"
+          },
+          {
+            "defendant_id": "8WCXCG",
+            "full_name": "Steve Rogers",
+            "entity_type": "LLC",
+            "role": "Owner"
+          }
+        ],
+        "all_plaintiffs_upper_with_types": "CLARK KENT, INDIVIDUAL; LOIS LANE, GUARDIAN; BRUCE WAYNE, INDIVIDUAL",
+        "all_defendants_upper_with_types": "TONY STARK, MANAGER; STEVE ROGERS, OWNER",
+        "plaintiffs_array": [
+          "Clark Kent",
+          "Lois Lane",
+          "Bruce Wayne"
+        ],
+        "filing_county": "Los Angeles"
+      }
+    },
+    {
+      "dataset_id": "1-4pyhfl-8WCXCG",
+      "case_id": "1",
+      "plaintiff": {
+        "plaintiff_id": "4pyhfl",
+        "first_name": "Lois",
+        "last_name": "Lane",
+        "full_name": "Lois Lane",
+        "unit_number": "2"
+      },
+      "defendant": {
+        "defendant_id": "8WCXCG",
+        "first_name": "Steve",
+        "last_name": "Rogers",
+        "full_name": "Steve Rogers",
+        "entity_type": "LLC",
+        "role": "Owner"
+      },
+      "case_metadata": {
+        "property_address": "1331 Yorkshire Place NW",
+        "property_address_with_unit": "1331 Yorkshire Place NW Unit 2",
+        "city": "Los Angeles",
+        "state": "North Carolina",
+        "zip": "28027",
+        "filing_city": "Los Charlotte",
+        "filing_county": "Los Angeles"
+      },
+      "discovery_data": {
+        "vermin": [
+          "Rats/Mice",
+          "Skunks",
+          "Raccoons",
+          "Pigeons"
+        ],
+        "insects": [
+          "Flies",
+          "Hornets",
+          "Termites",
+          "Bees"
+        ],
+        "hvac": [],
+        "electrical": [],
+        "fire_hazard": [],
+        "government_entities": [],
+        "appliances": [],
+        "plumbing": [],
+        "cabinets": [],
+        "flooring": [],
+        "windows": [],
+        "doors": [],
+        "structure": [],
+        "common_areas": [],
+        "trash_problems": [
+          "Inadequate number of receptacles",
+          "Properly servicing and emptying receptacles"
+        ],
+        "nuisance": [],
+        "health_hazard": [],
+        "harassment": [],
+        "notices": [],
+        "utility_interruptions": [],
+        "safety_issues": [],
+        "has_injury": false,
+        "has_nonresponsive_landlord": false,
+        "has_unauthorized_entries": false,
+        "has_stolen_items": false,
+        "has_damaged_items": false,
+        "has_age_discrimination": false,
+        "has_racial_discrimination": false,
+        "has_disability_discrimination": false,
+        "has_security_deposit_issues": false
+      },
+      "case_context": {
+        "all_plaintiffs_summary": [
+          {
+            "plaintiff_id": "VTSxIZ",
+            "full_name": "Clark Kent",
+            "plaintiff_type": "Individual",
+            "unit_number": "1",
+            "is_head_of_household": true
+          },
+          {
+            "plaintiff_id": "4pyhfl",
+            "full_name": "Lois Lane",
+            "plaintiff_type": "Guardian",
+            "unit_number": "2",
+            "is_head_of_household": true
+          },
+          {
+            "plaintiff_id": "ZbKVgB",
+            "full_name": "Bruce Wayne",
+            "plaintiff_type": "Individual",
+            "unit_number": null,
+            "is_head_of_household": false
+          }
+        ],
+        "all_defendants_summary": [
+          {
+            "defendant_id": "t5dfqS",
+            "full_name": "Tony Stark",
+            "entity_type": "LLC",
+            "role": "Manager"
+          },
+          {
+            "defendant_id": "8WCXCG",
+            "full_name": "Steve Rogers",
+            "entity_type": "LLC",
+            "role": "Owner"
+          }
+        ],
+        "all_plaintiffs_upper_with_types": "CLARK KENT, INDIVIDUAL; LOIS LANE, GUARDIAN; BRUCE WAYNE, INDIVIDUAL",
+        "all_defendants_upper_with_types": "TONY STARK, MANAGER; STEVE ROGERS, OWNER",
+        "plaintiffs_array": [
+          "Clark Kent",
+          "Lois Lane",
+          "Bruce Wayne"
+        ],
+        "filing_county": "Los Angeles"
+      }
+    }
+  ],
+  "metadata": {
+    "total_datasets": 4,
+    "hoh_count": 2,
+    "defendant_count": 2,
+    "non_hoh_plaintiffs": 1,
+    "expected_datasets": 4
+  }
+}

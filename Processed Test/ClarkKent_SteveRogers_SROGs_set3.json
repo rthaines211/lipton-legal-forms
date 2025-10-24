@@ -1,0 +1,71 @@
+{
+  "SetNumber": 3,
+  "InterrogatoryStart": 235,
+  "Case": {
+    "FilingCity": "Los Angeles",
+    "FilingCounty": "North Carolina",
+    "FullAddress": "1331 Yorkshire Place NW Unit 1, Los Angeles, North Carolina 28027",
+    "StreetAddress": "1331 Yorkshire Place NW Unit 1, Los Angeles, North Carolina 28027"
+  },
+  "Plaintiffs": [
+    {
+      "name": "Bruce Wayne",
+      "type": "Individual",
+      "Age": "Adult"
+    },
+    {
+      "name": "Clark Kent",
+      "type": "Individual",
+      "Age": "Adult"
+    },
+    {
+      "name": "Lois Lane",
+      "type": "Guardian",
+      "Age": "Adult"
+    }
+  ],
+  "Defendants": [
+    {
+      "name": "Steve Rogers",
+      "type": "LLC",
+      "Owner/Manager": "Owner"
+    },
+    {
+      "name": "Tony Stark",
+      "type": "LLC",
+      "Owner/Manager": "Manager"
+    }
+  ],
+  "AllPlaintiffs": "Bruce Wayne, Clark Kent, Lois Lane",
+  "AllDefendants": "Steve Rogers, Tony Stark",
+  "AllPlaintiffsUpperWithTypes": "BRUCE WAYNE, Individual; CLARK KENT, Individual; LOIS LANE, Guardian",
+  "AllDefendantsUpperWithTypes": "STEVE ROGERS, LLC; TONY STARK, LLC",
+  "HeadOfHousehold": "Clark Kent",
+  "TargetDefendant": "Steve Rogers",
+  "AgencyParagraph": "Los Angeles Health Department, Los Angeles Housing Department, Department of Building and Safety, Division Code Enforcement (County of North Carolina), Department of Health Services or Department of Environmental Health, City of Los Angeles Police Department, City of Los Angeles Fire Department, and lastly, the North Carolina County Sheriffs.",
+  "Street Address": "1331 Yorkshire Place NW, Los Angeles, North Carolina 28027",
+  "HasHeater": true,
+  "HasAC": true,
+  "HasOutlets": true,
+  "HasPanel": true,
+  "HasWallSwitches": true,
+  "HasExteriorLighting": true,
+  "HasInteriorLighting": true,
+  "HasLightFixtures": true,
+  "HasFans": true,
+  "HasSmokeAlarms": true,
+  "HasFireExtinguisher": true,
+  "HasNoncompliantElectricity": true,
+  "HasCarbonmonoxideDetectors": true,
+  "HasGovContact": true,
+  "HasStove": true,
+  "HasDishwasher": true,
+  "HasWasherDryer": true,
+  "TotalSets": 10,
+  "SetLabel": "Set 3 of 10",
+  "SetNoWrite": "THREE",
+  "SetStart": 235,
+  "SetEnd": 350,
+  "InterrogatoryCount": 116,
+  "CumulativeInterrogatoryEnd": 350
+}

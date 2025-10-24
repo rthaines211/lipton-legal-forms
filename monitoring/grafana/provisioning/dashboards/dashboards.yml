@@ -1,0 +1,20 @@
+# Grafana Dashboard Provisioning Configuration
+#
+# Automatically loads dashboards from the /dashboards directory
+# when Grafana starts. Dashboards can be created in the Grafana UI
+# and exported to JSON, then placed in the dashboards/ directory.
+
+apiVersion: 1
+
+providers:
+  # Provider for application dashboards
+  - name: 'legal-form-app-dashboards'
+    orgId: 1
+    folder: 'Legal Form Application'
+    type: file
+    disableDeletion: false
+    updateIntervalSeconds: 10
+    allowUiUpdates: true
+    options:
+      path: /var/lib/grafana/dashboards
+      foldersFromFilesStructure: false
