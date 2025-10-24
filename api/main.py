@@ -655,7 +655,7 @@ async def generate_documents(case_id: str, templates: list[str] = None, upload_t
         if not document_service.is_configured():
             raise HTTPException(
                 status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
-                detail="Document generation is not configured. Please set DOCMOSIS_ACCESS_KEY."
+                detail="Document generation is not configured. Please set DOCMOSIS_API_URL."
             )
 
         # Generate documents
@@ -716,7 +716,7 @@ async def generate_single_document(case_id: str, template_name: str, upload_to_d
         if not document_service.is_configured():
             raise HTTPException(
                 status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
-                detail="Document generation is not configured. Please set DOCMOSIS_ACCESS_KEY."
+                detail="Document generation is not configured. Please set DOCMOSIS_API_URL."
             )
 
         # Generate document

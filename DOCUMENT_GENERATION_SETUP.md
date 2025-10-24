@@ -57,8 +57,10 @@ POST /api/cases/{case_id}/generate-document/ComplaintForm.docx?upload_to_dropbox
 Add these to **lipton-doc-pipeline** service in Railway:
 
 ```bash
-# Docmosis Configuration
+# Docmosis Configuration (Required)
 DOCMOSIS_API_URL=https://docs.liptonlegal.com/api/render
+
+# Docmosis Configuration (Optional - only if your server requires it)
 DOCMOSIS_ACCESS_KEY=<your-docmosis-access-key>
 DOCMOSIS_TIMEOUT=60
 DOCMOSIS_RETRY_ATTEMPTS=3
@@ -234,12 +236,12 @@ Check your Dropbox app folder:
 
 ### "Document generation is not configured"
 
-**Problem:** `DOCMOSIS_ACCESS_KEY` not set
+**Problem:** `DOCMOSIS_API_URL` not set
 
 **Solution:**
 ```bash
 # Add to Railway variables
-DOCMOSIS_ACCESS_KEY=your-actual-access-key
+DOCMOSIS_API_URL=https://docs.liptonlegal.com/api/render
 ```
 
 ### "Docmosis API returned 401"
@@ -305,12 +307,12 @@ curl -X POST "/api/cases/{case_id}/generate-documents" \
 
 | Variable | Required | Default | Description |
 |----------|----------|---------|-------------|
-| `DOCMOSIS_API_URL` | No | `https://docs.liptonlegal.com/api/render` | Docmosis API endpoint |
-| `DOCMOSIS_ACCESS_KEY` | **YES** | None | Docmosis API access key |
+| `DOCMOSIS_API_URL` | **YES** | `https://docs.liptonlegal.com/api/render` | Docmosis API endpoint |
+| `DOCMOSIS_ACCESS_KEY` | No* | None | Docmosis API access key (*only if server requires authentication) |
 | `DOCMOSIS_TIMEOUT` | No | `60` | Request timeout in seconds |
 | `DOCMOSIS_RETRY_ATTEMPTS` | No | `3` | Number of retry attempts |
 | `DROPBOX_ENABLED` | No | `false` | Enable Dropbox uploads |
-| `DROPBOX_ACCESS_TOKEN` | No* | None | Dropbox OAuth token (*required if enabled) |
+| `DROPBOX_ACCESS_TOKEN` | No** | None | Dropbox OAuth token (**required if enabled) |
 | `DROPBOX_BASE_PATH` | No | `/Apps/LegalFormApp` | Base folder in Dropbox |
 
 ---

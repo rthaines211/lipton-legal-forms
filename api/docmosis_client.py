@@ -19,14 +19,15 @@ class DocmosisClient:
     def __init__(self):
         """Initialize Docmosis client with configuration from environment"""
         self.api_url = os.getenv('DOCMOSIS_API_URL', 'https://docs.liptonlegal.com/api/render')
-        self.access_key = os.getenv('DOCMOSIS_ACCESS_KEY')
+        self.access_key = os.getenv('DOCMOSIS_ACCESS_KEY')  # Optional
         self.timeout = int(os.getenv('DOCMOSIS_TIMEOUT', '60'))
         self.max_retries = int(os.getenv('DOCMOSIS_RETRY_ATTEMPTS', '3'))
 
-        if not self.access_key:
-            logger.warning("DOCMOSIS_ACCESS_KEY not set - document generation will fail")
-
         logger.info(f"Docmosis client initialized: {self.api_url}")
+        if self.access_key:
+            logger.info("Docmosis access key configured")
+        else:
+            logger.info("Docmosis access key not set (using open access)")
 
     async def generate_document(
         self,
@@ -72,9 +73,10 @@ class DocmosisClient:
                 'data': data
             }
 
-            # Add access key if configured
+            # Add access key only if configured (optional)
             if self.access_key:
                 payload['accessKey'] = self.access_key
+                logger.debug("Including access key in request")
 
             # Make request to Docmosis API
             async with httpx.AsyncClient(timeout=self.timeout) as client:
@@ -180,7 +182,9 @@ class DocmosisClient:
 
     def is_configured(self) -> bool:
         """Check if Docmosis client is properly configured"""
-        return bool(self.access_key)
+        # Docmosis is configured as long as we have the API URL
+        # Access key is optional depending on Docmosis server setup
+        return bool(self.api_url)
 
 
 # Singleton instance
