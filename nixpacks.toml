@@ -6,7 +6,7 @@
 
 [phases.setup]
 # Install both Node.js and Python environments
-nixPkgs = ["nodejs-20_x", "python311", "postgresql"]
+nixPkgs = ["nodejs_20", "python311", "postgresql"]
 
 [phases.install]
 # Install dependencies for both services
