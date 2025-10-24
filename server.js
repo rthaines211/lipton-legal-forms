@@ -1071,7 +1071,7 @@ async function callNormalizationPipeline(structuredData, caseId) {
 
         // Start the pipeline in the background
         const pipelinePromise = axios.post(
-            `${PIPELINE_CONFIG.apiUrl}/api/normalize`,
+            `${PIPELINE_CONFIG.apiUrl}/api/form-submissions`,
             structuredData,
             {
                 headers: headers,
