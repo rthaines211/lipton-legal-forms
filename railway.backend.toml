@@ -1,0 +1,28 @@
+# Railway configuration for lipton-backend (Node.js) service
+
+[build]
+builder = "DOCKERFILE"
+dockerfilePath = "Dockerfile.node"
+
+[deploy]
+numReplicas = 1
+restartPolicyType = "ON_FAILURE"
+restartPolicyMaxRetries = 10
+healthcheckPath = "/health"
+healthcheckTimeout = 300
+
+# Environment variables
+# These should be set in Railway UI under the service Variables tab
+# REQUIRED:
+# - DB_USER=postgres
+# - DB_HOST=postgres.railway.internal
+# - DB_NAME=railway
+# - DB_PASSWORD=<from lipton-database service>
+# - DB_PORT=5432
+# - NODE_ENV=production
+# - PORT=3000
+# - PIPELINE_API_URL=http://lipton-doc-pipeline:8000
+# - PIPELINE_ENABLED=true
+#
+# OPTIONAL:
+# - DROPBOX_ACCESS_TOKEN=<if using Dropbox for documents>
