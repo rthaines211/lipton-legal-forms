@@ -2,11 +2,13 @@
 
 ## Overview
 
-The Python pipeline now includes **complete document generation workflow**:
+The Python pipeline now includes **AUTOMATIC document generation workflow**:
 
 1. **Form Submission** → Database ETL (existing)
-2. **Document Generation** → Docmosis API at `docs.liptonlegal.com/api/render` (NEW)
-3. **Dropbox Upload** → Automatic backup to Dropbox (NEW)
+2. **🆕 AUTOMATIC Document Generation** → Docmosis API at `docs.liptonlegal.com/api/render`
+3. **🆕 AUTOMATIC Dropbox Upload** → Automatic backup to Dropbox
+
+**NEW**: Documents are generated and uploaded **automatically** after every form submission - no manual triggering required!
 
 ---
 
@@ -87,7 +89,9 @@ PYTHON_ENV=production
 
 ## Document Generation Workflow
 
-### Automatic Flow (After Form Submission)
+### Automatic Flow (After Form Submission) ✅
+
+**Documents are now generated AUTOMATICALLY** after every form submission:
 
 ```mermaid
 User submits form
@@ -98,16 +102,20 @@ Node.js calls Python /api/form-submissions
    ↓
 Python saves to PostgreSQL ✅
    ↓
-[NEW] Optional: Auto-trigger document generation
-   ↓
-Python calls Docmosis API
+🆕 Python AUTOMATICALLY calls Docmosis API
    ↓
 Docmosis generates PDFs
    ↓
-Python uploads to Dropbox
+Python uploads to Dropbox (if enabled)
    ↓
-Documents saved!
+Documents saved! ✅
 ```
+
+**No manual triggering required!** The `/api/form-submissions` endpoint now automatically:
+1. Saves form data to database
+2. Generates documents via Docmosis
+3. Uploads to Dropbox (if configured)
+4. Returns success to user
 
 ### Manual Trigger (Using API)
 
