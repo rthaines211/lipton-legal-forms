@@ -1077,62 +1077,17 @@ async function callNormalizationPipeline(structuredData, caseId) {
         );
 
         // ============================================================
-        // DOCUMENT GENERATION PROGRESS TRACKING
+        // DOCUMENT GENERATION (AUTOMATIC)
         // ============================================================
-        // While the Python pipeline executes, we poll its progress API
-        // to get real-time updates on document generation (1/32, 2/32, etc.)
-        // This allows the frontend to display incremental progress to users
-        // instead of just showing "processing" then jumping to "complete".
-        //
-        // The progress is stored in the pipeline status cache and picked up
-        // by the frontend's polling of /api/pipeline-status/:caseId
+        // Document generation now happens automatically within the
+        // /api/form-submissions endpoint. The Python service generates
+        // documents via Docmosis and uploads to Dropbox synchronously.
+        // No separate progress tracking needed.
         // ============================================================
-        console.log(`🚀 Starting document progress polling for case ${caseId} every 2 seconds...`);
-        const progressInterval = setInterval(async () => {
-            try {
-                console.log(`🔄 Polling document progress for case ${caseId}...`);
-                const progressResponse = await axios.get(`${PIPELINE_CONFIG.apiUrl}/api/progress/${caseId}`, {
-                    timeout: 10000  // Increase timeout to 10 seconds
-                });
+        console.log(`📄 Document generation will happen automatically in Python pipeline...`);
 
-                console.log(`📡 Progress response received:`, JSON.stringify(progressResponse.data));
-
-                if (progressResponse.data && progressResponse.data.total > 0) {
-                    const docProgress = {
-                        completed: progressResponse.data.completed,
-                        total: progressResponse.data.total,
-                        current: progressResponse.data.current_doc
-                    };
-
-                    console.log(`📊 Document progress: ${docProgress.completed}/${docProgress.total} - ${docProgress.current}`);
-
-                    // Update cache with document progress
-                    const currentStatus = getPipelineStatus(caseId);
-                    if (currentStatus) {
-                        console.log(`✅ Updating pipeline status cache with document progress`);
-                        setPipelineStatus(caseId, {
-                            ...currentStatus,
-                            documentProgress: docProgress,
-                            currentPhase: `Generating legal documents... (${docProgress.completed}/${docProgress.total} completed)`,
-                            progress: Math.min(90, 40 + (docProgress.completed / docProgress.total) * 50)
-                        });
-                    } else {
-                        console.warn(`⚠️  No current status found in cache for case ${caseId}`);
-                    }
-                } else {
-                    console.log(`⏳ No document progress data yet (total: ${progressResponse.data?.total || 0})`);
-                }
-            } catch (error) {
-                // Progress polling failed, but don't fail the main pipeline
-                console.log(`⚠️  Progress polling failed: ${error.message}`);
-            }
-        }, 2000); // Poll every 2 seconds
-
-        // Wait for pipeline completion
+        // Wait for pipeline completion (includes document generation)
         const response = await pipelinePromise;
-        
-        // Clear progress polling
-        clearInterval(progressInterval);
 
         const executionTime = Date.now() - startTime;
 

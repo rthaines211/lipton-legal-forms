@@ -284,41 +284,13 @@ async function handleSubmissionSuccess(result) {
     // Check if the server indicated that document generation is happening
     const pipelineEnabled = result.pipelineEnabled || result.pipeline_enabled || false;
 
-    if (pipelineEnabled && caseId && typeof createJobStream !== 'undefined' && typeof progressToast !== 'undefined') {
-        console.log(`🚀 Starting background document generation tracking for case: ${caseId}`);
-
-        try {
-            // Initialize progress toast for background tracking
-            progressToast.showProgress(caseId, 0, 0, 'Documents generating in background...');
-
-            // Create SSE connection
-            const jobStream = createJobStream(caseId);
-
-            // Set up event handlers
-            jobStream.onProgress = (data) => {
-                console.log('Background progress update:', data);
-            };
-
-            jobStream.onComplete = (data) => {
-                console.log('Background job completed:', data);
-            };
-
-            jobStream.onError = (data) => {
-                console.error('Background job failed:', data);
-            };
-
-            // Connect to SSE stream
-            jobStream.connect();
-
-            // Store stream reference for cleanup
-            window.currentJobStream = jobStream;
-
-        } catch (error) {
-            console.error('Failed to initialize background tracking:', error);
-            // Continue with form reset even if tracking fails
-        }
+    // NOTE: Document generation now happens automatically within the form submission
+    // request to Python. No separate SSE progress tracking needed.
+    if (pipelineEnabled && caseId) {
+        console.log(`✅ Form submitted successfully. Documents will be generated automatically.`);
+        console.log(`📄 Case ID: ${caseId}`);
     } else {
-        console.log(`ℹ️ Document generation not enabled - form saved to database only`);
+        console.log(`ℹ️ Pipeline not enabled - form saved to database only`);
     }
 
     // Reset form immediately - documents generate in background
