@@ -147,6 +147,7 @@ class FormSubmission(BaseModel):
 
 class CaseResponse(BaseModel):
     """Response after creating a case"""
+    success: bool = True
     case_id: UUID
     created_at: datetime
     plaintiff_count: int
