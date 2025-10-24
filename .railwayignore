@@ -62,6 +62,10 @@ TDD_SUMMARY.md
 TESTING_QUICKSTART.md
 GCP_DEPLOYMENT_PLAN.md
 RAILWAY_DEPLOYMENT_PLAN.md
+RAILWAY_TROUBLESHOOTING.md
+
+# Backup files
+railway.json.backup
 
 # Large files not needed in production
 *.pdf
