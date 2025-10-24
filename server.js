@@ -996,12 +996,8 @@ function revertToOriginalFormat(obj) {
  * Creates case, parties, and issue selections based on the structured data
  *
  * Database Schema Note:
- * - submitter_name: VARCHAR(255) - Name of person who submitted the form
- * - submitter_email: VARCHAR(255) - Email address of form submitter
- *
- * Default Values:
- * - If user skips notification: submitter_name='Anonymous', submitter_email=''
- * - If user provides info: uses actual values from notificationName and notificationEmail
+ * - Submitter information (notificationName, notificationEmail) is stored in raw_payload JSONB column
+ * - All form data is preserved in the raw_payload for reference
  */
 
 /**
@@ -1249,14 +1245,13 @@ async function saveToDatabase(structuredData, rawPayload) {
     try {
         await client.query('BEGIN');
 
-        // 1. Insert case with submitter information
-        // submitter_name and submitter_email track who submitted the form
-        // These fields are populated from the email notification modal
+        // 1. Insert case
+        // Note: Submitter info is stored in raw_payload JSON
         const caseResult = await client.query(
             `INSERT INTO cases (
                 property_address, city, state, zip_code, county, filing_location,
-                internal_name, form_name, raw_payload, is_active, submitter_name, submitter_email
-            ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12)
+                internal_name, form_name, raw_payload, is_active
+            ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
             RETURNING id`,
             [
                 structuredData.Full_Address?.StreetAddress || structuredData.Full_Address?.Line1,
@@ -1268,11 +1263,8 @@ async function saveToDatabase(structuredData, rawPayload) {
                 structuredData.Form?.InternalName,
                 structuredData.Form?.Name,
                 JSON.stringify(rawPayload),
-                true,
-                // Submitter information from email notification modal
-                // Defaults to 'Anonymous' and '' if user skipped
-                rawPayload.notificationName || 'Anonymous',
-                rawPayload.notificationEmail || ''
+                true
+                // Note: Submitter information (notificationName, notificationEmail) is stored in raw_payload JSON
             ]
         );
 
