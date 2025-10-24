@@ -4,6 +4,7 @@ Dropbox Upload Client for Python Pipeline
 Handles uploading generated documents to Dropbox for cloud storage and backup.
 """
 import os
+import json
 import logging
 from typing import Dict, Any, Optional
 from datetime import datetime
@@ -73,11 +74,16 @@ class DropboxClient:
 
             logger.info(f"📤 Uploading to Dropbox: {full_path} ({len(document_bytes)} bytes)")
 
-            # Prepare Dropbox API headers
+            # Prepare Dropbox API headers with properly encoded JSON
+            dropbox_args = {
+                'path': full_path,
+                'mode': 'overwrite' if overwrite else 'add'
+            }
+
             headers = {
                 'Authorization': f'Bearer {self.access_token}',
                 'Content-Type': 'application/octet-stream',
-                'Dropbox-API-Arg': f'{{"path": "{full_path}", "mode": "{{".\tag": "{"overwrite" if overwrite else "add"}"}}"}}'
+                'Dropbox-API-Arg': json.dumps(dropbox_args)
             }
 
             # Upload to Dropbox
