@@ -1500,6 +1500,10 @@ app.post('/api/form-entries', async (req, res) => {
         //
         // For setup instructions, see DROPBOX_SETUP.md
         // ============================================================
+        // NOTE: Dropbox upload of raw JSON files is disabled
+        // Dropbox is only used for final generated documents from Docmosis
+        // Raw form data is stored in PostgreSQL via the Python pipeline
+        /*
         if (dropboxService.isEnabled()) {
             console.log(`☁️  Uploading to Dropbox: ${filepath}`);
             dropboxService.uploadFile(filepath)
@@ -1514,6 +1518,7 @@ app.post('/api/form-entries', async (req, res) => {
                     console.error(`❌ Dropbox upload error: ${error.message}`);
                 });
         }
+        */
 
         // Step 2: Saving to database (20% progress)
         setPipelineStatus(tempCaseId, {
