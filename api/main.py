@@ -124,6 +124,7 @@ async def submit_form(form_data: FormSubmission):
     3. Inserts plaintiff and defendant party records
     4. Inserts plaintiff issue selections
     5. Stores the complete JSON in raw_payload and latest_payload
+    6. Automatically generates legal documents via Docmosis
 
     All operations are atomic (single transaction).
     """
@@ -145,11 +146,36 @@ async def submit_form(form_data: FormSubmission):
 
         # Process via ETL service
         result = etl_service.ingest_form_submission(form_data)
+        case_id = result['case_id']
 
-        logger.info(f"Form submission processed successfully: {result['case_id']}")
+        logger.info(f"Form submission processed successfully: {case_id}")
+
+        # Automatically generate documents if Docmosis is configured
+        if document_service.is_configured():
+            try:
+                logger.info(f"🚀 Triggering automatic document generation for case {case_id}")
+                doc_result = await document_service.generate_documents_for_case(
+                    case_id=case_id,
+                    templates=None,  # Use defaults
+                    upload_to_dropbox=True
+                )
+
+                if doc_result['success']:
+                    logger.info(
+                        f"✅ Documents generated automatically: "
+                        f"{doc_result['documents_generated']} generated, "
+                        f"{doc_result['documents_uploaded']} uploaded to Dropbox"
+                    )
+                else:
+                    logger.warning(f"⚠️ Document generation failed: {doc_result.get('error', 'Unknown error')}")
+            except Exception as doc_error:
+                # Log but don't fail the form submission if document generation fails
+                logger.error(f"❌ Automatic document generation failed: {doc_error}")
+        else:
+            logger.info("ℹ️ Document generation not configured (DOCMOSIS_API_URL not set)")
 
         return CaseResponse(
-            case_id=result["case_id"],
+            case_id=case_id,
             created_at=result["created_at"],
             plaintiff_count=result["plaintiff_count"],
             defendant_count=result["defendant_count"],
