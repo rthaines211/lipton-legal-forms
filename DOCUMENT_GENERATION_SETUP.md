@@ -143,19 +143,29 @@ The Docmosis client sends requests like this:
 
 ```json
 {
-  "templateName": "ComplaintForm.docx",
-  "outputName": "case-123_ComplaintForm.pdf",
+  "templateName": "SROGsMaster.docx",
+  "outputName": "case-123_SROGsMaster.pdf",
   "outputFormat": "pdf",
   "data": {
     // Complete case data from database
     "PlaintiffDetails": [...],
     "DefendantDetails2": [...],
     "Full_Address": {...},
-    // ... all form fields
+    // ... all form fields and discovery flags
   },
-  "accessKey": "<your-access-key>"
+  "accessKey": "<your-access-key>"  // Optional
 }
 ```
+
+### Discovery Document Templates
+
+The system automatically generates **three discovery documents** for each case:
+
+1. **SROGsMaster.docx** - Special Interrogatories (questions to opposing party)
+2. **PODsMaster.docx** - Production of Documents (document requests)
+3. **AdmissionsMaster.docx** - Requests for Admissions (facts to admit/deny)
+
+These templates must exist on your Docmosis server at `docs.liptonlegal.com`.
 
 ### Expected Response
 
@@ -181,14 +191,16 @@ Body: <PDF binary data>
 Generated documents are organized in Dropbox:
 
 ```
-/Apps/LegalFormApp/
+/Current Clients/
 ├── Cases/
 │   ├── {case-id-1}/
-│   │   ├── case-id-1_ComplaintForm.pdf
-│   │   ├── case-id-1_DiscoveryRequest.pdf
-│   │   └── case-id-1_SummonsForm.pdf
+│   │   ├── case-id-1_SROGsMaster.pdf         (Special Interrogatories)
+│   │   ├── case-id-1_PODsMaster.pdf          (Production of Documents)
+│   │   └── case-id-1_AdmissionsMaster.pdf    (Requests for Admissions)
 │   └── {case-id-2}/
-│       └── case-id-2_ComplaintForm.pdf
+│       ├── case-id-2_SROGsMaster.pdf
+│       ├── case-id-2_PODsMaster.pdf
+│       └── case-id-2_AdmissionsMaster.pdf
 ```
 
 ### Dropbox Access Token
